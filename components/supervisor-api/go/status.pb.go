@@ -1740,7 +1740,7 @@ func file_status_proto_rawDescGZIP() []byte {
 
 var file_status_proto_enumTypes = make([]protoimpl.EnumInfo, 6)
 var file_status_proto_msgTypes = make([]protoimpl.MessageInfo, 22)
-var file_status_proto_goTypes = []interface{}{
+var file_status_proto_goTypes = []any{
 	(ContentSource)(0),                      // 0: supervisor.ContentSource
 	(PortVisibility)(0),                     // 1: supervisor.PortVisibility
 	(OnPortExposedAction)(0),                // 2: supervisor.OnPortExposedAction
@@ -1816,7 +1816,7 @@ func file_status_proto_init() {
 	}
 	file_port_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_status_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*SupervisorStatusRequest); i {
 			case 0:
 				return &v.state
@@ -1828,7 +1828,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*SupervisorStatusResponse); i {
 			case 0:
 				return &v.state
@@ -1840,7 +1840,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*IDEStatusRequest); i {
 			case 0:
 				return &v.state
@@ -1852,7 +1852,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*IDEStatusResponse); i {
 			case 0:
 				return &v.state
@@ -1864,7 +1864,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*ContentStatusRequest); i {
 			case 0:
 				return &v.state
@@ -1876,7 +1876,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*ContentStatusResponse); i {
 			case 0:
 				return &v.state
@@ -1888,7 +1888,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*BackupStatusRequest); i {
 			case 0:
 				return &v.state
@@ -1900,7 +1900,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*BackupStatusResponse); i {
 			case 0:
 				return &v.state
@@ -1912,7 +1912,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*PortsStatusRequest); i {
 			case 0:
 				return &v.state
@@ -1924,7 +1924,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*PortsStatusResponse); i {
 			case 0:
 				return &v.state
@@ -1936,7 +1936,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*ExposedPortInfo); i {
 			case 0:
 				return &v.state
@@ -1948,7 +1948,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*TunneledPortInfo); i {
 			case 0:
 				return &v.state
@@ -1960,7 +1960,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*PortsStatus); i {
 			case 0:
 				return &v.state
@@ -1972,7 +1972,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*TasksStatusRequest); i {
 			case 0:
 				return &v.state
@@ -1984,7 +1984,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[14].Exporter = func(v any, i int) any {
 			switch v := v.(*TasksStatusResponse); i {
 			case 0:
 				return &v.state
@@ -1996,7 +1996,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[15].Exporter = func(v any, i int) any {
 			switch v := v.(*TaskStatus); i {
 			case 0:
 				return &v.state
@@ -2008,7 +2008,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[16].Exporter = func(v any, i int) any {
 			switch v := v.(*TaskPresentation); i {
 			case 0:
 				return &v.state
@@ -2020,7 +2020,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[17].Exporter = func(v any, i int) any {
 			switch v := v.(*ResourcesStatuRequest); i {
 			case 0:
 				return &v.state
@@ -2032,7 +2032,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[18].Exporter = func(v any, i int) any {
 			switch v := v.(*ResourcesStatusResponse); i {
 			case 0:
 				return &v.state
@@ -2044,7 +2044,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[19].Exporter = func(v any, i int) any {
 			switch v := v.(*ResourceStatus); i {
 			case 0:
 				return &v.state
@@ -2056,7 +2056,7 @@ func file_status_proto_init() {
 				return nil
 			}
 		}
-		file_status_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+		file_status_proto_msgTypes[20].Exporter = func(v any, i int) any {
 			switch v := v.(*IDEStatusResponse_DesktopStatus); i {
 			case 0:
 				return &v.state

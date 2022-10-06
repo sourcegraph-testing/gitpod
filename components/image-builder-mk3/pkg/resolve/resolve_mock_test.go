@@ -51,7 +51,7 @@ func (m *MockResolver) Fetcher(arg0 context.Context, arg1 string) (remotes.Fetch
 }
 
 // Fetcher indicates an expected call of Fetcher.
-func (mr *MockResolverMockRecorder) Fetcher(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockResolverMockRecorder) Fetcher(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Fetcher", reflect.TypeOf((*MockResolver)(nil).Fetcher), arg0, arg1)
 }
@@ -66,7 +66,7 @@ func (m *MockResolver) Pusher(arg0 context.Context, arg1 string) (remotes.Pusher
 }
 
 // Pusher indicates an expected call of Pusher.
-func (mr *MockResolverMockRecorder) Pusher(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockResolverMockRecorder) Pusher(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Pusher", reflect.TypeOf((*MockResolver)(nil).Pusher), arg0, arg1)
 }
@@ -82,7 +82,7 @@ func (m *MockResolver) Resolve(arg0 context.Context, arg1 string) (string, v1.De
 }
 
 // Resolve indicates an expected call of Resolve.
-func (mr *MockResolverMockRecorder) Resolve(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockResolverMockRecorder) Resolve(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Resolve", reflect.TypeOf((*MockResolver)(nil).Resolve), arg0, arg1)
 }
@@ -120,7 +120,7 @@ func (m *MockFetcher) Fetch(arg0 context.Context, arg1 v1.Descriptor) (io.ReadCl
 }
 
 // Fetch indicates an expected call of Fetch.
-func (mr *MockFetcherMockRecorder) Fetch(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockFetcherMockRecorder) Fetch(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Fetch", reflect.TypeOf((*MockFetcher)(nil).Fetch), arg0, arg1)
 }

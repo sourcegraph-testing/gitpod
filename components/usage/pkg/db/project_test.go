@@ -15,7 +15,7 @@ import (
 	"testing"
 )
 
-var projectJSON = map[string]interface{}{
+var projectJSON = map[string]any{
 	"id":                uuid.New().String(),
 	"cloneUrl":          "https://github.com/gptest1/gptest1-repo1-private.git",
 	"teamId":            "0e433063-1358-4892-9ed2-68e273d17d07",
@@ -46,14 +46,14 @@ func TestProject_ReadExistingRecords(t *testing.T) {
 	require.NoError(t, conn.Where("id = ?", project.ID).Delete(&db.Project{}).Error)
 }
 
-func insertRawProject(t *testing.T, conn *gorm.DB, obj map[string]interface{}) uuid.UUID {
+func insertRawProject(t *testing.T, conn *gorm.DB, obj map[string]any) uuid.UUID {
 	columns := []string{
 		"id", "cloneUrl", "teamId", "appInstallationId", "creationTime", "deleted", "_lastModified", "name", "config", "markedDeleted", "userId", "slug", "settings",
 	}
 	statement := fmt.Sprintf(`INSERT INTO d_b_project (%s) VALUES ?;`, strings.Join(columns, ", "))
 	id := uuid.MustParse(obj["id"].(string))
 
-	var values []interface{}
+	var values []any
 	for _, col := range columns {
 		val, ok := obj[col]
 		if !ok {

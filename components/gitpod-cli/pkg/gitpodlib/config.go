@@ -19,7 +19,7 @@ type gitpodTask struct {
 }
 
 type GitpodFile struct {
-	Image             interface{}  `yaml:"image,omitempty"`
+	Image             any          `yaml:"image,omitempty"`
 	Ports             []gitpodPort `yaml:"ports,omitempty"`
 	Tasks             []gitpodTask `yaml:"tasks,omitempty"`
 	CheckoutLocation  string       `yaml:"checkoutLocation,omitempty"`

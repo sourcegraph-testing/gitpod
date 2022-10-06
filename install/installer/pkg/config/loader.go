@@ -19,7 +19,7 @@ const CurrentVersion = "v1"
 
 // NewDefaultConfig returns a new instance of the current config struct,
 // with all defaults filled in.
-func NewDefaultConfig() (interface{}, error) {
+func NewDefaultConfig() (any, error) {
 	v, ok := versions[CurrentVersion]
 	if !ok {
 		return nil, fmt.Errorf("current config version is invalid - this should never happen")
@@ -36,21 +36,21 @@ func NewDefaultConfig() (interface{}, error) {
 
 type ConfigVersion interface {
 	// Factory provides a new instance of the config struct
-	Factory() interface{}
+	Factory() any
 
 	// Defaults fills in the defaults for this version.
 	// obj is expected to be the return value of Factory()
-	Defaults(obj interface{}) error
+	Defaults(obj any) error
 
 	// LoadValidationFuncs loads the custom validation functions
 	LoadValidationFuncs(*validator.Validate) error
 
 	// ClusterValidation introduces configuration specific cluster validation checks
-	ClusterValidation(cfg interface{}) cluster.ValidationChecks
+	ClusterValidation(cfg any) cluster.ValidationChecks
 
 	// CheckDeprecated checks for deprecated config params.
 	// Returns key/value pair of deprecated params/values and any error messages (used for conflicting params)
-	CheckDeprecated(cfg interface{}) (map[string]interface{}, []string)
+	CheckDeprecated(cfg any) (map[string]any, []string)
 }
 
 // AddVersion adds a new version.
@@ -80,7 +80,7 @@ func LoadConfigVersion(version string) (ConfigVersion, error) {
 // Load takes a config string and overrides that onto the default
 // config for that version (passed in the config). If no config version
 // is passed, It overrides it onto the default CurrentVersion of the binary
-func Load(overrideConfig string, strict bool) (cfg interface{}, version string, err error) {
+func Load(overrideConfig string, strict bool) (cfg any, version string, err error) {
 	var overrideVS struct {
 		APIVersion string `json:"apiVersion"`
 	}
@@ -127,7 +127,7 @@ func Load(overrideConfig string, strict bool) (cfg interface{}, version string, 
 	return cfg, apiVersion, nil
 }
 
-func Marshal(version string, cfg interface{}) ([]byte, error) {
+func Marshal(version string, cfg any) ([]byte, error) {
 	if _, ok := versions[version]; !ok {
 		return nil, fmt.Errorf("unsupported API version: %s", version)
 	}

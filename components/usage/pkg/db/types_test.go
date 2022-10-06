@@ -20,7 +20,7 @@ func TestVarcharTime_Scan(t *testing.T) {
 	for _, scenario := range []struct {
 		Name string
 
-		Input    interface{}
+		Input    any
 		Expected Expectation
 	}{
 		{

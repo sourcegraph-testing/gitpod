@@ -55,7 +55,7 @@ type OWI struct {
 	InstanceID  string
 }
 
-func (o OWI) Fields() map[string]interface{} {
+func (o OWI) Fields() map[string]any {
 	return log.OWI(o.Owner, o.WorkspaceID, o.InstanceID)
 }
 
@@ -451,5 +451,5 @@ type msgInitContent struct {
 	IDMappings    []archive.IDMapping
 
 	TraceInfo string
-	OWI       map[string]interface{}
+	OWI       map[string]any
 }

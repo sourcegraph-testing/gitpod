@@ -22,7 +22,7 @@ type Identity struct {
 type IdentifyMessage struct {
 	Identity
 
-	Traits    map[string]interface{}
+	Traits    map[string]any
 	Timestamp time.Time
 }
 
@@ -31,7 +31,7 @@ type TrackMessage struct {
 	Identity
 
 	Event      string
-	Properties map[string]interface{}
+	Properties map[string]any
 	Timestamp  time.Time
 }
 

@@ -210,7 +210,7 @@ type BindEvent struct {
 
 // Mount handles mount syscalls
 func (h *InWorkspaceHandler) Mount(req *libseccomp.ScmpNotifReq) (val uint64, errno int32, flags uint32) {
-	log := log.WithFields(map[string]interface{}{
+	log := log.WithFields(map[string]any{
 		"syscall":          "mount",
 		log.WorkspaceField: h.WorkspaceId,
 		"pid":              req.Pid,
@@ -246,7 +246,7 @@ func (h *InWorkspaceHandler) Mount(req *libseccomp.ScmpNotifReq) (val uint64, er
 		return Errno(unix.EFAULT)
 	}
 
-	log.WithFields(map[string]interface{}{
+	log.WithFields(map[string]any{
 		"source": source,
 		"dest":   dest,
 		"fstype": filesystem,
@@ -316,7 +316,7 @@ func (h *InWorkspaceHandler) Mount(req *libseccomp.ScmpNotifReq) (val uint64, er
 // Umount handles umount and umount2 syscalls
 func (h *InWorkspaceHandler) Umount(req *libseccomp.ScmpNotifReq) (val uint64, errno int32, flags uint32) {
 	nme, _ := req.Data.Syscall.GetName()
-	log := log.WithFields(map[string]interface{}{
+	log := log.WithFields(map[string]any{
 		"syscall":          nme,
 		log.WorkspaceField: h.WorkspaceId,
 		"pid":              req.Pid,
@@ -396,7 +396,7 @@ func (h *InWorkspaceHandler) Umount(req *libseccomp.ScmpNotifReq) (val uint64, e
 }
 
 func (h *InWorkspaceHandler) Bind(req *libseccomp.ScmpNotifReq) (val uint64, errno int32, flags uint32) {
-	log := log.WithFields(map[string]interface{}{
+	log := log.WithFields(map[string]any{
 		"syscall":          "bind",
 		log.WorkspaceField: h.WorkspaceId,
 		"pid":              req.Pid,
@@ -442,7 +442,7 @@ func (h *InWorkspaceHandler) Bind(req *libseccomp.ScmpNotifReq) (val uint64, err
 }
 
 func (h *InWorkspaceHandler) Chown(req *libseccomp.ScmpNotifReq) (val uint64, errno int32, flags uint32) {
-	log := log.WithFields(map[string]interface{}{
+	log := log.WithFields(map[string]any{
 		"syscall":          "chown",
 		log.WorkspaceField: h.WorkspaceId,
 		"pid":              req.Pid,

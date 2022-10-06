@@ -630,7 +630,7 @@ func file_usage_v1_billing_proto_rawDescGZIP() []byte {
 
 var file_usage_v1_billing_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_usage_v1_billing_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
-var file_usage_v1_billing_proto_goTypes = []interface{}{
+var file_usage_v1_billing_proto_goTypes = []any{
 	(System)(0),                        // 0: usage.v1.System
 	(*UpdateInvoicesRequest)(nil),      // 1: usage.v1.UpdateInvoicesRequest
 	(*UpdateInvoicesResponse)(nil),     // 2: usage.v1.UpdateInvoicesResponse
@@ -671,7 +671,7 @@ func file_usage_v1_billing_proto_init() {
 	}
 	file_usage_v1_usage_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_usage_v1_billing_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateInvoicesRequest); i {
 			case 0:
 				return &v.state
@@ -683,7 +683,7 @@ func file_usage_v1_billing_proto_init() {
 				return nil
 			}
 		}
-		file_usage_v1_billing_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateInvoicesResponse); i {
 			case 0:
 				return &v.state
@@ -695,7 +695,7 @@ func file_usage_v1_billing_proto_init() {
 				return nil
 			}
 		}
-		file_usage_v1_billing_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*GetUpcomingInvoiceRequest); i {
 			case 0:
 				return &v.state
@@ -707,7 +707,7 @@ func file_usage_v1_billing_proto_init() {
 				return nil
 			}
 		}
-		file_usage_v1_billing_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*GetUpcomingInvoiceResponse); i {
 			case 0:
 				return &v.state
@@ -719,7 +719,7 @@ func file_usage_v1_billing_proto_init() {
 				return nil
 			}
 		}
-		file_usage_v1_billing_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*FinalizeInvoiceRequest); i {
 			case 0:
 				return &v.state
@@ -731,7 +731,7 @@ func file_usage_v1_billing_proto_init() {
 				return nil
 			}
 		}
-		file_usage_v1_billing_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*FinalizeInvoiceResponse); i {
 			case 0:
 				return &v.state
@@ -743,7 +743,7 @@ func file_usage_v1_billing_proto_init() {
 				return nil
 			}
 		}
-		file_usage_v1_billing_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*SetBilledSessionRequest); i {
 			case 0:
 				return &v.state
@@ -755,7 +755,7 @@ func file_usage_v1_billing_proto_init() {
 				return nil
 			}
 		}
-		file_usage_v1_billing_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_usage_v1_billing_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*SetBilledSessionResponse); i {
 			case 0:
 				return &v.state
@@ -768,7 +768,7 @@ func file_usage_v1_billing_proto_init() {
 			}
 		}
 	}
-	file_usage_v1_billing_proto_msgTypes[2].OneofWrappers = []interface{}{
+	file_usage_v1_billing_proto_msgTypes[2].OneofWrappers = []any{
 		(*GetUpcomingInvoiceRequest_TeamId)(nil),
 		(*GetUpcomingInvoiceRequest_UserId)(nil),
 	}

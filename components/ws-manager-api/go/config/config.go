@@ -244,7 +244,7 @@ func (c *Configuration) Validate() error {
 	return err
 }
 
-var validPodTemplate = ozzo.By(func(o interface{}) error {
+var validPodTemplate = ozzo.By(func(o any) error {
 	s, ok := o.(string)
 	if !ok {
 		return xerrors.Errorf("field should be string")
@@ -254,7 +254,7 @@ var validPodTemplate = ozzo.By(func(o interface{}) error {
 	return err
 })
 
-var validWorkspaceURLTemplate = ozzo.By(func(o interface{}) error {
+var validWorkspaceURLTemplate = ozzo.By(func(o any) error {
 	s, ok := o.(string)
 	if !ok {
 		return xerrors.Errorf("field should be string")
@@ -302,7 +302,7 @@ func (c *ContainerConfiguration) Validate() error {
 	)
 }
 
-var validResourceRequestConfig = ozzo.By(func(o interface{}) error {
+var validResourceRequestConfig = ozzo.By(func(o any) error {
 	rc, ok := o.(*ResourceRequestConfiguration)
 	if !ok {
 		return xerrors.Errorf("can only validate ResourceRequestConfiguration")
@@ -337,7 +337,7 @@ var validResourceRequestConfig = ozzo.By(func(o interface{}) error {
 	return nil
 })
 
-var validResourceLimitConfig = ozzo.By(func(o interface{}) error {
+var validResourceLimitConfig = ozzo.By(func(o any) error {
 	rc, ok := o.(*ResourceLimitConfiguration)
 	if !ok {
 		return xerrors.Errorf("can only validate ResourceLimitConfiguration")

@@ -826,7 +826,7 @@ func file_daemon_proto_rawDescGZIP() []byte {
 
 var file_daemon_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_daemon_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
-var file_daemon_proto_goTypes = []interface{}{
+var file_daemon_proto_goTypes = []any{
 	(WorkspaceContentState)(0),       // 0: wsdaemon.WorkspaceContentState
 	(*InitWorkspaceRequest)(nil),     // 1: wsdaemon.InitWorkspaceRequest
 	(*WorkspaceMetadata)(nil),        // 2: wsdaemon.WorkspaceMetadata
@@ -869,7 +869,7 @@ func file_daemon_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_daemon_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*InitWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -881,7 +881,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceMetadata); i {
 			case 0:
 				return &v.state
@@ -893,7 +893,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*InitWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -905,7 +905,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*WaitForInitRequest); i {
 			case 0:
 				return &v.state
@@ -917,7 +917,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*WaitForInitResponse); i {
 			case 0:
 				return &v.state
@@ -929,7 +929,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*TakeSnapshotRequest); i {
 			case 0:
 				return &v.state
@@ -941,7 +941,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*TakeSnapshotResponse); i {
 			case 0:
 				return &v.state
@@ -953,7 +953,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*DisposeWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -965,7 +965,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*DisposeWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -977,7 +977,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*BackupWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -989,7 +989,7 @@ func file_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_daemon_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_daemon_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*BackupWorkspaceResponse); i {
 			case 0:
 				return &v.state

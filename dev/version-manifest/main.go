@@ -61,8 +61,8 @@ func produceManifest(out io.Writer, dir fs.FS) error {
 
 	// We need to deduplicate keys in the resulting yaml file. To this end, we first build up
 	// a map of maps and later print that map YAML style.
-	res := make(map[string]interface{})
-	comps := make(map[string]interface{})
+	res := make(map[string]any)
+	comps := make(map[string]any)
 	res["components"] = comps
 	for k, v := range versions {
 		var (
@@ -76,17 +76,17 @@ func produceManifest(out io.Writer, dir fs.FS) error {
 			}
 
 			if _, ok := m[seg]; !ok {
-				m[seg] = make(map[string]interface{})
+				m[seg] = make(map[string]any)
 			}
-			m = m[seg].(map[string]interface{})
+			m = m[seg].(map[string]any)
 		}
 	}
 
 	// It's not clear how to maintain a stable order of keys using the YAML serializer.
 	// If it were, we could just through this map at the YAML serializer and call it a day.
 	// Right now, we have to produce the YAML ourselves.
-	var print func(m map[string]interface{}, indent int) error
-	print = func(m map[string]interface{}, indent int) error {
+	var print func(m map[string]any, indent int) error
+	print = func(m map[string]any, indent int) error {
 		keys := make([]string, 0, len(m))
 		for v := range m {
 			keys = append(keys, v)
@@ -96,7 +96,7 @@ func produceManifest(out io.Writer, dir fs.FS) error {
 		for _, k := range keys {
 			v := m[k]
 			fmt.Fprintf(out, "%s%s:", strings.Repeat("  ", indent), k)
-			if c, ok := v.(map[string]interface{}); ok {
+			if c, ok := v.(map[string]any); ok {
 				fmt.Fprintln(out)
 				err := print(c, indent+1)
 				if err != nil {

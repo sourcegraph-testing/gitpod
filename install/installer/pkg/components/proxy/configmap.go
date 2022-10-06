@@ -58,7 +58,7 @@ type openVSXTpl struct {
 	RepoURL string
 }
 
-func renderTemplate(tpl []byte, values interface{}) (*string, error) {
+func renderTemplate(tpl []byte, values any) (*string, error) {
 	t, err := template.New("template").Parse(string(tpl))
 	if err != nil {
 		return nil, err

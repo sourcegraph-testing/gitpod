@@ -237,7 +237,7 @@ func (w *redisBlobWriter) Commit(ctx context.Context, size int64, expected diges
 		return nil
 	}
 
-	err = w.client.MSet(ctx, map[string]interface{}{
+	err = w.client.MSet(ctx, map[string]any{
 		kContent: w.buf.String(),
 		kInfo:    string(rnfo),
 	}).Err()

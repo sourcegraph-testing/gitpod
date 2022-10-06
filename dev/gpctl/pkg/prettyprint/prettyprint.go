@@ -33,7 +33,7 @@ const (
 	JSONFormat Format = "json"
 )
 
-type formatterFunc func(*Printer, interface{}) error
+type formatterFunc func(*Printer, any) error
 
 var formatter = map[Format]formatterFunc{
 	StringFormat:   formatString,
@@ -42,12 +42,12 @@ var formatter = map[Format]formatterFunc{
 	JSONPathFormat: formatJSONPath,
 }
 
-func formatString(pp *Printer, obj interface{}) error {
+func formatString(pp *Printer, obj any) error {
 	_, err := fmt.Fprintf(pp.Writer, "%s", obj)
 	return err
 }
 
-func formatJSONPath(pp *Printer, obj interface{}) error {
+func formatJSONPath(pp *Printer, obj any) error {
 	p := jsonpath.New("expr")
 	if err := p.Parse(pp.Template); err != nil {
 		return err
@@ -55,7 +55,7 @@ func formatJSONPath(pp *Printer, obj interface{}) error {
 	return p.Execute(pp.Writer, obj)
 }
 
-func formatTemplate(pp *Printer, obj interface{}) error {
+func formatTemplate(pp *Printer, obj any) error {
 	tmpl, err := template.New("prettyprint").Funcs(sprig.FuncMap()).Parse(pp.Template)
 	if err != nil {
 		return err
@@ -71,7 +71,7 @@ func formatTemplate(pp *Printer, obj interface{}) error {
 	return nil
 }
 
-func formatJSON(pp *Printer, obj interface{}) error {
+func formatJSON(pp *Printer, obj any) error {
 	enc := json.NewEncoder(pp.Writer)
 	enc.SetIndent("", "  ")
 	return enc.Encode(obj)
@@ -85,7 +85,7 @@ type Printer struct {
 }
 
 // Print pretty-prints the content
-func (pp *Printer) Print(obj interface{}) error {
+func (pp *Printer) Print(obj any) error {
 	formatter, ok := formatter[pp.Format]
 	if !ok {
 		return xerrors.Errorf("Unknown format: %s", pp.Format)

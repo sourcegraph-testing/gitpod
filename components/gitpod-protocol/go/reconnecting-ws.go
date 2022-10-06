@@ -131,7 +131,7 @@ func isJSONError(err error) bool {
 
 // WriteObject writes the JSON encoding of v as a message.
 // See the documentation for encoding/json Marshal for details about the conversion of Go values to JSON.
-func (rc *ReconnectingWebsocket) WriteObject(v interface{}) error {
+func (rc *ReconnectingWebsocket) WriteObject(v any) error {
 	return rc.EnsureConnection(func(conn *WebsocketConnection) (bool, error) {
 		err := conn.WriteJSON(v)
 		closed := err != nil && !isJSONError(err)
@@ -141,7 +141,7 @@ func (rc *ReconnectingWebsocket) WriteObject(v interface{}) error {
 
 // ReadObject reads the next JSON-encoded message from the connection and stores it in the value pointed to by v.
 // See the documentation for the encoding/json Unmarshal function for details about the conversion of JSON to a Go value.
-func (rc *ReconnectingWebsocket) ReadObject(v interface{}) error {
+func (rc *ReconnectingWebsocket) ReadObject(v any) error {
 	return rc.EnsureConnection(func(conn *WebsocketConnection) (bool, error) {
 		err := conn.ReadJSON(v)
 		closed := err != nil && !isJSONError(err)

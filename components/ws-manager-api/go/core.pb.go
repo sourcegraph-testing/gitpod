@@ -3791,7 +3791,7 @@ func file_core_proto_rawDescGZIP() []byte {
 
 var file_core_proto_enumTypes = make([]protoimpl.EnumInfo, 7)
 var file_core_proto_msgTypes = make([]protoimpl.MessageInfo, 48)
-var file_core_proto_goTypes = []interface{}{
+var file_core_proto_goTypes = []any{
 	(StopWorkspacePolicy)(0),                 // 0: wsman.StopWorkspacePolicy
 	(AdmissionLevel)(0),                      // 1: wsman.AdmissionLevel
 	(PortVisibility)(0),                      // 2: wsman.PortVisibility
@@ -3939,7 +3939,7 @@ func file_core_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_core_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*MetadataFilter); i {
 			case 0:
 				return &v.state
@@ -3951,7 +3951,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*GetWorkspacesRequest); i {
 			case 0:
 				return &v.state
@@ -3963,7 +3963,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*GetWorkspacesResponse); i {
 			case 0:
 				return &v.state
@@ -3975,7 +3975,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*StartWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -3987,7 +3987,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*StartWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -3999,7 +3999,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*StopWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -4011,7 +4011,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*StopWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -4023,7 +4023,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*DescribeWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -4035,7 +4035,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*DescribeWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -4047,7 +4047,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*SubscribeRequest); i {
 			case 0:
 				return &v.state
@@ -4059,7 +4059,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*SubscribeResponse); i {
 			case 0:
 				return &v.state
@@ -4071,7 +4071,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*MarkActiveRequest); i {
 			case 0:
 				return &v.state
@@ -4083,7 +4083,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*MarkActiveResponse); i {
 			case 0:
 				return &v.state
@@ -4095,7 +4095,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTimeoutRequest); i {
 			case 0:
 				return &v.state
@@ -4107,7 +4107,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[14].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTimeoutResponse); i {
 			case 0:
 				return &v.state
@@ -4119,7 +4119,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[15].Exporter = func(v any, i int) any {
 			switch v := v.(*ControlPortRequest); i {
 			case 0:
 				return &v.state
@@ -4131,7 +4131,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[16].Exporter = func(v any, i int) any {
 			switch v := v.(*ControlPortResponse); i {
 			case 0:
 				return &v.state
@@ -4143,7 +4143,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[17].Exporter = func(v any, i int) any {
 			switch v := v.(*TakeSnapshotRequest); i {
 			case 0:
 				return &v.state
@@ -4155,7 +4155,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[18].Exporter = func(v any, i int) any {
 			switch v := v.(*TakeSnapshotResponse); i {
 			case 0:
 				return &v.state
@@ -4167,7 +4167,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[19].Exporter = func(v any, i int) any {
 			switch v := v.(*ControlAdmissionRequest); i {
 			case 0:
 				return &v.state
@@ -4179,7 +4179,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[20].Exporter = func(v any, i int) any {
 			switch v := v.(*ControlAdmissionResponse); i {
 			case 0:
 				return &v.state
@@ -4191,7 +4191,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[21].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteVolumeSnapshotRequest); i {
 			case 0:
 				return &v.state
@@ -4203,7 +4203,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[22].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteVolumeSnapshotResponse); i {
 			case 0:
 				return &v.state
@@ -4215,7 +4215,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[23].Exporter = func(v any, i int) any {
 			switch v := v.(*BackupWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -4227,7 +4227,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[24].Exporter = func(v any, i int) any {
 			switch v := v.(*BackupWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -4239,7 +4239,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[25].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateSSHKeyRequest); i {
 			case 0:
 				return &v.state
@@ -4251,7 +4251,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[26].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateSSHKeyResponse); i {
 			case 0:
 				return &v.state
@@ -4263,7 +4263,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[27].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceStatus); i {
 			case 0:
 				return &v.state
@@ -4275,7 +4275,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[28].Exporter = func(v any, i int) any {
 			switch v := v.(*IDEImage); i {
 			case 0:
 				return &v.state
@@ -4287,7 +4287,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[29].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceSpec); i {
 			case 0:
 				return &v.state
@@ -4299,7 +4299,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[30].Exporter = func(v any, i int) any {
 			switch v := v.(*PortSpec); i {
 			case 0:
 				return &v.state
@@ -4311,7 +4311,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[31].Exporter = func(v any, i int) any {
 			switch v := v.(*VolumeSnapshotInfo); i {
 			case 0:
 				return &v.state
@@ -4323,7 +4323,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[32].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceConditions); i {
 			case 0:
 				return &v.state
@@ -4335,7 +4335,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[33].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceMetadata); i {
 			case 0:
 				return &v.state
@@ -4347,7 +4347,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[34].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceRuntimeInfo); i {
 			case 0:
 				return &v.state
@@ -4359,7 +4359,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[35].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceAuthentication); i {
 			case 0:
 				return &v.state
@@ -4371,7 +4371,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[36].Exporter = func(v any, i int) any {
 			switch v := v.(*StartWorkspaceSpec); i {
 			case 0:
 				return &v.state
@@ -4383,7 +4383,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[37].Exporter = func(v any, i int) any {
 			switch v := v.(*GitSpec); i {
 			case 0:
 				return &v.state
@@ -4395,7 +4395,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[38].Exporter = func(v any, i int) any {
 			switch v := v.(*EnvironmentVariable); i {
 			case 0:
 				return &v.state
@@ -4407,7 +4407,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[39].Exporter = func(v any, i int) any {
 			switch v := v.(*ExposedPorts); i {
 			case 0:
 				return &v.state
@@ -4419,7 +4419,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[40].Exporter = func(v any, i int) any {
 			switch v := v.(*SSHPublicKeys); i {
 			case 0:
 				return &v.state
@@ -4431,7 +4431,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[41].Exporter = func(v any, i int) any {
 			switch v := v.(*DescribeClusterRequest); i {
 			case 0:
 				return &v.state
@@ -4443,7 +4443,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[42].Exporter = func(v any, i int) any {
 			switch v := v.(*DescribeClusterResponse); i {
 			case 0:
 				return &v.state
@@ -4455,7 +4455,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[43].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceClass); i {
 			case 0:
 				return &v.state
@@ -4467,7 +4467,7 @@ func file_core_proto_init() {
 				return nil
 			}
 		}
-		file_core_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
+		file_core_proto_msgTypes[47].Exporter = func(v any, i int) any {
 			switch v := v.(*EnvironmentVariable_SecretKeyRef); i {
 			case 0:
 				return &v.state
@@ -4480,7 +4480,7 @@ func file_core_proto_init() {
 			}
 		}
 	}
-	file_core_proto_msgTypes[33].OneofWrappers = []interface{}{}
+	file_core_proto_msgTypes[33].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

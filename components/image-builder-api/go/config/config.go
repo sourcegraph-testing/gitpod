@@ -96,5 +96,5 @@ type WorkspaceManagerConfig struct {
 	TLS     TLS    `json:"tls,omitempty"`
 	// expected to be a wsmanapi.WorkspaceManagerClient - use to avoid dependency on wsmanapi
 	// this field is used for testing only
-	Client interface{} `json:"-"`
+	Client any `json:"-"`
 }

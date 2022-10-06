@@ -60,7 +60,7 @@ func SettingsFactory(config *Config, chart string, vals *values.Options) Setting
 	return settings
 }
 
-func (settings *Settings) Write(format string, v ...interface{}) {
+func (settings *Settings) Write(format string, v ...any) {
 	format = fmt.Sprintf("[Gitpod] %s\n", format)
 	log.Output(2, fmt.Sprintf(format, v...))
 }

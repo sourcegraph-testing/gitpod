@@ -668,7 +668,7 @@ func file_port_proto_rawDescGZIP() []byte {
 
 var file_port_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_port_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
-var file_port_proto_goTypes = []interface{}{
+var file_port_proto_goTypes = []any{
 	(TunnelVisiblity)(0),            // 0: supervisor.TunnelVisiblity
 	(*TunnelPortRequest)(nil),       // 1: supervisor.TunnelPortRequest
 	(*TunnelPortResponse)(nil),      // 2: supervisor.TunnelPortResponse
@@ -707,7 +707,7 @@ func file_port_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_port_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*TunnelPortRequest); i {
 			case 0:
 				return &v.state
@@ -719,7 +719,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*TunnelPortResponse); i {
 			case 0:
 				return &v.state
@@ -731,7 +731,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*CloseTunnelRequest); i {
 			case 0:
 				return &v.state
@@ -743,7 +743,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*CloseTunnelResponse); i {
 			case 0:
 				return &v.state
@@ -755,7 +755,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*EstablishTunnelRequest); i {
 			case 0:
 				return &v.state
@@ -767,7 +767,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*EstablishTunnelResponse); i {
 			case 0:
 				return &v.state
@@ -779,7 +779,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*AutoTunnelRequest); i {
 			case 0:
 				return &v.state
@@ -791,7 +791,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*AutoTunnelResponse); i {
 			case 0:
 				return &v.state
@@ -803,7 +803,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*RetryAutoExposeRequest); i {
 			case 0:
 				return &v.state
@@ -815,7 +815,7 @@ func file_port_proto_init() {
 				return nil
 			}
 		}
-		file_port_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_port_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*RetryAutoExposeResponse); i {
 			case 0:
 				return &v.state
@@ -828,7 +828,7 @@ func file_port_proto_init() {
 			}
 		}
 	}
-	file_port_proto_msgTypes[4].OneofWrappers = []interface{}{
+	file_port_proto_msgTypes[4].OneofWrappers = []any{
 		(*EstablishTunnelRequest_Desc)(nil),
 		(*EstablishTunnelRequest_Data)(nil),
 	}

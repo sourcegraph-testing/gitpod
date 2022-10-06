@@ -117,7 +117,7 @@ func (a *ConfigAnalyzer) computeFields(configs ...*gitpod.GitpodConfig) []string
 	return fields
 }
 
-func (a *ConfigAnalyzer) valueByField(config *gitpod.GitpodConfig, field string) interface{} {
+func (a *ConfigAnalyzer) valueByField(config *gitpod.GitpodConfig, field string) any {
 	defer func() {
 		if err := recover(); err != nil {
 			a.log.WithField("error", err).WithField("field", field).Error("gitpod config analytics: failed to retrieve value from gitpod config")
@@ -129,7 +129,7 @@ func (a *ConfigAnalyzer) valueByField(config *gitpod.GitpodConfig, field string)
 	return reflect.ValueOf(*config).FieldByName(field).Interface()
 }
 
-func (a *ConfigAnalyzer) computeHash(i interface{}) (string, error) {
+func (a *ConfigAnalyzer) computeHash(i any) (string, error) {
 	b, err := json.Marshal(i)
 	if err != nil {
 		return "", err

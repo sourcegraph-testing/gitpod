@@ -88,7 +88,7 @@ func RegisterMetricsServiceServer(s grpc.ServiceRegistrar, srv MetricsServiceSer
 	s.RegisterService(&MetricsService_ServiceDesc, srv)
 }
 
-func _MetricsService_AddCounter_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _MetricsService_AddCounter_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(AddCounterRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -100,13 +100,13 @@ func _MetricsService_AddCounter_Handler(srv interface{}, ctx context.Context, de
 		Server:     srv,
 		FullMethod: "/ide_metrics_api.MetricsService/AddCounter",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(MetricsServiceServer).AddCounter(ctx, req.(*AddCounterRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _MetricsService_ObserveHistogram_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _MetricsService_ObserveHistogram_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ObserveHistogramRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -118,7 +118,7 @@ func _MetricsService_ObserveHistogram_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/ide_metrics_api.MetricsService/ObserveHistogram",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(MetricsServiceServer).ObserveHistogram(ctx, req.(*ObserveHistogramRequest))
 	}
 	return interceptor(ctx, in, info, handler)

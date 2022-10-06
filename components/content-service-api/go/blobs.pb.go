@@ -437,7 +437,7 @@ func file_blobs_proto_rawDescGZIP() []byte {
 }
 
 var file_blobs_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_blobs_proto_goTypes = []interface{}{
+var file_blobs_proto_goTypes = []any{
 	(*UploadUrlRequest)(nil),    // 0: contentservice.UploadUrlRequest
 	(*UploadUrlResponse)(nil),   // 1: contentservice.UploadUrlResponse
 	(*DownloadUrlRequest)(nil),  // 2: contentservice.DownloadUrlRequest
@@ -465,7 +465,7 @@ func file_blobs_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_blobs_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_blobs_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*UploadUrlRequest); i {
 			case 0:
 				return &v.state
@@ -477,7 +477,7 @@ func file_blobs_proto_init() {
 				return nil
 			}
 		}
-		file_blobs_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_blobs_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*UploadUrlResponse); i {
 			case 0:
 				return &v.state
@@ -489,7 +489,7 @@ func file_blobs_proto_init() {
 				return nil
 			}
 		}
-		file_blobs_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_blobs_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*DownloadUrlRequest); i {
 			case 0:
 				return &v.state
@@ -501,7 +501,7 @@ func file_blobs_proto_init() {
 				return nil
 			}
 		}
-		file_blobs_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_blobs_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*DownloadUrlResponse); i {
 			case 0:
 				return &v.state
@@ -513,7 +513,7 @@ func file_blobs_proto_init() {
 				return nil
 			}
 		}
-		file_blobs_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_blobs_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteRequest); i {
 			case 0:
 				return &v.state
@@ -525,7 +525,7 @@ func file_blobs_proto_init() {
 				return nil
 			}
 		}
-		file_blobs_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_blobs_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteResponse); i {
 			case 0:
 				return &v.state
@@ -538,7 +538,7 @@ func file_blobs_proto_init() {
 			}
 		}
 	}
-	file_blobs_proto_msgTypes[4].OneofWrappers = []interface{}{
+	file_blobs_proto_msgTypes[4].OneofWrappers = []any{
 		(*DeleteRequest_Exact)(nil),
 		(*DeleteRequest_Prefix)(nil),
 	}

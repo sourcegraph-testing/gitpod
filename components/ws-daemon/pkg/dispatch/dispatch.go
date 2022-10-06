@@ -104,7 +104,7 @@ func (d *Dispatch) Start() error {
 	ifac := informers.NewSharedInformerFactoryWithOptions(d.Kubernetes, podInformerResyncInterval, informers.WithNamespace(d.KubernetesNamespace))
 	podInformer := ifac.Core().V1().Pods().Informer()
 	podInformer.AddEventHandler(cache.ResourceEventHandlerFuncs{
-		UpdateFunc: func(oldObj, newObj interface{}) {
+		UpdateFunc: func(oldObj, newObj any) {
 			oldPod, ok := oldObj.(*corev1.Pod)
 			if !ok {
 				return
@@ -116,7 +116,7 @@ func (d *Dispatch) Start() error {
 
 			d.handlePodUpdate(oldPod, newPod)
 		},
-		DeleteFunc: func(obj interface{}) {
+		DeleteFunc: func(obj any) {
 			pod, ok := obj.(*corev1.Pod)
 			if !ok {
 				return

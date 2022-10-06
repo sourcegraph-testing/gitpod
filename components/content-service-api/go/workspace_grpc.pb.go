@@ -108,7 +108,7 @@ func RegisterWorkspaceServiceServer(s grpc.ServiceRegistrar, srv WorkspaceServic
 	s.RegisterService(&WorkspaceService_ServiceDesc, srv)
 }
 
-func _WorkspaceService_WorkspaceDownloadURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceService_WorkspaceDownloadURL_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WorkspaceDownloadURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -120,13 +120,13 @@ func _WorkspaceService_WorkspaceDownloadURL_Handler(srv interface{}, ctx context
 		Server:     srv,
 		FullMethod: "/contentservice.WorkspaceService/WorkspaceDownloadURL",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceServiceServer).WorkspaceDownloadURL(ctx, req.(*WorkspaceDownloadURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceService_DeleteWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceService_DeleteWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DeleteWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -138,13 +138,13 @@ func _WorkspaceService_DeleteWorkspace_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/contentservice.WorkspaceService/DeleteWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceServiceServer).DeleteWorkspace(ctx, req.(*DeleteWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceService_WorkspaceSnapshotExists_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceService_WorkspaceSnapshotExists_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WorkspaceSnapshotExistsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -156,7 +156,7 @@ func _WorkspaceService_WorkspaceSnapshotExists_Handler(srv interface{}, ctx cont
 		Server:     srv,
 		FullMethod: "/contentservice.WorkspaceService/WorkspaceSnapshotExists",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceServiceServer).WorkspaceSnapshotExists(ctx, req.(*WorkspaceSnapshotExistsRequest))
 	}
 	return interceptor(ctx, in, info, handler)

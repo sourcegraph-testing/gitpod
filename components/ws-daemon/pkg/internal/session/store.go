@@ -119,7 +119,7 @@ func (s *Store) NewWorkspace(ctx context.Context, instanceID, location string, c
 	}
 	res.state = WorkspaceInitializing
 	if res.NonPersistentAttrs == nil {
-		res.NonPersistentAttrs = make(map[string]interface{})
+		res.NonPersistentAttrs = make(map[string]any)
 	}
 	res.operatingCondition = sync.NewCond(&sync.Mutex{})
 	res.store = s

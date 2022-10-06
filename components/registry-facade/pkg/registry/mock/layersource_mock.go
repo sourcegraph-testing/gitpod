@@ -52,7 +52,7 @@ func (m *MockLayerSource) Envs(arg0 context.Context, arg1 *api.ImageSpec) ([]reg
 }
 
 // Envs indicates an expected call of Envs.
-func (mr *MockLayerSourceMockRecorder) Envs(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockLayerSourceMockRecorder) Envs(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Envs", reflect.TypeOf((*MockLayerSource)(nil).Envs), arg0, arg1)
 }
@@ -70,7 +70,7 @@ func (m *MockLayerSource) GetBlob(arg0 context.Context, arg1 *api.ImageSpec, arg
 }
 
 // GetBlob indicates an expected call of GetBlob.
-func (mr *MockLayerSourceMockRecorder) GetBlob(arg0, arg1, arg2 interface{}) *gomock.Call {
+func (mr *MockLayerSourceMockRecorder) GetBlob(arg0, arg1, arg2 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlob", reflect.TypeOf((*MockLayerSource)(nil).GetBlob), arg0, arg1, arg2)
 }
@@ -85,7 +85,7 @@ func (m *MockLayerSource) GetLayer(arg0 context.Context, arg1 *api.ImageSpec) ([
 }
 
 // GetLayer indicates an expected call of GetLayer.
-func (mr *MockLayerSourceMockRecorder) GetLayer(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockLayerSourceMockRecorder) GetLayer(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLayer", reflect.TypeOf((*MockLayerSource)(nil).GetLayer), arg0, arg1)
 }
@@ -99,7 +99,7 @@ func (m *MockLayerSource) HasBlob(arg0 context.Context, arg1 *api.ImageSpec, arg
 }
 
 // HasBlob indicates an expected call of HasBlob.
-func (mr *MockLayerSourceMockRecorder) HasBlob(arg0, arg1, arg2 interface{}) *gomock.Call {
+func (mr *MockLayerSourceMockRecorder) HasBlob(arg0, arg1, arg2 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HasBlob", reflect.TypeOf((*MockLayerSource)(nil).HasBlob), arg0, arg1, arg2)
 }

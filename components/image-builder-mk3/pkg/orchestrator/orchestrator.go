@@ -674,7 +674,7 @@ func (c *parentCantCancelContext) Err() error {
 	return err
 }
 
-func (c *parentCantCancelContext) Value(key interface{}) interface{} {
+func (c *parentCantCancelContext) Value(key any) any {
 	return c.Delegate.Value(key)
 }
 

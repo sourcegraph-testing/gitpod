@@ -337,7 +337,7 @@ var ring1Cmd = &cobra.Command{
 				m.FSType = "none"
 			}
 
-			log.WithFields(map[string]interface{}{
+			log.WithFields(map[string]any{
 				"source": m.Source,
 				"target": dst,
 				"fstype": m.FSType,

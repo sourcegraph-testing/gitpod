@@ -544,7 +544,7 @@ func file_info_proto_rawDescGZIP() []byte {
 }
 
 var file_info_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_info_proto_goTypes = []interface{}{
+var file_info_proto_goTypes = []any{
 	(*WorkspaceInfoRequest)(nil),                 // 0: supervisor.WorkspaceInfoRequest
 	(*WorkspaceInfoResponse)(nil),                // 1: supervisor.WorkspaceInfoResponse
 	(*WorkspaceInfoResponse_GitpodAPI)(nil),      // 2: supervisor.WorkspaceInfoResponse.GitpodAPI
@@ -570,7 +570,7 @@ func file_info_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_info_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_info_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInfoRequest); i {
 			case 0:
 				return &v.state
@@ -582,7 +582,7 @@ func file_info_proto_init() {
 				return nil
 			}
 		}
-		file_info_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_info_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInfoResponse); i {
 			case 0:
 				return &v.state
@@ -594,7 +594,7 @@ func file_info_proto_init() {
 				return nil
 			}
 		}
-		file_info_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_info_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInfoResponse_GitpodAPI); i {
 			case 0:
 				return &v.state
@@ -606,7 +606,7 @@ func file_info_proto_init() {
 				return nil
 			}
 		}
-		file_info_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_info_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInfoResponse_Repository); i {
 			case 0:
 				return &v.state
@@ -618,7 +618,7 @@ func file_info_proto_init() {
 				return nil
 			}
 		}
-		file_info_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_info_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInfoResponse_WorkspaceClass); i {
 			case 0:
 				return &v.state
@@ -631,7 +631,7 @@ func file_info_proto_init() {
 			}
 		}
 	}
-	file_info_proto_msgTypes[1].OneofWrappers = []interface{}{
+	file_info_proto_msgTypes[1].OneofWrappers = []any{
 		(*WorkspaceInfoResponse_WorkspaceLocationFile)(nil),
 		(*WorkspaceInfoResponse_WorkspaceLocationFolder)(nil),
 	}

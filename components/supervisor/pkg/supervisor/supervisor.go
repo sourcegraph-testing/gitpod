@@ -1542,7 +1542,7 @@ func analyseConfigChanges(ctx context.Context, wscfg *Config, w analytics.Writer
 					w.Track(analytics.TrackMessage{
 						Identity: analytics.Identity{UserID: info.Workspace.OwnerID},
 						Event:    "gitpod_config_changed",
-						Properties: map[string]interface{}{
+						Properties: map[string]any{
 							"key":         field,
 							"instanceId":  wscfg.WorkspaceInstanceID,
 							"workspaceId": wscfg.WorkspaceID,

@@ -93,7 +93,7 @@ func (s *Server) ChannelForward(ctx context.Context, session *Session, targetCon
 }
 
 func TrackIDECloseSignal(session *Session) {
-	propertics := make(map[string]interface{})
+	propertics := make(map[string]any)
 	propertics["workspaceId"] = session.WorkspaceID
 	propertics["instanceId"] = session.InstanceID
 	propertics["clientKind"] = "ssh"

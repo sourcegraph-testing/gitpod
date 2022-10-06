@@ -507,7 +507,7 @@ type muxVarsContext struct {
 	vars map[string]string
 }
 
-func (ctx *muxVarsContext) Value(key interface{}) interface{} {
+func (ctx *muxVarsContext) Value(key any) any {
 	if keyStr, ok := key.(string); ok {
 		if keyStr == "vars" {
 			return ctx.vars

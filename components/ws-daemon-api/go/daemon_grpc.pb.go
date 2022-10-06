@@ -145,7 +145,7 @@ func RegisterWorkspaceContentServiceServer(s grpc.ServiceRegistrar, srv Workspac
 	s.RegisterService(&WorkspaceContentService_ServiceDesc, srv)
 }
 
-func _WorkspaceContentService_InitWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceContentService_InitWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(InitWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -157,13 +157,13 @@ func _WorkspaceContentService_InitWorkspace_Handler(srv interface{}, ctx context
 		Server:     srv,
 		FullMethod: "/wsdaemon.WorkspaceContentService/InitWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceContentServiceServer).InitWorkspace(ctx, req.(*InitWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceContentService_WaitForInit_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceContentService_WaitForInit_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WaitForInitRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -175,13 +175,13 @@ func _WorkspaceContentService_WaitForInit_Handler(srv interface{}, ctx context.C
 		Server:     srv,
 		FullMethod: "/wsdaemon.WorkspaceContentService/WaitForInit",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceContentServiceServer).WaitForInit(ctx, req.(*WaitForInitRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceContentService_TakeSnapshot_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceContentService_TakeSnapshot_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(TakeSnapshotRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -193,13 +193,13 @@ func _WorkspaceContentService_TakeSnapshot_Handler(srv interface{}, ctx context.
 		Server:     srv,
 		FullMethod: "/wsdaemon.WorkspaceContentService/TakeSnapshot",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceContentServiceServer).TakeSnapshot(ctx, req.(*TakeSnapshotRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceContentService_DisposeWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceContentService_DisposeWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DisposeWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -211,13 +211,13 @@ func _WorkspaceContentService_DisposeWorkspace_Handler(srv interface{}, ctx cont
 		Server:     srv,
 		FullMethod: "/wsdaemon.WorkspaceContentService/DisposeWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceContentServiceServer).DisposeWorkspace(ctx, req.(*DisposeWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceContentService_BackupWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceContentService_BackupWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(BackupWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -229,7 +229,7 @@ func _WorkspaceContentService_BackupWorkspace_Handler(srv interface{}, ctx conte
 		Server:     srv,
 		FullMethod: "/wsdaemon.WorkspaceContentService/BackupWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceContentServiceServer).BackupWorkspace(ctx, req.(*BackupWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)

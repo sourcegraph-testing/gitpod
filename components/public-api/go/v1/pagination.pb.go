@@ -110,7 +110,7 @@ func file_gitpod_v1_pagination_proto_rawDescGZIP() []byte {
 }
 
 var file_gitpod_v1_pagination_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_gitpod_v1_pagination_proto_goTypes = []interface{}{
+var file_gitpod_v1_pagination_proto_goTypes = []any{
 	(*Pagination)(nil), // 0: gitpod.v1.Pagination
 }
 var file_gitpod_v1_pagination_proto_depIdxs = []int32{
@@ -127,7 +127,7 @@ func file_gitpod_v1_pagination_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_gitpod_v1_pagination_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_pagination_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*Pagination); i {
 			case 0:
 				return &v.state

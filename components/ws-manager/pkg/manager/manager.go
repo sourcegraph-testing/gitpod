@@ -588,7 +588,7 @@ func validateStartWorkspaceRequest(req *api.StartWorkspaceRequest) error {
 	return nil
 }
 
-func isValidWorkspaceType(value interface{}) error {
+func isValidWorkspaceType(value any) error {
 	s, ok := value.(api.WorkspaceType)
 	if !ok {
 		return xerrors.Errorf("value is not a workspace type")
@@ -602,7 +602,7 @@ func isValidWorkspaceType(value interface{}) error {
 	return nil
 }
 
-func areValidPorts(value interface{}) error {
+func areValidPorts(value any) error {
 	s, ok := value.([]*api.PortSpec)
 	if !ok {
 		return xerrors.Errorf("value is not a port spec list")
@@ -707,7 +707,7 @@ func deleteWorkspacePodForce(clientset client.Client, name, namespace string) er
 
 	return nil
 }
-func areValidFeatureFlags(value interface{}) error {
+func areValidFeatureFlags(value any) error {
 	s, ok := value.([]api.WorkspaceFeatureFlag)
 	if !ok {
 		return xerrors.Errorf("value not a feature flag list")

@@ -184,7 +184,7 @@ func TestExtractInjectSecretsFromInitializer(t *testing.T) {
 				t.Errorf("unexpected GatherSecretsFromInitializer (-want +got):\n%s", diff)
 			}
 
-			ignoreUnexported := []interface{}{
+			ignoreUnexported := []any{
 				api.WorkspaceInitializer{},
 				api.WorkspaceInitializer_Git{},
 				api.GitInitializer{},

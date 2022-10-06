@@ -92,7 +92,7 @@ func RegisterUsageReportServiceServer(s grpc.ServiceRegistrar, srv UsageReportSe
 	s.RegisterService(&UsageReportService_ServiceDesc, srv)
 }
 
-func _UsageReportService_UploadURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UsageReportService_UploadURL_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UsageReportUploadURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -104,13 +104,13 @@ func _UsageReportService_UploadURL_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/contentservice.UsageReportService/UploadURL",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UsageReportServiceServer).UploadURL(ctx, req.(*UsageReportUploadURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UsageReportService_DownloadURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UsageReportService_DownloadURL_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UsageReportDownloadURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -122,7 +122,7 @@ func _UsageReportService_DownloadURL_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/contentservice.UsageReportService/DownloadURL",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UsageReportServiceServer).DownloadURL(ctx, req.(*UsageReportDownloadURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)

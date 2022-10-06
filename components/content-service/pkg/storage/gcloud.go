@@ -36,7 +36,7 @@ import (
 
 var _ DirectAccess = &DirectGCPStorage{}
 
-var validateExistsInFilesystem = validation.By(func(o interface{}) error {
+var validateExistsInFilesystem = validation.By(func(o any) error {
 	s, ok := o.(string)
 	if !ok {
 		return xerrors.Errorf("field should be string")

@@ -180,7 +180,7 @@ func RegisterPrebuildsServiceServer(s grpc.ServiceRegistrar, srv PrebuildsServic
 	s.RegisterService(&PrebuildsService_ServiceDesc, srv)
 }
 
-func _PrebuildsService_GetPrebuild_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PrebuildsService_GetPrebuild_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetPrebuildRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -192,13 +192,13 @@ func _PrebuildsService_GetPrebuild_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/gitpod.v1.PrebuildsService/GetPrebuild",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(PrebuildsServiceServer).GetPrebuild(ctx, req.(*GetPrebuildRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PrebuildsService_GetRunningPrebuild_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PrebuildsService_GetRunningPrebuild_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetRunningPrebuildRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -210,13 +210,13 @@ func _PrebuildsService_GetRunningPrebuild_Handler(srv interface{}, ctx context.C
 		Server:     srv,
 		FullMethod: "/gitpod.v1.PrebuildsService/GetRunningPrebuild",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(PrebuildsServiceServer).GetRunningPrebuild(ctx, req.(*GetRunningPrebuildRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PrebuildsService_ListenToPrebuildStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _PrebuildsService_ListenToPrebuildStatus_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(ListenToPrebuildStatusRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -237,7 +237,7 @@ func (x *prebuildsServiceListenToPrebuildStatusServer) Send(m *ListenToPrebuildS
 	return x.ServerStream.SendMsg(m)
 }
 
-func _PrebuildsService_ListenToPrebuildLogs_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _PrebuildsService_ListenToPrebuildLogs_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(ListenToPrebuildLogsRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err

@@ -43,7 +43,7 @@ func (m *MockWorkspaceContentServiceClient) EXPECT() *MockWorkspaceContentServic
 // BackupWorkspace mocks base method.
 func (m *MockWorkspaceContentServiceClient) BackupWorkspace(arg0 context.Context, arg1 *api.BackupWorkspaceRequest, arg2 ...grpc.CallOption) (*api.BackupWorkspaceResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -54,16 +54,16 @@ func (m *MockWorkspaceContentServiceClient) BackupWorkspace(arg0 context.Context
 }
 
 // BackupWorkspace indicates an expected call of BackupWorkspace.
-func (mr *MockWorkspaceContentServiceClientMockRecorder) BackupWorkspace(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceClientMockRecorder) BackupWorkspace(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BackupWorkspace", reflect.TypeOf((*MockWorkspaceContentServiceClient)(nil).BackupWorkspace), varargs...)
 }
 
 // DisposeWorkspace mocks base method.
 func (m *MockWorkspaceContentServiceClient) DisposeWorkspace(arg0 context.Context, arg1 *api.DisposeWorkspaceRequest, arg2 ...grpc.CallOption) (*api.DisposeWorkspaceResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -74,16 +74,16 @@ func (m *MockWorkspaceContentServiceClient) DisposeWorkspace(arg0 context.Contex
 }
 
 // DisposeWorkspace indicates an expected call of DisposeWorkspace.
-func (mr *MockWorkspaceContentServiceClientMockRecorder) DisposeWorkspace(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceClientMockRecorder) DisposeWorkspace(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisposeWorkspace", reflect.TypeOf((*MockWorkspaceContentServiceClient)(nil).DisposeWorkspace), varargs...)
 }
 
 // InitWorkspace mocks base method.
 func (m *MockWorkspaceContentServiceClient) InitWorkspace(arg0 context.Context, arg1 *api.InitWorkspaceRequest, arg2 ...grpc.CallOption) (*api.InitWorkspaceResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -94,16 +94,16 @@ func (m *MockWorkspaceContentServiceClient) InitWorkspace(arg0 context.Context, 
 }
 
 // InitWorkspace indicates an expected call of InitWorkspace.
-func (mr *MockWorkspaceContentServiceClientMockRecorder) InitWorkspace(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceClientMockRecorder) InitWorkspace(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InitWorkspace", reflect.TypeOf((*MockWorkspaceContentServiceClient)(nil).InitWorkspace), varargs...)
 }
 
 // TakeSnapshot mocks base method.
 func (m *MockWorkspaceContentServiceClient) TakeSnapshot(arg0 context.Context, arg1 *api.TakeSnapshotRequest, arg2 ...grpc.CallOption) (*api.TakeSnapshotResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -114,16 +114,16 @@ func (m *MockWorkspaceContentServiceClient) TakeSnapshot(arg0 context.Context, a
 }
 
 // TakeSnapshot indicates an expected call of TakeSnapshot.
-func (mr *MockWorkspaceContentServiceClientMockRecorder) TakeSnapshot(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceClientMockRecorder) TakeSnapshot(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TakeSnapshot", reflect.TypeOf((*MockWorkspaceContentServiceClient)(nil).TakeSnapshot), varargs...)
 }
 
 // WaitForInit mocks base method.
 func (m *MockWorkspaceContentServiceClient) WaitForInit(arg0 context.Context, arg1 *api.WaitForInitRequest, arg2 ...grpc.CallOption) (*api.WaitForInitResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -134,9 +134,9 @@ func (m *MockWorkspaceContentServiceClient) WaitForInit(arg0 context.Context, ar
 }
 
 // WaitForInit indicates an expected call of WaitForInit.
-func (mr *MockWorkspaceContentServiceClientMockRecorder) WaitForInit(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceClientMockRecorder) WaitForInit(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitForInit", reflect.TypeOf((*MockWorkspaceContentServiceClient)(nil).WaitForInit), varargs...)
 }
 
@@ -174,7 +174,7 @@ func (m *MockWorkspaceContentServiceServer) BackupWorkspace(arg0 context.Context
 }
 
 // BackupWorkspace indicates an expected call of BackupWorkspace.
-func (mr *MockWorkspaceContentServiceServerMockRecorder) BackupWorkspace(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceServerMockRecorder) BackupWorkspace(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BackupWorkspace", reflect.TypeOf((*MockWorkspaceContentServiceServer)(nil).BackupWorkspace), arg0, arg1)
 }
@@ -189,7 +189,7 @@ func (m *MockWorkspaceContentServiceServer) DisposeWorkspace(arg0 context.Contex
 }
 
 // DisposeWorkspace indicates an expected call of DisposeWorkspace.
-func (mr *MockWorkspaceContentServiceServerMockRecorder) DisposeWorkspace(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceServerMockRecorder) DisposeWorkspace(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DisposeWorkspace", reflect.TypeOf((*MockWorkspaceContentServiceServer)(nil).DisposeWorkspace), arg0, arg1)
 }
@@ -204,7 +204,7 @@ func (m *MockWorkspaceContentServiceServer) InitWorkspace(arg0 context.Context, 
 }
 
 // InitWorkspace indicates an expected call of InitWorkspace.
-func (mr *MockWorkspaceContentServiceServerMockRecorder) InitWorkspace(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceServerMockRecorder) InitWorkspace(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InitWorkspace", reflect.TypeOf((*MockWorkspaceContentServiceServer)(nil).InitWorkspace), arg0, arg1)
 }
@@ -219,7 +219,7 @@ func (m *MockWorkspaceContentServiceServer) TakeSnapshot(arg0 context.Context, a
 }
 
 // TakeSnapshot indicates an expected call of TakeSnapshot.
-func (mr *MockWorkspaceContentServiceServerMockRecorder) TakeSnapshot(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceServerMockRecorder) TakeSnapshot(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TakeSnapshot", reflect.TypeOf((*MockWorkspaceContentServiceServer)(nil).TakeSnapshot), arg0, arg1)
 }
@@ -234,7 +234,7 @@ func (m *MockWorkspaceContentServiceServer) WaitForInit(arg0 context.Context, ar
 }
 
 // WaitForInit indicates an expected call of WaitForInit.
-func (mr *MockWorkspaceContentServiceServerMockRecorder) WaitForInit(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockWorkspaceContentServiceServerMockRecorder) WaitForInit(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitForInit", reflect.TypeOf((*MockWorkspaceContentServiceServer)(nil).WaitForInit), arg0, arg1)
 }
@@ -277,7 +277,7 @@ func (m *MockInWorkspaceServiceClient) EXPECT() *MockInWorkspaceServiceClientMoc
 // EvacuateCGroup mocks base method.
 func (m *MockInWorkspaceServiceClient) EvacuateCGroup(arg0 context.Context, arg1 *api.EvacuateCGroupRequest, arg2 ...grpc.CallOption) (*api.EvacuateCGroupResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -288,16 +288,16 @@ func (m *MockInWorkspaceServiceClient) EvacuateCGroup(arg0 context.Context, arg1
 }
 
 // EvacuateCGroup indicates an expected call of EvacuateCGroup.
-func (mr *MockInWorkspaceServiceClientMockRecorder) EvacuateCGroup(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) EvacuateCGroup(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EvacuateCGroup", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).EvacuateCGroup), varargs...)
 }
 
 // MountProc mocks base method.
 func (m *MockInWorkspaceServiceClient) MountProc(arg0 context.Context, arg1 *api.MountProcRequest, arg2 ...grpc.CallOption) (*api.MountProcResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -308,16 +308,16 @@ func (m *MockInWorkspaceServiceClient) MountProc(arg0 context.Context, arg1 *api
 }
 
 // MountProc indicates an expected call of MountProc.
-func (mr *MockInWorkspaceServiceClientMockRecorder) MountProc(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) MountProc(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "MountProc", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).MountProc), varargs...)
 }
 
 // MountSysfs mocks base method.
 func (m *MockInWorkspaceServiceClient) MountSysfs(arg0 context.Context, arg1 *api.MountProcRequest, arg2 ...grpc.CallOption) (*api.MountProcResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -328,16 +328,16 @@ func (m *MockInWorkspaceServiceClient) MountSysfs(arg0 context.Context, arg1 *ap
 }
 
 // MountSysfs indicates an expected call of MountSysfs.
-func (mr *MockInWorkspaceServiceClientMockRecorder) MountSysfs(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) MountSysfs(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "MountSysfs", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).MountSysfs), varargs...)
 }
 
 // PrepareForUserNS mocks base method.
 func (m *MockInWorkspaceServiceClient) PrepareForUserNS(arg0 context.Context, arg1 *api.PrepareForUserNSRequest, arg2 ...grpc.CallOption) (*api.PrepareForUserNSResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -348,16 +348,16 @@ func (m *MockInWorkspaceServiceClient) PrepareForUserNS(arg0 context.Context, ar
 }
 
 // PrepareForUserNS indicates an expected call of PrepareForUserNS.
-func (mr *MockInWorkspaceServiceClientMockRecorder) PrepareForUserNS(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) PrepareForUserNS(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "PrepareForUserNS", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).PrepareForUserNS), varargs...)
 }
 
 // SetupPairVeths mocks base method.
 func (m *MockInWorkspaceServiceClient) SetupPairVeths(arg0 context.Context, arg1 *api.SetupPairVethsRequest, arg2 ...grpc.CallOption) (*api.SetupPairVethsResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -368,16 +368,16 @@ func (m *MockInWorkspaceServiceClient) SetupPairVeths(arg0 context.Context, arg1
 }
 
 // SetupPairVeths indicates an expected call of SetupPairVeths.
-func (mr *MockInWorkspaceServiceClientMockRecorder) SetupPairVeths(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) SetupPairVeths(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetupPairVeths", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).SetupPairVeths), varargs...)
 }
 
 // Teardown mocks base method.
 func (m *MockInWorkspaceServiceClient) Teardown(arg0 context.Context, arg1 *api.TeardownRequest, arg2 ...grpc.CallOption) (*api.TeardownResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -388,16 +388,16 @@ func (m *MockInWorkspaceServiceClient) Teardown(arg0 context.Context, arg1 *api.
 }
 
 // Teardown indicates an expected call of Teardown.
-func (mr *MockInWorkspaceServiceClientMockRecorder) Teardown(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) Teardown(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Teardown", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).Teardown), varargs...)
 }
 
 // UmountProc mocks base method.
 func (m *MockInWorkspaceServiceClient) UmountProc(arg0 context.Context, arg1 *api.UmountProcRequest, arg2 ...grpc.CallOption) (*api.UmountProcResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -408,16 +408,16 @@ func (m *MockInWorkspaceServiceClient) UmountProc(arg0 context.Context, arg1 *ap
 }
 
 // UmountProc indicates an expected call of UmountProc.
-func (mr *MockInWorkspaceServiceClientMockRecorder) UmountProc(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) UmountProc(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UmountProc", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).UmountProc), varargs...)
 }
 
 // UmountSysfs mocks base method.
 func (m *MockInWorkspaceServiceClient) UmountSysfs(arg0 context.Context, arg1 *api.UmountProcRequest, arg2 ...grpc.CallOption) (*api.UmountProcResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -428,16 +428,16 @@ func (m *MockInWorkspaceServiceClient) UmountSysfs(arg0 context.Context, arg1 *a
 }
 
 // UmountSysfs indicates an expected call of UmountSysfs.
-func (mr *MockInWorkspaceServiceClientMockRecorder) UmountSysfs(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) UmountSysfs(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UmountSysfs", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).UmountSysfs), varargs...)
 }
 
 // WorkspaceInfo mocks base method.
 func (m *MockInWorkspaceServiceClient) WorkspaceInfo(arg0 context.Context, arg1 *api.WorkspaceInfoRequest, arg2 ...grpc.CallOption) (*api.WorkspaceInfoResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -448,16 +448,16 @@ func (m *MockInWorkspaceServiceClient) WorkspaceInfo(arg0 context.Context, arg1 
 }
 
 // WorkspaceInfo indicates an expected call of WorkspaceInfo.
-func (mr *MockInWorkspaceServiceClientMockRecorder) WorkspaceInfo(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) WorkspaceInfo(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WorkspaceInfo", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).WorkspaceInfo), varargs...)
 }
 
 // WriteIDMapping mocks base method.
 func (m *MockInWorkspaceServiceClient) WriteIDMapping(arg0 context.Context, arg1 *api.WriteIDMappingRequest, arg2 ...grpc.CallOption) (*api.WriteIDMappingResponse, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1}
+	varargs := []any{arg0, arg1}
 	for _, a := range arg2 {
 		varargs = append(varargs, a)
 	}
@@ -468,8 +468,8 @@ func (m *MockInWorkspaceServiceClient) WriteIDMapping(arg0 context.Context, arg1
 }
 
 // WriteIDMapping indicates an expected call of WriteIDMapping.
-func (mr *MockInWorkspaceServiceClientMockRecorder) WriteIDMapping(arg0, arg1 interface{}, arg2 ...interface{}) *gomock.Call {
+func (mr *MockInWorkspaceServiceClientMockRecorder) WriteIDMapping(arg0, arg1 any, arg2 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1}, arg2...)
+	varargs := append([]any{arg0, arg1}, arg2...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WriteIDMapping", reflect.TypeOf((*MockInWorkspaceServiceClient)(nil).WriteIDMapping), varargs...)
 }

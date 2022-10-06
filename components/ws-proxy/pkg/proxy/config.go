@@ -186,7 +186,7 @@ func (c *BuiltinPagesConfig) Validate() error {
 func validateFileExists(addition string) validation.RuleFunc {
 	tpRoot := os.Getenv("TELEPRESENCE_ROOT")
 
-	return func(value interface{}) error {
+	return func(value any) error {
 		pth, ok := value.(string)
 		if !ok {
 			return xerrors.Errorf("validateFileExists: value must be a string")

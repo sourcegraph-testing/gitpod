@@ -31,12 +31,12 @@ type FixtureTest struct {
 	Path     string
 	GoldPath func(path string) string
 	Test     FixtureTestFunc
-	Fixture  func() interface{}
-	Gold     func() interface{}
+	Fixture  func() any
+	Gold     func() any
 }
 
 // FixtureTestFunc implements the actual fixture test
-type FixtureTestFunc func(t *testing.T, fixture interface{}) interface{}
+type FixtureTestFunc func(t *testing.T, fixture any) any
 
 // Run executes the fixture test - do not forget to call this one
 func (ft *FixtureTest) Run() {

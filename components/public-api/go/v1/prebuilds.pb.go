@@ -827,7 +827,7 @@ func file_gitpod_v1_prebuilds_proto_rawDescGZIP() []byte {
 
 var file_gitpod_v1_prebuilds_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_gitpod_v1_prebuilds_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
-var file_gitpod_v1_prebuilds_proto_goTypes = []interface{}{
+var file_gitpod_v1_prebuilds_proto_goTypes = []any{
 	(PrebuildStatus_Phase)(0),              // 0: gitpod.v1.PrebuildStatus.Phase
 	(PrebuildStatus_Result)(0),             // 1: gitpod.v1.PrebuildStatus.Result
 	(*GetPrebuildRequest)(nil),             // 2: gitpod.v1.GetPrebuildRequest
@@ -874,7 +874,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 	}
 	file_gitpod_v1_workspaces_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_gitpod_v1_prebuilds_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*GetPrebuildRequest); i {
 			case 0:
 				return &v.state
@@ -886,7 +886,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*GetPrebuildResponse); i {
 			case 0:
 				return &v.state
@@ -898,7 +898,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*GetRunningPrebuildRequest); i {
 			case 0:
 				return &v.state
@@ -910,7 +910,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*GetRunningPrebuildResponse); i {
 			case 0:
 				return &v.state
@@ -922,7 +922,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToPrebuildStatusRequest); i {
 			case 0:
 				return &v.state
@@ -934,7 +934,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToPrebuildStatusResponse); i {
 			case 0:
 				return &v.state
@@ -946,7 +946,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToPrebuildLogsRequest); i {
 			case 0:
 				return &v.state
@@ -958,7 +958,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToPrebuildLogsResponse); i {
 			case 0:
 				return &v.state
@@ -970,7 +970,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*Prebuild); i {
 			case 0:
 				return &v.state
@@ -982,7 +982,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*PrebuildSpec); i {
 			case 0:
 				return &v.state
@@ -994,7 +994,7 @@ func file_gitpod_v1_prebuilds_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_prebuilds_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_prebuilds_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*PrebuildStatus); i {
 			case 0:
 				return &v.state

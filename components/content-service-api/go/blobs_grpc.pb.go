@@ -108,7 +108,7 @@ func RegisterBlobServiceServer(s grpc.ServiceRegistrar, srv BlobServiceServer) {
 	s.RegisterService(&BlobService_ServiceDesc, srv)
 }
 
-func _BlobService_UploadUrl_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BlobService_UploadUrl_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UploadUrlRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -120,13 +120,13 @@ func _BlobService_UploadUrl_Handler(srv interface{}, ctx context.Context, dec fu
 		Server:     srv,
 		FullMethod: "/contentservice.BlobService/UploadUrl",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(BlobServiceServer).UploadUrl(ctx, req.(*UploadUrlRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BlobService_DownloadUrl_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BlobService_DownloadUrl_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DownloadUrlRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -138,13 +138,13 @@ func _BlobService_DownloadUrl_Handler(srv interface{}, ctx context.Context, dec 
 		Server:     srv,
 		FullMethod: "/contentservice.BlobService/DownloadUrl",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(BlobServiceServer).DownloadUrl(ctx, req.(*DownloadUrlRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BlobService_Delete_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BlobService_Delete_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DeleteRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -156,7 +156,7 @@ func _BlobService_Delete_Handler(srv interface{}, ctx context.Context, dec func(
 		Server:     srv,
 		FullMethod: "/contentservice.BlobService/Delete",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(BlobServiceServer).Delete(ctx, req.(*DeleteRequest))
 	}
 	return interceptor(ctx, in, info, handler)

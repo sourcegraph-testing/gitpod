@@ -108,7 +108,7 @@ func RegisterIDEPluginServiceServer(s grpc.ServiceRegistrar, srv IDEPluginServic
 	s.RegisterService(&IDEPluginService_ServiceDesc, srv)
 }
 
-func _IDEPluginService_UploadURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IDEPluginService_UploadURL_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(PluginUploadURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -120,13 +120,13 @@ func _IDEPluginService_UploadURL_Handler(srv interface{}, ctx context.Context, d
 		Server:     srv,
 		FullMethod: "/ideplugin.IDEPluginService/UploadURL",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(IDEPluginServiceServer).UploadURL(ctx, req.(*PluginUploadURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IDEPluginService_DownloadURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IDEPluginService_DownloadURL_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(PluginDownloadURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -138,13 +138,13 @@ func _IDEPluginService_DownloadURL_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/ideplugin.IDEPluginService/DownloadURL",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(IDEPluginServiceServer).DownloadURL(ctx, req.(*PluginDownloadURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _IDEPluginService_PluginHash_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _IDEPluginService_PluginHash_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(PluginHashRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -156,7 +156,7 @@ func _IDEPluginService_PluginHash_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/ideplugin.IDEPluginService/PluginHash",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(IDEPluginServiceServer).PluginHash(ctx, req.(*PluginHashRequest))
 	}
 	return interceptor(ctx, in, info, handler)

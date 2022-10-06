@@ -91,7 +91,7 @@ func (ce ConditionalEncoder) EncodeEntry(e zapcore.Entry, fields []zapcore.Field
 	}
 
 	// Extract values
-	values := make(map[string]interface{})
+	values := make(map[string]any)
 	for _, key := range lang.Fields {
 		path := strings.Split(key, ">")
 		val, typ, _, err := jsonparser.Get(data, path...)
