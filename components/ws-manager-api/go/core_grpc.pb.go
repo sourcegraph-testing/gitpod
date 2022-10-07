@@ -307,7 +307,7 @@ func RegisterWorkspaceManagerServer(s grpc.ServiceRegistrar, srv WorkspaceManage
 	s.RegisterService(&WorkspaceManager_ServiceDesc, srv)
 }
 
-func _WorkspaceManager_GetWorkspaces_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_GetWorkspaces_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetWorkspacesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -319,13 +319,13 @@ func _WorkspaceManager_GetWorkspaces_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/GetWorkspaces",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).GetWorkspaces(ctx, req.(*GetWorkspacesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_StartWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_StartWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(StartWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -337,13 +337,13 @@ func _WorkspaceManager_StartWorkspace_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/StartWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).StartWorkspace(ctx, req.(*StartWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_StopWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_StopWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(StopWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -355,13 +355,13 @@ func _WorkspaceManager_StopWorkspace_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/StopWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).StopWorkspace(ctx, req.(*StopWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_DescribeWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_DescribeWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DescribeWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -373,13 +373,13 @@ func _WorkspaceManager_DescribeWorkspace_Handler(srv interface{}, ctx context.Co
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/DescribeWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).DescribeWorkspace(ctx, req.(*DescribeWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_BackupWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_BackupWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(BackupWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -391,13 +391,13 @@ func _WorkspaceManager_BackupWorkspace_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/BackupWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).BackupWorkspace(ctx, req.(*BackupWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_Subscribe_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _WorkspaceManager_Subscribe_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(SubscribeRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -418,7 +418,7 @@ func (x *workspaceManagerSubscribeServer) Send(m *SubscribeResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _WorkspaceManager_MarkActive_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_MarkActive_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(MarkActiveRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -430,13 +430,13 @@ func _WorkspaceManager_MarkActive_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/MarkActive",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).MarkActive(ctx, req.(*MarkActiveRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_SetTimeout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_SetTimeout_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SetTimeoutRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -448,13 +448,13 @@ func _WorkspaceManager_SetTimeout_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/SetTimeout",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).SetTimeout(ctx, req.(*SetTimeoutRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_ControlPort_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_ControlPort_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ControlPortRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -466,13 +466,13 @@ func _WorkspaceManager_ControlPort_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/ControlPort",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).ControlPort(ctx, req.(*ControlPortRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_TakeSnapshot_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_TakeSnapshot_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(TakeSnapshotRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -484,13 +484,13 @@ func _WorkspaceManager_TakeSnapshot_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/TakeSnapshot",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).TakeSnapshot(ctx, req.(*TakeSnapshotRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_ControlAdmission_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_ControlAdmission_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ControlAdmissionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -502,13 +502,13 @@ func _WorkspaceManager_ControlAdmission_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/ControlAdmission",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).ControlAdmission(ctx, req.(*ControlAdmissionRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_DeleteVolumeSnapshot_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_DeleteVolumeSnapshot_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DeleteVolumeSnapshotRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -520,13 +520,13 @@ func _WorkspaceManager_DeleteVolumeSnapshot_Handler(srv interface{}, ctx context
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/DeleteVolumeSnapshot",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).DeleteVolumeSnapshot(ctx, req.(*DeleteVolumeSnapshotRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_UpdateSSHKey_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_UpdateSSHKey_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UpdateSSHKeyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -538,13 +538,13 @@ func _WorkspaceManager_UpdateSSHKey_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/UpdateSSHKey",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).UpdateSSHKey(ctx, req.(*UpdateSSHKeyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspaceManager_DescribeCluster_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceManager_DescribeCluster_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DescribeClusterRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -556,7 +556,7 @@ func _WorkspaceManager_DescribeCluster_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/wsman.WorkspaceManager/DescribeCluster",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceManagerServer).DescribeCluster(ctx, req.(*DescribeClusterRequest))
 	}
 	return interceptor(ctx, in, info, handler)

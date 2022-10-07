@@ -92,7 +92,7 @@ func RegisterHeadlessLogServiceServer(s grpc.ServiceRegistrar, srv HeadlessLogSe
 	s.RegisterService(&HeadlessLogService_ServiceDesc, srv)
 }
 
-func _HeadlessLogService_LogDownloadURL_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _HeadlessLogService_LogDownloadURL_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(LogDownloadURLRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -104,13 +104,13 @@ func _HeadlessLogService_LogDownloadURL_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/contentservice.HeadlessLogService/LogDownloadURL",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(HeadlessLogServiceServer).LogDownloadURL(ctx, req.(*LogDownloadURLRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _HeadlessLogService_ListLogs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _HeadlessLogService_ListLogs_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ListLogsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -122,7 +122,7 @@ func _HeadlessLogService_ListLogs_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/contentservice.HeadlessLogService/ListLogs",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(HeadlessLogServiceServer).ListLogs(ctx, req.(*ListLogsRequest))
 	}
 	return interceptor(ctx, in, info, handler)

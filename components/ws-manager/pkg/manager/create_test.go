@@ -38,7 +38,7 @@ func TestCreateDefiniteWorkspacePod(t *testing.T) {
 	}
 	type tpl struct {
 		FN      string
-		Content interface{}
+		Content any
 		Setter  func(fn string)
 	}
 	toTpl := func(path string, cls WorkspaceClass, c *config.WorkspacePodTemplateConfiguration) []tpl {
@@ -70,7 +70,7 @@ func TestCreateDefiniteWorkspacePod(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:    t,
 		Path: "testdata/cdwp_*.json",
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*fixture)
 
 			mgmtCfg := forTestingOnlyManagerConfig()
@@ -182,8 +182,8 @@ func TestCreateDefiniteWorkspacePod(t *testing.T) {
 
 			return &result
 		},
-		Fixture: func() interface{} { return &fixture{} },
-		Gold:    func() interface{} { return &gold{} },
+		Fixture: func() any { return &fixture{} },
+		Gold:    func() any { return &gold{} },
 	}
 	test.Run()
 }
@@ -213,7 +213,7 @@ func TestCreatePVCForWorkspacePod(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:    t,
 		Path: "testdata/cpwp_*.json",
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*fixture)
 
 			mgmtCfg := forTestingOnlyManagerConfig()
@@ -299,8 +299,8 @@ func TestCreatePVCForWorkspacePod(t *testing.T) {
 
 			return &result
 		},
-		Fixture: func() interface{} { return &fixture{} },
-		Gold:    func() interface{} { return &gold{} },
+		Fixture: func() any { return &fixture{} },
+		Gold:    func() any { return &gold{} },
 	}
 	test.Run()
 }

@@ -1130,7 +1130,7 @@ func file_initializer_proto_rawDescGZIP() []byte {
 
 var file_initializer_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_initializer_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
-var file_initializer_proto_goTypes = []interface{}{
+var file_initializer_proto_goTypes = []any{
 	(CloneTargetMode)(0),                     // 0: contentservice.CloneTargetMode
 	(GitAuthMethod)(0),                       // 1: contentservice.GitAuthMethod
 	(*WorkspaceInitializer)(nil),             // 2: contentservice.WorkspaceInitializer
@@ -1175,7 +1175,7 @@ func file_initializer_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_initializer_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInitializer); i {
 			case 0:
 				return &v.state
@@ -1187,7 +1187,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*CompositeInitializer); i {
 			case 0:
 				return &v.state
@@ -1199,7 +1199,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*FileDownloadInitializer); i {
 			case 0:
 				return &v.state
@@ -1211,7 +1211,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*EmptyInitializer); i {
 			case 0:
 				return &v.state
@@ -1223,7 +1223,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*GitInitializer); i {
 			case 0:
 				return &v.state
@@ -1235,7 +1235,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*GitConfig); i {
 			case 0:
 				return &v.state
@@ -1247,7 +1247,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*SnapshotInitializer); i {
 			case 0:
 				return &v.state
@@ -1259,7 +1259,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*PrebuildInitializer); i {
 			case 0:
 				return &v.state
@@ -1271,7 +1271,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*FromBackupInitializer); i {
 			case 0:
 				return &v.state
@@ -1283,7 +1283,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*GitStatus); i {
 			case 0:
 				return &v.state
@@ -1295,7 +1295,7 @@ func file_initializer_proto_init() {
 				return nil
 			}
 		}
-		file_initializer_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_initializer_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*FileDownloadInitializer_FileInfo); i {
 			case 0:
 				return &v.state
@@ -1308,7 +1308,7 @@ func file_initializer_proto_init() {
 			}
 		}
 	}
-	file_initializer_proto_msgTypes[0].OneofWrappers = []interface{}{
+	file_initializer_proto_msgTypes[0].OneofWrappers = []any{
 		(*WorkspaceInitializer_Empty)(nil),
 		(*WorkspaceInitializer_Git)(nil),
 		(*WorkspaceInitializer_Snapshot)(nil),

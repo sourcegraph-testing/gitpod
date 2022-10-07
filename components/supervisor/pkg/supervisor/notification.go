@@ -216,14 +216,14 @@ func (srv *NotificationService) Respond(ctx context.Context, req *api.RespondReq
 	defer srv.mutex.Unlock()
 	pending, ok := srv.pendingNotifications[req.RequestId]
 	if !ok {
-		log.WithFields(map[string]interface{}{
+		log.WithFields(map[string]any{
 			"RequestId": req.RequestId,
 			"Action":    req.Response.Action,
 		}).Info("Invalid or late response to notification")
 		return nil, status.Errorf(codes.DeadlineExceeded, "Invalid or late response to notification")
 	}
 	if !isActionAllowed(req.Response.Action, pending.message.Request) {
-		log.WithFields(map[string]interface{}{
+		log.WithFields(map[string]any{
 			"Notification": pending.message,
 			"Action":       req.Response.Action,
 		}).Error("Invalid user action on notification")

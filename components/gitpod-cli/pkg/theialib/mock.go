@@ -47,7 +47,7 @@ func (m *MockTheiaCLIService) GetGitToken(arg0 GetGitTokenRequest) (*GetGitToken
 }
 
 // GetGitToken indicates an expected call of GetGitToken
-func (mr *MockTheiaCLIServiceMockRecorder) GetGitToken(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) GetGitToken(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGitToken", reflect.TypeOf((*MockTheiaCLIService)(nil).GetGitToken), arg0)
 }
@@ -62,7 +62,7 @@ func (m *MockTheiaCLIService) OpenPreview(arg0 OpenPreviewRequest) (*OpenPreview
 }
 
 // OpenPreview indicates an expected call of OpenPreview
-func (mr *MockTheiaCLIServiceMockRecorder) OpenPreview(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) OpenPreview(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OpenPreview", reflect.TypeOf((*MockTheiaCLIService)(nil).OpenPreview), arg0)
 }
@@ -77,7 +77,7 @@ func (m *MockTheiaCLIService) OpenFile(arg0 OpenFileRequest) (*OpenFileResponse,
 }
 
 // OpenFile indicates an expected call of OpenFile
-func (mr *MockTheiaCLIServiceMockRecorder) OpenFile(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) OpenFile(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OpenFile", reflect.TypeOf((*MockTheiaCLIService)(nil).OpenFile), arg0)
 }
@@ -92,7 +92,7 @@ func (m *MockTheiaCLIService) IsFileOpen(arg0 IsFileOpenRequest) (*IsFileOpenRes
 }
 
 // IsFileOpen indicates an expected call of IsFileOpen
-func (mr *MockTheiaCLIServiceMockRecorder) IsFileOpen(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) IsFileOpen(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsFileOpen", reflect.TypeOf((*MockTheiaCLIService)(nil).IsFileOpen), arg0)
 }
@@ -107,7 +107,7 @@ func (m *MockTheiaCLIService) GetEnvVars(arg0 GetEnvvarsRequest) (*GetEnvvarsRes
 }
 
 // GetEnvVars indicates an expected call of GetEnvVars
-func (mr *MockTheiaCLIServiceMockRecorder) GetEnvVars(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) GetEnvVars(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvVars", reflect.TypeOf((*MockTheiaCLIService)(nil).GetEnvVars), arg0)
 }
@@ -122,7 +122,7 @@ func (m *MockTheiaCLIService) SetEnvVar(arg0 SetEnvvarRequest) (*SetEnvvarRespon
 }
 
 // SetEnvVar indicates an expected call of SetEnvVar
-func (mr *MockTheiaCLIServiceMockRecorder) SetEnvVar(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) SetEnvVar(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetEnvVar", reflect.TypeOf((*MockTheiaCLIService)(nil).SetEnvVar), arg0)
 }
@@ -137,7 +137,7 @@ func (m *MockTheiaCLIService) DeleteEnvVar(arg0 DeleteEnvvarRequest) (*DeleteEnv
 }
 
 // DeleteEnvVar indicates an expected call of DeleteEnvVar
-func (mr *MockTheiaCLIServiceMockRecorder) DeleteEnvVar(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) DeleteEnvVar(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvVar", reflect.TypeOf((*MockTheiaCLIService)(nil).DeleteEnvVar), arg0)
 }
@@ -152,7 +152,7 @@ func (m *MockTheiaCLIService) GetPortURL(arg0 GetPortURLRequest) (*GetPortURLRes
 }
 
 // GetPortURL indicates an expected call of GetPortURL
-func (mr *MockTheiaCLIServiceMockRecorder) GetPortURL(arg0 interface{}) *gomock.Call {
+func (mr *MockTheiaCLIServiceMockRecorder) GetPortURL(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPortURL", reflect.TypeOf((*MockTheiaCLIService)(nil).GetPortURL), arg0)
 }

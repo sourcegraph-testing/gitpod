@@ -32,7 +32,7 @@ func TestActOnPodEvent(t *testing.T) {
 			res = strings.ReplaceAll(res, "/status_", "/actOnPodEvent_")
 			return res
 		},
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*workspaceObjects)
 			manager := Manager{
 				Clientset: fake.NewClientBuilder().Build(),
@@ -52,15 +52,15 @@ func TestActOnPodEvent(t *testing.T) {
 			}
 			return &result
 		},
-		Fixture: func() interface{} { return &workspaceObjects{} },
-		Gold:    func() interface{} { return &actOnPodEventResult{} },
+		Fixture: func() any { return &workspaceObjects{} },
+		Gold:    func() any { return &actOnPodEventResult{} },
 	}
 	test.Run()
 }
 
 type actRecord struct {
 	Func   string
-	Params map[string]interface{}
+	Params map[string]any
 }
 
 type actRecorder struct {
@@ -70,7 +70,7 @@ type actRecorder struct {
 func (r *actRecorder) waitForWorkspaceReady(ctx context.Context, pod *corev1.Pod) (err error) {
 	r.Records = append(r.Records, actRecord{
 		Func: "waitForWorkspaceReady",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"pod": pod,
 		},
 	})
@@ -80,7 +80,7 @@ func (r *actRecorder) waitForWorkspaceReady(ctx context.Context, pod *corev1.Pod
 func (r *actRecorder) stopWorkspace(ctx context.Context, workspaceID string, gracePeriod time.Duration) (err error) {
 	r.Records = append(r.Records, actRecord{
 		Func: "stopWorkspace",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"workspaceID": workspaceID,
 			"gracePeriod": gracePeriod,
 		},
@@ -91,7 +91,7 @@ func (r *actRecorder) stopWorkspace(ctx context.Context, workspaceID string, gra
 func (r *actRecorder) markWorkspace(ctx context.Context, workspaceID string, annotations ...*annotation) error {
 	r.Records = append(r.Records, actRecord{
 		Func: "markWorkspace",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"workspaceID": workspaceID,
 			"annotations": annotations,
 		},
@@ -102,7 +102,7 @@ func (r *actRecorder) markWorkspace(ctx context.Context, workspaceID string, ann
 func (r *actRecorder) clearInitializerFromMap(podName string) {
 	r.Records = append(r.Records, actRecord{
 		Func: "clearInitializerFromMap",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"podName": podName,
 		},
 	})
@@ -111,7 +111,7 @@ func (r *actRecorder) clearInitializerFromMap(podName string) {
 func (r *actRecorder) initializeWorkspaceContent(ctx context.Context, pod *corev1.Pod) (err error) {
 	r.Records = append(r.Records, actRecord{
 		Func: "initializeWorkspaceContent",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"pod": pod,
 		},
 	})
@@ -121,7 +121,7 @@ func (r *actRecorder) initializeWorkspaceContent(ctx context.Context, pod *corev
 func (r *actRecorder) finalizeWorkspaceContent(ctx context.Context, wso *workspaceObjects) {
 	r.Records = append(r.Records, actRecord{
 		Func: "finalizeWorkspaceContent",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"wso": wso,
 		},
 	})
@@ -130,7 +130,7 @@ func (r *actRecorder) finalizeWorkspaceContent(ctx context.Context, wso *workspa
 func (r *actRecorder) modifyFinalizer(ctx context.Context, workspaceID string, finalizer string, add bool) error {
 	r.Records = append(r.Records, actRecord{
 		Func: "modifyFinalizer",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"workspaceID": workspaceID,
 			"finalizer":   finalizer,
 			"add":         add,
@@ -142,7 +142,7 @@ func (r *actRecorder) modifyFinalizer(ctx context.Context, workspaceID string, f
 func (r *actRecorder) deleteWorkspaceSecrets(ctx context.Context, podName string) error {
 	r.Records = append(r.Records, actRecord{
 		Func: "deleteWorkspaceSecrets",
-		Params: map[string]interface{}{
+		Params: map[string]any{
 			"podName": podName,
 		},
 	})

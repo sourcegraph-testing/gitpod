@@ -18,24 +18,24 @@ import (
 
 var Lang = gval.NewLanguage(
 	// Logic
-	gval.InfixShortCircuit("&&", func(lhs interface{}) (interface{}, bool) { return false, lhs == false }),
-	gval.InfixShortCircuit("||", func(lhs interface{}) (interface{}, bool) { return true, lhs == true }),
+	gval.InfixShortCircuit("&&", func(lhs any) (any, bool) { return false, lhs == false }),
+	gval.InfixShortCircuit("||", func(lhs any) (any, bool) { return true, lhs == true }),
 
-	gval.InfixBoolOperator("&&", func(lhs, rhs bool) (interface{}, error) { return lhs && rhs, nil }),
-	gval.InfixBoolOperator("||", func(lhs, rhs bool) (interface{}, error) { return lhs || rhs, nil }),
+	gval.InfixBoolOperator("&&", func(lhs, rhs bool) (any, error) { return lhs && rhs, nil }),
+	gval.InfixBoolOperator("||", func(lhs, rhs bool) (any, error) { return lhs || rhs, nil }),
 
-	gval.InfixBoolOperator("==", func(lhs, rhs bool) (interface{}, error) { return lhs == rhs, nil }),
-	gval.InfixBoolOperator("!=", func(lhs, rhs bool) (interface{}, error) { return lhs != rhs, nil }),
+	gval.InfixBoolOperator("==", func(lhs, rhs bool) (any, error) { return lhs == rhs, nil }),
+	gval.InfixBoolOperator("!=", func(lhs, rhs bool) (any, error) { return lhs != rhs, nil }),
 
 	// Arithmetic
 
-	gval.InfixNumberOperator("==", func(lhs, rhs float64) (interface{}, error) { return lhs == rhs, nil }),
-	gval.InfixNumberOperator("!=", func(lhs, rhs float64) (interface{}, error) { return lhs != rhs, nil }),
+	gval.InfixNumberOperator("==", func(lhs, rhs float64) (any, error) { return lhs == rhs, nil }),
+	gval.InfixNumberOperator("!=", func(lhs, rhs float64) (any, error) { return lhs != rhs, nil }),
 
-	gval.InfixNumberOperator("<", func(lhs, rhs float64) (interface{}, error) { return lhs < rhs, nil }),
-	gval.InfixNumberOperator("<=", func(lhs, rhs float64) (interface{}, error) { return lhs <= rhs, nil }),
-	gval.InfixNumberOperator(">", func(lhs, rhs float64) (interface{}, error) { return lhs > rhs, nil }),
-	gval.InfixNumberOperator(">=", func(lhs, rhs float64) (interface{}, error) { return lhs >= rhs, nil }),
+	gval.InfixNumberOperator("<", func(lhs, rhs float64) (any, error) { return lhs < rhs, nil }),
+	gval.InfixNumberOperator("<=", func(lhs, rhs float64) (any, error) { return lhs <= rhs, nil }),
+	gval.InfixNumberOperator(">", func(lhs, rhs float64) (any, error) { return lhs > rhs, nil }),
+	gval.InfixNumberOperator(">=", func(lhs, rhs float64) (any, error) { return lhs >= rhs, nil }),
 
 	// Text
 
@@ -43,8 +43,8 @@ var Lang = gval.NewLanguage(
 
 	// Base
 
-	gval.InfixOperator("==", func(lhs, rhs interface{}) (interface{}, error) { return reflect.DeepEqual(lhs, rhs), nil }),
-	gval.InfixOperator("!=", func(lhs, rhs interface{}) (interface{}, error) { return !reflect.DeepEqual(lhs, rhs), nil }),
+	gval.InfixOperator("==", func(lhs, rhs any) (any, error) { return reflect.DeepEqual(lhs, rhs), nil }),
+	gval.InfixOperator("!=", func(lhs, rhs any) (any, error) { return !reflect.DeepEqual(lhs, rhs), nil }),
 
 	gval.PrefixExtension(scanner.Int, parseNumber),
 	gval.PrefixExtension(scanner.Float, parseNumber),
@@ -76,7 +76,7 @@ func Compile(expression string) (gval.Evaluable, error) {
 	return Lang.NewEvaluable(expression)
 }
 
-func Execute(eval gval.Evaluable, data map[string]interface{}) (interface{}, error) {
+func Execute(eval gval.Evaluable, data map[string]any) (any, error) {
 	return eval(context.Background(), data)
 }
 
@@ -98,7 +98,7 @@ func parseNumber(c context.Context, p *gval.Parser) (gval.Evaluable, error) {
 
 func regEx(a, b gval.Evaluable) (gval.Evaluable, error) {
 	if !b.IsConst() {
-		return func(c context.Context, o interface{}) (interface{}, error) {
+		return func(c context.Context, o any) (any, error) {
 			a, err := a.EvalString(c, o)
 			if err != nil {
 				return nil, err
@@ -119,7 +119,7 @@ func regEx(a, b gval.Evaluable) (gval.Evaluable, error) {
 	if err != nil {
 		return nil, err
 	}
-	return func(c context.Context, v interface{}) (interface{}, error) {
+	return func(c context.Context, v any) (any, error) {
 		s, err := a.EvalString(c, v)
 		if err != nil {
 			return nil, err

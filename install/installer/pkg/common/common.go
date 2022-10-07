@@ -601,7 +601,7 @@ func ThirdPartyContainerRepo(configRegistry string, thirdPartyRegistry string) s
 }
 
 // ToJSONString returns the serialized JSON string of an object
-func ToJSONString(input interface{}) ([]byte, error) {
+func ToJSONString(input any) ([]byte, error) {
 	return json.MarshalIndent(input, "", "  ")
 }
 

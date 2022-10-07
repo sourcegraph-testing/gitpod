@@ -392,7 +392,7 @@ func file_ideplugin_proto_rawDescGZIP() []byte {
 }
 
 var file_ideplugin_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_ideplugin_proto_goTypes = []interface{}{
+var file_ideplugin_proto_goTypes = []any{
 	(*PluginUploadURLRequest)(nil),    // 0: ideplugin.PluginUploadURLRequest
 	(*PluginUploadURLResponse)(nil),   // 1: ideplugin.PluginUploadURLResponse
 	(*PluginDownloadURLRequest)(nil),  // 2: ideplugin.PluginDownloadURLRequest
@@ -420,7 +420,7 @@ func file_ideplugin_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_ideplugin_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_ideplugin_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*PluginUploadURLRequest); i {
 			case 0:
 				return &v.state
@@ -432,7 +432,7 @@ func file_ideplugin_proto_init() {
 				return nil
 			}
 		}
-		file_ideplugin_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_ideplugin_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*PluginUploadURLResponse); i {
 			case 0:
 				return &v.state
@@ -444,7 +444,7 @@ func file_ideplugin_proto_init() {
 				return nil
 			}
 		}
-		file_ideplugin_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_ideplugin_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*PluginDownloadURLRequest); i {
 			case 0:
 				return &v.state
@@ -456,7 +456,7 @@ func file_ideplugin_proto_init() {
 				return nil
 			}
 		}
-		file_ideplugin_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_ideplugin_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*PluginDownloadURLResponse); i {
 			case 0:
 				return &v.state
@@ -468,7 +468,7 @@ func file_ideplugin_proto_init() {
 				return nil
 			}
 		}
-		file_ideplugin_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_ideplugin_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*PluginHashRequest); i {
 			case 0:
 				return &v.state
@@ -480,7 +480,7 @@ func file_ideplugin_proto_init() {
 				return nil
 			}
 		}
-		file_ideplugin_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_ideplugin_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*PluginHashResponse); i {
 			case 0:
 				return &v.state

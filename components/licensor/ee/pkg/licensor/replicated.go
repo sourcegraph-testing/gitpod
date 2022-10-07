@@ -17,10 +17,10 @@ const (
 )
 
 type replicatedFields struct {
-	Field string      `json:"field"`
-	Title string      `json:"title"`
-	Type  string      `json:"type"`
-	Value interface{} `json:"value"` // This is of type "fieldType"
+	Field string `json:"field"`
+	Title string `json:"title"`
+	Type  string `json:"type"`
+	Value any    `json:"value"` // This is of type "fieldType"
 }
 
 // replicatedLicensePayload exists to convert the JSON structure to a LicensePayload

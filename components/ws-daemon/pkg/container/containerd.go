@@ -150,7 +150,7 @@ func (s *Containerd) start() {
 	}
 }
 
-func (s *Containerd) handleContainerdEvent(ev interface{}) {
+func (s *Containerd) handleContainerdEvent(ev any) {
 	switch evt := ev.(type) {
 	case *events.ContainerCreate:
 		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)

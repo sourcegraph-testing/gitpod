@@ -321,7 +321,7 @@ func (gp *APIoverJSONRPC) InstanceUpdates(ctx context.Context, instanceID string
 	return chn, nil
 }
 
-func (gp *APIoverJSONRPC) handler(ctx context.Context, conn *jsonrpc2.Conn, req *jsonrpc2.Request) (result interface{}, err error) {
+func (gp *APIoverJSONRPC) handler(ctx context.Context, conn *jsonrpc2.Conn, req *jsonrpc2.Request) (result any, err error) {
 	if gp == nil {
 		err = errNotConnected
 		return
@@ -360,7 +360,7 @@ func (gp *APIoverJSONRPC) GetOwnerToken(ctx context.Context, workspaceID string)
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 	_params = append(_params, workspaceID)
 
 	var _result string
@@ -378,10 +378,10 @@ func (gp *APIoverJSONRPC) AdminBlockUser(ctx context.Context, message *AdminBloc
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 	_params = append(_params, message)
 
-	var _result interface{}
+	var _result any
 	err = gp.C.Call(ctx, "adminBlockUser", _params, &_result)
 	if err != nil {
 		return err
@@ -395,7 +395,7 @@ func (gp *APIoverJSONRPC) GetLoggedInUser(ctx context.Context) (res *User, err e
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result User
 	err = gp.C.Call(ctx, "getLoggedInUser", _params, &result)
@@ -413,7 +413,7 @@ func (gp *APIoverJSONRPC) UpdateLoggedInUser(ctx context.Context, user *User) (r
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, user)
 
@@ -433,7 +433,7 @@ func (gp *APIoverJSONRPC) GetAuthProviders(ctx context.Context) (res []*AuthProv
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result []*AuthProviderInfo
 	err = gp.C.Call(ctx, "getAuthProviders", _params, &result)
@@ -451,7 +451,7 @@ func (gp *APIoverJSONRPC) GetOwnAuthProviders(ctx context.Context) (res []*AuthP
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result []*AuthProviderEntry
 	err = gp.C.Call(ctx, "getOwnAuthProviders", _params, &result)
@@ -469,7 +469,7 @@ func (gp *APIoverJSONRPC) UpdateOwnAuthProvider(ctx context.Context, params *Upd
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, params)
 
@@ -487,7 +487,7 @@ func (gp *APIoverJSONRPC) DeleteOwnAuthProvider(ctx context.Context, params *Del
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, params)
 
@@ -505,7 +505,7 @@ func (gp *APIoverJSONRPC) GetConfiguration(ctx context.Context) (res *Configurat
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result Configuration
 	err = gp.C.Call(ctx, "getConfiguration", _params, &result)
@@ -523,7 +523,7 @@ func (gp *APIoverJSONRPC) GetGitpodTokenScopes(ctx context.Context, tokenHash st
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, tokenHash)
 
@@ -543,7 +543,7 @@ func (gp *APIoverJSONRPC) GetToken(ctx context.Context, query *GetTokenSearchOpt
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, query)
 
@@ -563,7 +563,7 @@ func (gp *APIoverJSONRPC) GetPortAuthenticationToken(ctx context.Context, worksp
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -583,7 +583,7 @@ func (gp *APIoverJSONRPC) DeleteAccount(ctx context.Context) (err error) {
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	err = gp.C.Call(ctx, "deleteAccount", _params, nil)
 	if err != nil {
@@ -599,7 +599,7 @@ func (gp *APIoverJSONRPC) GetClientRegion(ctx context.Context) (res string, err 
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result string
 	err = gp.C.Call(ctx, "getClientRegion", _params, &result)
@@ -617,7 +617,7 @@ func (gp *APIoverJSONRPC) HasPermission(ctx context.Context, permission *Permiss
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, permission)
 
@@ -637,7 +637,7 @@ func (gp *APIoverJSONRPC) GetWorkspaces(ctx context.Context, options *GetWorkspa
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, options)
 
@@ -657,7 +657,7 @@ func (gp *APIoverJSONRPC) GetWorkspaceOwner(ctx context.Context, workspaceID str
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -677,7 +677,7 @@ func (gp *APIoverJSONRPC) GetWorkspaceUsers(ctx context.Context, workspaceID str
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -697,7 +697,7 @@ func (gp *APIoverJSONRPC) GetFeaturedRepositories(ctx context.Context) (res []*W
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result []*WhitelistedRepository
 	err = gp.C.Call(ctx, "getFeaturedRepositories", _params, &result)
@@ -715,7 +715,7 @@ func (gp *APIoverJSONRPC) GetWorkspace(ctx context.Context, id string) (res *Wor
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, id)
 
@@ -735,7 +735,7 @@ func (gp *APIoverJSONRPC) IsWorkspaceOwner(ctx context.Context, workspaceID stri
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -755,7 +755,7 @@ func (gp *APIoverJSONRPC) CreateWorkspace(ctx context.Context, options *CreateWo
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, options)
 
@@ -775,7 +775,7 @@ func (gp *APIoverJSONRPC) StartWorkspace(ctx context.Context, id string, options
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, id)
 	_params = append(_params, options)
@@ -796,7 +796,7 @@ func (gp *APIoverJSONRPC) StopWorkspace(ctx context.Context, id string) (err err
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, id)
 
@@ -814,7 +814,7 @@ func (gp *APIoverJSONRPC) DeleteWorkspace(ctx context.Context, id string) (err e
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, id)
 
@@ -832,7 +832,7 @@ func (gp *APIoverJSONRPC) SetWorkspaceDescription(ctx context.Context, id string
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, id)
 	_params = append(_params, desc)
@@ -851,7 +851,7 @@ func (gp *APIoverJSONRPC) ControlAdmission(ctx context.Context, id string, level
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, id)
 	_params = append(_params, level)
@@ -870,7 +870,7 @@ func (gp *APIoverJSONRPC) WatchWorkspaceImageBuildLogs(ctx context.Context, work
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -888,7 +888,7 @@ func (gp *APIoverJSONRPC) IsPrebuildDone(ctx context.Context, pwsid string) (res
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, pwsid)
 
@@ -908,7 +908,7 @@ func (gp *APIoverJSONRPC) SetWorkspaceTimeout(ctx context.Context, workspaceID s
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 	_params = append(_params, duration)
@@ -929,7 +929,7 @@ func (gp *APIoverJSONRPC) GetWorkspaceTimeout(ctx context.Context, workspaceID s
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -949,7 +949,7 @@ func (gp *APIoverJSONRPC) SendHeartBeat(ctx context.Context, options *SendHeartB
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, options)
 
@@ -967,7 +967,7 @@ func (gp *APIoverJSONRPC) UpdateWorkspaceUserPin(ctx context.Context, id string,
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, id)
 	_params = append(_params, action)
@@ -986,7 +986,7 @@ func (gp *APIoverJSONRPC) GetOpenPorts(ctx context.Context, workspaceID string) 
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -1006,7 +1006,7 @@ func (gp *APIoverJSONRPC) OpenPort(ctx context.Context, workspaceID string, port
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 	_params = append(_params, port)
@@ -1027,7 +1027,7 @@ func (gp *APIoverJSONRPC) ClosePort(ctx context.Context, workspaceID string, por
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 	_params = append(_params, port)
@@ -1046,7 +1046,7 @@ func (gp *APIoverJSONRPC) GetUserStorageResource(ctx context.Context, options *G
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, options)
 
@@ -1066,7 +1066,7 @@ func (gp *APIoverJSONRPC) UpdateUserStorageResource(ctx context.Context, options
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, options)
 
@@ -1084,7 +1084,7 @@ func (gp *APIoverJSONRPC) GetEnvVars(ctx context.Context) (res []*UserEnvVarValu
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result []*UserEnvVarValue
 	err = gp.C.Call(ctx, "getEnvVars", _params, &result)
@@ -1102,7 +1102,7 @@ func (gp *APIoverJSONRPC) SetEnvVar(ctx context.Context, variable *UserEnvVarVal
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, variable)
 
@@ -1120,7 +1120,7 @@ func (gp *APIoverJSONRPC) DeleteEnvVar(ctx context.Context, variable *UserEnvVar
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, variable)
 
@@ -1138,7 +1138,7 @@ func (gp *APIoverJSONRPC) HasSSHPublicKey(ctx context.Context) (res bool, err er
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 	err = gp.C.Call(ctx, "hasSSHPublicKey", _params, &res)
 	return
 }
@@ -1149,7 +1149,7 @@ func (gp *APIoverJSONRPC) GetSSHPublicKeys(ctx context.Context) (res []*UserSSHP
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 	err = gp.C.Call(ctx, "getSSHPublicKeys", _params, &res)
 	return
 }
@@ -1160,7 +1160,7 @@ func (gp *APIoverJSONRPC) AddSSHPublicKey(ctx context.Context, value *SSHPublicK
 		err = errNotConnected
 		return
 	}
-	_params := []interface{}{value}
+	_params := []any{value}
 	err = gp.C.Call(ctx, "addSSHPublicKey", _params, &res)
 	return
 }
@@ -1171,7 +1171,7 @@ func (gp *APIoverJSONRPC) DeleteSSHPublicKey(ctx context.Context, id string) (er
 		err = errNotConnected
 		return
 	}
-	_params := []interface{}{id}
+	_params := []any{id}
 	err = gp.C.Call(ctx, "deleteSSHPublicKey", _params, nil)
 	return
 }
@@ -1182,7 +1182,7 @@ func (gp *APIoverJSONRPC) GetContentBlobUploadURL(ctx context.Context, name stri
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, name)
 
@@ -1202,7 +1202,7 @@ func (gp *APIoverJSONRPC) GetContentBlobDownloadURL(ctx context.Context, name st
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, name)
 
@@ -1222,7 +1222,7 @@ func (gp *APIoverJSONRPC) GetGitpodTokens(ctx context.Context) (res []*APIToken,
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	var result []*APIToken
 	err = gp.C.Call(ctx, "getGitpodTokens", _params, &result)
@@ -1240,7 +1240,7 @@ func (gp *APIoverJSONRPC) GenerateNewGitpodToken(ctx context.Context, options *G
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, options)
 
@@ -1260,7 +1260,7 @@ func (gp *APIoverJSONRPC) DeleteGitpodToken(ctx context.Context, tokenHash strin
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, tokenHash)
 
@@ -1278,7 +1278,7 @@ func (gp *APIoverJSONRPC) SendFeedback(ctx context.Context, feedback string) (re
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, feedback)
 
@@ -1298,7 +1298,7 @@ func (gp *APIoverJSONRPC) RegisterGithubApp(ctx context.Context, installationID 
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, installationID)
 
@@ -1316,7 +1316,7 @@ func (gp *APIoverJSONRPC) TakeSnapshot(ctx context.Context, options *TakeSnapsho
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, options)
 
@@ -1336,7 +1336,7 @@ func (gp *APIoverJSONRPC) WaitForSnapshot(ctx context.Context, snapshotId string
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, snapshotId)
 
@@ -1351,7 +1351,7 @@ func (gp *APIoverJSONRPC) GetSnapshots(ctx context.Context, workspaceID string) 
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -1371,7 +1371,7 @@ func (gp *APIoverJSONRPC) StoreLayout(ctx context.Context, workspaceID string, l
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 	_params = append(_params, layoutData)
@@ -1390,7 +1390,7 @@ func (gp *APIoverJSONRPC) GetLayout(ctx context.Context, workspaceID string) (re
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, workspaceID)
 
@@ -1410,7 +1410,7 @@ func (gp *APIoverJSONRPC) GuessGitTokenScopes(ctx context.Context, params *Guess
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, params)
 
@@ -1430,7 +1430,7 @@ func (gp *APIoverJSONRPC) TrackEvent(ctx context.Context, params *RemoteTrackMes
 		err = errNotConnected
 		return
 	}
-	var _params []interface{}
+	var _params []any
 
 	_params = append(_params, params)
 	err = gp.C.Call(ctx, "trackEvent", _params, nil)
@@ -1442,7 +1442,7 @@ func (gp *APIoverJSONRPC) GetSupportedWorkspaceClasses(ctx context.Context) (res
 		err = errNotConnected
 		return
 	}
-	_params := []interface{}{}
+	_params := []any{}
 	err = gp.C.Call(ctx, "getSupportedWorkspaceClasses", _params, &res)
 	return
 }
@@ -1644,10 +1644,10 @@ type Workspace struct {
 	// The source where to get the workspace base image from. This source is resolved
 	// during workspace creation. Once a base image has been built the information in here
 	// is superseded by baseImageNameResolved.
-	ImageSource interface{} `json:"imageSource,omitempty"`
-	OwnerID     string      `json:"ownerId,omitempty"`
-	Pinned      bool        `json:"pinned,omitempty"`
-	Shareable   bool        `json:"shareable,omitempty"`
+	ImageSource any    `json:"imageSource,omitempty"`
+	OwnerID     string `json:"ownerId,omitempty"`
+	Pinned      bool   `json:"pinned,omitempty"`
+	Shareable   bool   `json:"shareable,omitempty"`
 
 	// Mark as deleted (user-facing). The actual deletion of the workspace content is executed
 	// with a (configurable) delay
@@ -1670,7 +1670,7 @@ type WorkspaceConfig struct {
 	GitConfig    map[string]string `json:"gitConfig,omitempty"`
 	Github       *GithubAppConfig  `json:"github,omitempty"`
 	Ide          string            `json:"ide,omitempty"`
-	Image        interface{}       `json:"image,omitempty"`
+	Image        any               `json:"image,omitempty"`
 
 	// Where the config object originates from.
 	//
@@ -1796,14 +1796,14 @@ type GithubAppConfig struct {
 
 // GithubAppPrebuildConfig is the GithubAppPrebuildConfig message type
 type GithubAppPrebuildConfig struct {
-	AddBadge              bool        `json:"addBadge,omitempty"`
-	AddCheck              interface{} `json:"addCheck,omitempty"`
-	AddComment            bool        `json:"addComment,omitempty"`
-	AddLabel              interface{} `json:"addLabel,omitempty"`
-	Branches              bool        `json:"branches,omitempty"`
-	Master                bool        `json:"master,omitempty"`
-	PullRequests          bool        `json:"pullRequests,omitempty"`
-	PullRequestsFromForks bool        `json:"pullRequestsFromForks,omitempty"`
+	AddBadge              bool `json:"addBadge,omitempty"`
+	AddCheck              any  `json:"addCheck,omitempty"`
+	AddComment            bool `json:"addComment,omitempty"`
+	AddLabel              any  `json:"addLabel,omitempty"`
+	Branches              bool `json:"branches,omitempty"`
+	Master                bool `json:"master,omitempty"`
+	PullRequests          bool `json:"pullRequests,omitempty"`
+	PullRequestsFromForks bool `json:"pullRequestsFromForks,omitempty"`
 }
 
 // ImageConfigFile is the ImageConfigFile message type
@@ -1823,14 +1823,14 @@ type PortConfig struct {
 
 // TaskConfig is the TaskConfig message type
 type TaskConfig struct {
-	Before   string                 `json:"before,omitempty"`
-	Command  string                 `json:"command,omitempty"`
-	Env      map[string]interface{} `json:"env,omitempty"`
-	Init     string                 `json:"init,omitempty"`
-	Name     string                 `json:"name,omitempty"`
-	OpenIn   string                 `json:"openIn,omitempty"`
-	OpenMode string                 `json:"openMode,omitempty"`
-	Prebuild string                 `json:"prebuild,omitempty"`
+	Before   string         `json:"before,omitempty"`
+	Command  string         `json:"command,omitempty"`
+	Env      map[string]any `json:"env,omitempty"`
+	Init     string         `json:"init,omitempty"`
+	Name     string         `json:"name,omitempty"`
+	OpenIn   string         `json:"openIn,omitempty"`
+	OpenMode string         `json:"openMode,omitempty"`
+	Prebuild string         `json:"prebuild,omitempty"`
 }
 
 // VSCodeConfig is the VSCodeConfig message type
@@ -1916,7 +1916,7 @@ type PickOAuth2ConfigClientIDClientSecret struct {
 
 // UpdateOwnAuthProviderParams is the UpdateOwnAuthProviderParams message type
 type UpdateOwnAuthProviderParams struct {
-	Entry interface{} `json:"entry,omitempty"`
+	Entry any `json:"entry,omitempty"`
 }
 
 // CreateWorkspaceOptions is the CreateWorkspaceOptions message type
@@ -1961,8 +1961,8 @@ type SupportedWorkspaceClass struct {
 }
 
 type RemoteTrackMessage struct {
-	Event      string      `json:"event,omitempty"`
-	Properties interface{} `json:"properties,omitempty"`
+	Event      string `json:"event,omitempty"`
+	Properties any    `json:"properties,omitempty"`
 }
 
 // WorkspaceInstanceUser is the WorkspaceInstanceUser message type

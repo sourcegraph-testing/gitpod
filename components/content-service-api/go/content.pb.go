@@ -146,7 +146,7 @@ func file_content_proto_rawDescGZIP() []byte {
 }
 
 var file_content_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_content_proto_goTypes = []interface{}{
+var file_content_proto_goTypes = []any{
 	(*DeleteUserContentRequest)(nil),  // 0: contentservice.DeleteUserContentRequest
 	(*DeleteUserContentResponse)(nil), // 1: contentservice.DeleteUserContentResponse
 }
@@ -166,7 +166,7 @@ func file_content_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_content_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_content_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteUserContentRequest); i {
 			case 0:
 				return &v.state
@@ -178,7 +178,7 @@ func file_content_proto_init() {
 				return nil
 			}
 		}
-		file_content_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_content_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteUserContentResponse); i {
 			case 0:
 				return &v.state

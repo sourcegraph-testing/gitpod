@@ -305,7 +305,7 @@ func RegisterWorkspacesServiceServer(s grpc.ServiceRegistrar, srv WorkspacesServ
 	s.RegisterService(&WorkspacesService_ServiceDesc, srv)
 }
 
-func _WorkspacesService_ListWorkspaces_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspacesService_ListWorkspaces_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ListWorkspacesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -317,13 +317,13 @@ func _WorkspacesService_ListWorkspaces_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/gitpod.v1.WorkspacesService/ListWorkspaces",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspacesServiceServer).ListWorkspaces(ctx, req.(*ListWorkspacesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspacesService_GetWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspacesService_GetWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -335,13 +335,13 @@ func _WorkspacesService_GetWorkspace_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/gitpod.v1.WorkspacesService/GetWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspacesServiceServer).GetWorkspace(ctx, req.(*GetWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspacesService_GetOwnerToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspacesService_GetOwnerToken_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetOwnerTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -353,13 +353,13 @@ func _WorkspacesService_GetOwnerToken_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/gitpod.v1.WorkspacesService/GetOwnerToken",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspacesServiceServer).GetOwnerToken(ctx, req.(*GetOwnerTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspacesService_CreateAndStartWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspacesService_CreateAndStartWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(CreateAndStartWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -371,13 +371,13 @@ func _WorkspacesService_CreateAndStartWorkspace_Handler(srv interface{}, ctx con
 		Server:     srv,
 		FullMethod: "/gitpod.v1.WorkspacesService/CreateAndStartWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspacesServiceServer).CreateAndStartWorkspace(ctx, req.(*CreateAndStartWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspacesService_StartWorkspace_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspacesService_StartWorkspace_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(StartWorkspaceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -389,13 +389,13 @@ func _WorkspacesService_StartWorkspace_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/gitpod.v1.WorkspacesService/StartWorkspace",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspacesServiceServer).StartWorkspace(ctx, req.(*StartWorkspaceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspacesService_GetActiveWorkspaceInstance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspacesService_GetActiveWorkspaceInstance_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetActiveWorkspaceInstanceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -407,13 +407,13 @@ func _WorkspacesService_GetActiveWorkspaceInstance_Handler(srv interface{}, ctx 
 		Server:     srv,
 		FullMethod: "/gitpod.v1.WorkspacesService/GetActiveWorkspaceInstance",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspacesServiceServer).GetActiveWorkspaceInstance(ctx, req.(*GetActiveWorkspaceInstanceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspacesService_GetWorkspaceInstanceOwnerToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspacesService_GetWorkspaceInstanceOwnerToken_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetWorkspaceInstanceOwnerTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -425,13 +425,13 @@ func _WorkspacesService_GetWorkspaceInstanceOwnerToken_Handler(srv interface{}, 
 		Server:     srv,
 		FullMethod: "/gitpod.v1.WorkspacesService/GetWorkspaceInstanceOwnerToken",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspacesServiceServer).GetWorkspaceInstanceOwnerToken(ctx, req.(*GetWorkspaceInstanceOwnerTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _WorkspacesService_ListenToWorkspaceInstance_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _WorkspacesService_ListenToWorkspaceInstance_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(ListenToWorkspaceInstanceRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -452,7 +452,7 @@ func (x *workspacesServiceListenToWorkspaceInstanceServer) Send(m *ListenToWorks
 	return x.ServerStream.SendMsg(m)
 }
 
-func _WorkspacesService_ListenToImageBuildLogs_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _WorkspacesService_ListenToImageBuildLogs_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(ListenToImageBuildLogsRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -473,7 +473,7 @@ func (x *workspacesServiceListenToImageBuildLogsServer) Send(m *ListenToImageBui
 	return x.ServerStream.SendMsg(m)
 }
 
-func _WorkspacesService_StopWorkspace_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _WorkspacesService_StopWorkspace_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(StopWorkspaceRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err

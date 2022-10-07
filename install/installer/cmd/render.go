@@ -98,7 +98,7 @@ func saveYamlToFiles(dir string, yaml []string) error {
 	return nil
 }
 
-func loadConfig(cfgFN string) (rawCfg interface{}, cfgVersion string, cfg *configv1.Config, err error) {
+func loadConfig(cfgFN string) (rawCfg any, cfgVersion string, cfg *configv1.Config, err error) {
 	var overrideConfig string
 	// Update overrideConfig if cfgFN is not empty
 	switch cfgFN {

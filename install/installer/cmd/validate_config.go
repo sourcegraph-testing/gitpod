@@ -40,7 +40,7 @@ var validateConfigCmd = &cobra.Command{
 
 // runConfigValidation this will run the validation and print any validation errors
 // It's silent if everything is fine
-func runConfigValidation(version string, cfg interface{}) error {
+func runConfigValidation(version string, cfg any) error {
 	apiVersion, err := config.LoadConfigVersion(version)
 	if err != nil {
 		return err

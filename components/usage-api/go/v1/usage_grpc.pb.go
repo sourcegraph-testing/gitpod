@@ -108,7 +108,7 @@ func RegisterUsageServiceServer(s grpc.ServiceRegistrar, srv UsageServiceServer)
 	s.RegisterService(&UsageService_ServiceDesc, srv)
 }
 
-func _UsageService_ListBilledUsage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UsageService_ListBilledUsage_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ListBilledUsageRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -120,13 +120,13 @@ func _UsageService_ListBilledUsage_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/usage.v1.UsageService/ListBilledUsage",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UsageServiceServer).ListBilledUsage(ctx, req.(*ListBilledUsageRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UsageService_ReconcileUsage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UsageService_ReconcileUsage_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ReconcileUsageRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -138,13 +138,13 @@ func _UsageService_ReconcileUsage_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/usage.v1.UsageService/ReconcileUsage",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UsageServiceServer).ReconcileUsage(ctx, req.(*ReconcileUsageRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _UsageService_GetCostCenter_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UsageService_GetCostCenter_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetCostCenterRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -156,7 +156,7 @@ func _UsageService_GetCostCenter_Handler(srv interface{}, ctx context.Context, d
 		Server:     srv,
 		FullMethod: "/usage.v1.UsageService/GetCostCenter",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(UsageServiceServer).GetCostCenter(ctx, req.(*GetCostCenterRequest))
 	}
 	return interceptor(ctx, in, info, handler)

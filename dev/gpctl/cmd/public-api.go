@@ -50,7 +50,7 @@ func newPublicAPIConn() (*grpc.ClientConn, error) {
 
 	opts := []grpc.DialOption{
 		// attach token to requests to auth
-		grpc.WithUnaryInterceptor(func(ctx context.Context, method string, req, reply interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) error {
+		grpc.WithUnaryInterceptor(func(ctx context.Context, method string, req, reply any, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) error {
 			withAuth := metadata.AppendToOutgoingContext(ctx, "authorization", publicApiCmdOpts.token)
 			return invoker(withAuth, method, req, reply, cc, opts...)
 		}),

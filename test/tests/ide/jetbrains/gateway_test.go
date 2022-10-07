@@ -157,7 +157,7 @@ func TestJetBrainsGatewayWorkspace(t *testing.T) {
 				t.Logf("trigger github action")
 				_, err = githubClient.Actions.CreateWorkflowDispatchEventByFileName(ctx, "gitpod-io", "gitpod", "jetbrains-integration-test.yml", github.CreateWorkflowDispatchEventRequest{
 					Ref: "main",
-					Inputs: map[string]interface{}{
+					Inputs: map[string]any{
 						"secret_gateway_link": gatewayLink,
 						"secret_access_token": oauthToken,
 						"secret_endpoint":     strings.TrimPrefix(nfo.LatestInstance.IdeURL, "https://"),

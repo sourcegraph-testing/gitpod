@@ -19,7 +19,7 @@ type ValidationResult struct {
 	Fatal    []string `json:"fatal,omitempty"`
 }
 
-func Validate(version ConfigVersion, cfg interface{}) (r *ValidationResult, err error) {
+func Validate(version ConfigVersion, cfg any) (r *ValidationResult, err error) {
 	defer func() {
 		if r != nil {
 			r.Valid = len(r.Fatal) == 0

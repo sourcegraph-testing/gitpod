@@ -164,7 +164,7 @@ func RegisterPortServiceServer(s grpc.ServiceRegistrar, srv PortServiceServer) {
 	s.RegisterService(&PortService_ServiceDesc, srv)
 }
 
-func _PortService_Tunnel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PortService_Tunnel_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(TunnelPortRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -176,13 +176,13 @@ func _PortService_Tunnel_Handler(srv interface{}, ctx context.Context, dec func(
 		Server:     srv,
 		FullMethod: "/supervisor.PortService/Tunnel",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(PortServiceServer).Tunnel(ctx, req.(*TunnelPortRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PortService_CloseTunnel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PortService_CloseTunnel_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(CloseTunnelRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -194,13 +194,13 @@ func _PortService_CloseTunnel_Handler(srv interface{}, ctx context.Context, dec 
 		Server:     srv,
 		FullMethod: "/supervisor.PortService/CloseTunnel",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(PortServiceServer).CloseTunnel(ctx, req.(*CloseTunnelRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PortService_EstablishTunnel_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _PortService_EstablishTunnel_Handler(srv any, stream grpc.ServerStream) error {
 	return srv.(PortServiceServer).EstablishTunnel(&portServiceEstablishTunnelServer{stream})
 }
 
@@ -226,7 +226,7 @@ func (x *portServiceEstablishTunnelServer) Recv() (*EstablishTunnelRequest, erro
 	return m, nil
 }
 
-func _PortService_AutoTunnel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PortService_AutoTunnel_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(AutoTunnelRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -238,13 +238,13 @@ func _PortService_AutoTunnel_Handler(srv interface{}, ctx context.Context, dec f
 		Server:     srv,
 		FullMethod: "/supervisor.PortService/AutoTunnel",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(PortServiceServer).AutoTunnel(ctx, req.(*AutoTunnelRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PortService_RetryAutoExpose_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PortService_RetryAutoExpose_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(RetryAutoExposeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -256,7 +256,7 @@ func _PortService_RetryAutoExpose_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/supervisor.PortService/RetryAutoExpose",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(PortServiceServer).RetryAutoExpose(ctx, req.(*RetryAutoExposeRequest))
 	}
 	return interceptor(ctx, in, info, handler)

@@ -2229,7 +2229,7 @@ func file_gitpod_v1_workspaces_proto_rawDescGZIP() []byte {
 
 var file_gitpod_v1_workspaces_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_gitpod_v1_workspaces_proto_msgTypes = make([]protoimpl.MessageInfo, 30)
-var file_gitpod_v1_workspaces_proto_goTypes = []interface{}{
+var file_gitpod_v1_workspaces_proto_goTypes = []any{
 	(AdmissionLevel)(0),                                 // 0: gitpod.v1.AdmissionLevel
 	(WorkspaceInstanceStatus_Phase)(0),                  // 1: gitpod.v1.WorkspaceInstanceStatus.Phase
 	(*ListWorkspacesRequest)(nil),                       // 2: gitpod.v1.ListWorkspacesRequest
@@ -2322,7 +2322,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 	}
 	file_gitpod_v1_pagination_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_gitpod_v1_workspaces_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*ListWorkspacesRequest); i {
 			case 0:
 				return &v.state
@@ -2334,7 +2334,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*ListWorkspacesResponse); i {
 			case 0:
 				return &v.state
@@ -2346,7 +2346,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*GetWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -2358,7 +2358,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*GetWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -2370,7 +2370,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*GetOwnerTokenRequest); i {
 			case 0:
 				return &v.state
@@ -2382,7 +2382,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*GetOwnerTokenResponse); i {
 			case 0:
 				return &v.state
@@ -2394,7 +2394,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*CreateAndStartWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -2406,7 +2406,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*CreateAndStartWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -2418,7 +2418,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*StartWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -2430,7 +2430,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*StartWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -2442,7 +2442,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*GetActiveWorkspaceInstanceRequest); i {
 			case 0:
 				return &v.state
@@ -2454,7 +2454,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*GetActiveWorkspaceInstanceResponse); i {
 			case 0:
 				return &v.state
@@ -2466,7 +2466,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*GetWorkspaceInstanceOwnerTokenRequest); i {
 			case 0:
 				return &v.state
@@ -2478,7 +2478,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*GetWorkspaceInstanceOwnerTokenResponse); i {
 			case 0:
 				return &v.state
@@ -2490,7 +2490,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[14].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToWorkspaceInstanceRequest); i {
 			case 0:
 				return &v.state
@@ -2502,7 +2502,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[15].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToWorkspaceInstanceResponse); i {
 			case 0:
 				return &v.state
@@ -2514,7 +2514,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[16].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToImageBuildLogsRequest); i {
 			case 0:
 				return &v.state
@@ -2526,7 +2526,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[17].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenToImageBuildLogsResponse); i {
 			case 0:
 				return &v.state
@@ -2538,7 +2538,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[18].Exporter = func(v any, i int) any {
 			switch v := v.(*StopWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -2550,7 +2550,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[19].Exporter = func(v any, i int) any {
 			switch v := v.(*StopWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -2562,7 +2562,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[20].Exporter = func(v any, i int) any {
 			switch v := v.(*Workspace); i {
 			case 0:
 				return &v.state
@@ -2574,7 +2574,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[21].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceContext); i {
 			case 0:
 				return &v.state
@@ -2586,7 +2586,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[22].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInstance); i {
 			case 0:
 				return &v.state
@@ -2598,7 +2598,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[23].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInstanceStatus); i {
 			case 0:
 				return &v.state
@@ -2610,7 +2610,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[24].Exporter = func(v any, i int) any {
 			switch v := v.(*StartWorkspaceSpec); i {
 			case 0:
 				return &v.state
@@ -2622,7 +2622,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[25].Exporter = func(v any, i int) any {
 			switch v := v.(*ListWorkspacesResponse_WorkspaceAndInstance); i {
 			case 0:
 				return &v.state
@@ -2634,7 +2634,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[26].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceContext_Git); i {
 			case 0:
 				return &v.state
@@ -2646,7 +2646,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[27].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceContext_Prebuild); i {
 			case 0:
 				return &v.state
@@ -2658,7 +2658,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[28].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceContext_Snapshot); i {
 			case 0:
 				return &v.state
@@ -2670,7 +2670,7 @@ func file_gitpod_v1_workspaces_proto_init() {
 				return nil
 			}
 		}
-		file_gitpod_v1_workspaces_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
+		file_gitpod_v1_workspaces_proto_msgTypes[29].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInstanceStatus_Conditions); i {
 			case 0:
 				return &v.state
@@ -2683,16 +2683,16 @@ func file_gitpod_v1_workspaces_proto_init() {
 			}
 		}
 	}
-	file_gitpod_v1_workspaces_proto_msgTypes[6].OneofWrappers = []interface{}{
+	file_gitpod_v1_workspaces_proto_msgTypes[6].OneofWrappers = []any{
 		(*CreateAndStartWorkspaceRequest_ContextUrl)(nil),
 		(*CreateAndStartWorkspaceRequest_PrebuildId)(nil),
 	}
-	file_gitpod_v1_workspaces_proto_msgTypes[21].OneofWrappers = []interface{}{
+	file_gitpod_v1_workspaces_proto_msgTypes[21].OneofWrappers = []any{
 		(*WorkspaceContext_Git_)(nil),
 		(*WorkspaceContext_Prebuild_)(nil),
 		(*WorkspaceContext_Snapshot_)(nil),
 	}
-	file_gitpod_v1_workspaces_proto_msgTypes[29].OneofWrappers = []interface{}{}
+	file_gitpod_v1_workspaces_proto_msgTypes[29].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

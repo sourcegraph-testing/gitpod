@@ -125,7 +125,7 @@ func RegisterLocalAppServer(s grpc.ServiceRegistrar, srv LocalAppServer) {
 	s.RegisterService(&LocalApp_ServiceDesc, srv)
 }
 
-func _LocalApp_TunnelStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _LocalApp_TunnelStatus_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(TunnelStatusRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -146,7 +146,7 @@ func (x *localAppTunnelStatusServer) Send(m *TunnelStatusResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _LocalApp_AutoTunnel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _LocalApp_AutoTunnel_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(AutoTunnelRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -158,13 +158,13 @@ func _LocalApp_AutoTunnel_Handler(srv interface{}, ctx context.Context, dec func
 		Server:     srv,
 		FullMethod: "/localapp.LocalApp/AutoTunnel",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(LocalAppServer).AutoTunnel(ctx, req.(*AutoTunnelRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _LocalApp_ResolveSSHConnection_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _LocalApp_ResolveSSHConnection_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ResolveSSHConnectionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -176,7 +176,7 @@ func _LocalApp_ResolveSSHConnection_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/localapp.LocalApp/ResolveSSHConnection",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(LocalAppServer).ResolveSSHConnection(ctx, req.(*ResolveSSHConnectionRequest))
 	}
 	return interceptor(ctx, in, info, handler)

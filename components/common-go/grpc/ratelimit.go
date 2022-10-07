@@ -21,7 +21,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
-type keyFunc func(req interface{}) (string, error)
+type keyFunc func(req any) (string, error)
 
 // RateLimit configures the reate limit for a function
 type RateLimit struct {
@@ -78,7 +78,7 @@ func NewRatelimitingInterceptor(f map[string]RateLimit) RatelimitingInterceptor 
 }
 
 func fieldAccessKey(key string) keyFunc {
-	return func(req interface{}) (string, error) {
+	return func(req any) (string, error) {
 		msg, ok := req.(proto.Message)
 		if !ok {
 			return "", status.Errorf(codes.Internal, "request was not a protobuf message")
@@ -157,7 +157,7 @@ type ratelimitedFunction struct {
 
 // UnaryInterceptor creates a unary interceptor that implements the rate limiting
 func (r RatelimitingInterceptor) UnaryInterceptor() grpc.UnaryServerInterceptor {
-	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
+	return func(ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp any, err error) {
 		f, ok := r.functions[info.FullMethod]
 		if !ok {
 			return handler(ctx, req)

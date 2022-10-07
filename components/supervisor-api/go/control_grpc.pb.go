@@ -92,7 +92,7 @@ func RegisterControlServiceServer(s grpc.ServiceRegistrar, srv ControlServiceSer
 	s.RegisterService(&ControlService_ServiceDesc, srv)
 }
 
-func _ControlService_ExposePort_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ControlService_ExposePort_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ExposePortRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -104,13 +104,13 @@ func _ControlService_ExposePort_Handler(srv interface{}, ctx context.Context, de
 		Server:     srv,
 		FullMethod: "/supervisor.ControlService/ExposePort",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ControlServiceServer).ExposePort(ctx, req.(*ExposePortRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ControlService_CreateSSHKeyPair_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ControlService_CreateSSHKeyPair_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(CreateSSHKeyPairRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -122,7 +122,7 @@ func _ControlService_CreateSSHKeyPair_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/supervisor.ControlService/CreateSSHKeyPair",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ControlServiceServer).CreateSSHKeyPair(ctx, req.(*CreateSSHKeyPairRequest))
 	}
 	return interceptor(ctx, in, info, handler)

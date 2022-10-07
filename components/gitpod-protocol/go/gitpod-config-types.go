@@ -31,7 +31,7 @@ type Env struct {
 type Github struct {
 
 	// Set to true to enable workspace prebuilds, false to disable them. Defaults to true.
-	Prebuilds interface{} `yaml:"prebuilds,omitempty"`
+	Prebuilds any `yaml:"prebuilds,omitempty"`
 }
 
 // GitpodConfig
@@ -53,7 +53,7 @@ type GitpodConfig struct {
 	Github *Github `yaml:"github,omitempty"`
 
 	// The Docker image to run your workspace in.
-	Image interface{} `yaml:"image,omitempty"`
+	Image any `yaml:"image,omitempty"`
 
 	// Configure JetBrains integration
 	Jetbrains *Jetbrains `yaml:"jetbrains,omitempty"`
@@ -129,7 +129,7 @@ type PortsItems struct {
 	OnOpen string `yaml:"onOpen,omitempty"`
 
 	// The port number (e.g. 1337) or range (e.g. 3000-3999) to expose.
-	Port interface{} `yaml:"port"`
+	Port any `yaml:"port"`
 
 	// The protocol to be used. (deprecated)
 	Protocol string `yaml:"protocol,omitempty"`
@@ -152,10 +152,10 @@ type Prebuilds_object struct {
 	AddBadge bool `yaml:"addBadge,omitempty"`
 
 	// Add a commit check to pull requests. Set to 'fail-on-error' if you want broken prebuilds to block merging. Defaults to true.
-	AddCheck interface{} `yaml:"addCheck,omitempty"`
+	AddCheck any `yaml:"addCheck,omitempty"`
 
 	// Add a label to a PR when it's prebuilt. Set to true to use the default label (prebuilt-in-gitpod) or set to a string to use a different label name. This is a beta feature and may be unreliable. Defaults to false.
-	AddLabel interface{} `yaml:"addLabel,omitempty"`
+	AddLabel any `yaml:"addLabel,omitempty"`
 
 	// Enable prebuilds for all branches. Defaults to false.
 	Branches bool `yaml:"branches,omitempty"`

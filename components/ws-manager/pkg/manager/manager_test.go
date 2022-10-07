@@ -33,9 +33,9 @@ func TestValidateStartWorkspaceRequest(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:       t,
 		Path:    "testdata/validateStartReq_*.json",
-		Fixture: func() interface{} { return &fixture{} },
-		Gold:    func() interface{} { return &gold{} },
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Fixture: func() any { return &fixture{} },
+		Gold:    func() any { return &gold{} },
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*fixture)
 			if fixture.Req == nil {
 				t.Errorf("request is nil")
@@ -74,7 +74,7 @@ func TestControlPort(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:    t,
 		Path: "testdata/controlPort_*.json",
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*fixture)
 
 			manager := forTestingOnlyGetManager(t)
@@ -118,8 +118,8 @@ func TestControlPort(t *testing.T) {
 
 			return &result
 		},
-		Fixture: func() interface{} { return &fixture{} },
-		Gold:    func() interface{} { return &gold{} },
+		Fixture: func() any { return &fixture{} },
+		Gold:    func() any { return &gold{} },
 	}
 	test.Run()
 }
@@ -138,7 +138,7 @@ func TestGetWorkspaces(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:    t,
 		Path: "testdata/getWorkspaces_*.json",
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*fixture)
 
 			manager := forTestingOnlyGetManager(t)
@@ -181,8 +181,8 @@ func TestGetWorkspaces(t *testing.T) {
 
 			return &result
 		},
-		Fixture: func() interface{} { return &fixture{} },
-		Gold:    func() interface{} { return &gold{} },
+		Fixture: func() any { return &fixture{} },
+		Gold:    func() any { return &gold{} },
 	}
 	test.Run()
 }

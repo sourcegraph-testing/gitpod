@@ -229,7 +229,7 @@ func RegisterTerminalServiceServer(s grpc.ServiceRegistrar, srv TerminalServiceS
 	s.RegisterService(&TerminalService_ServiceDesc, srv)
 }
 
-func _TerminalService_Open_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_Open_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(OpenTerminalRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -241,13 +241,13 @@ func _TerminalService_Open_Handler(srv interface{}, ctx context.Context, dec fun
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/Open",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).Open(ctx, req.(*OpenTerminalRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TerminalService_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_Shutdown_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ShutdownTerminalRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -259,13 +259,13 @@ func _TerminalService_Shutdown_Handler(srv interface{}, ctx context.Context, dec
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/Shutdown",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).Shutdown(ctx, req.(*ShutdownTerminalRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TerminalService_Get_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_Get_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetTerminalRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -277,13 +277,13 @@ func _TerminalService_Get_Handler(srv interface{}, ctx context.Context, dec func
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/Get",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).Get(ctx, req.(*GetTerminalRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TerminalService_List_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_List_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ListTerminalsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -295,13 +295,13 @@ func _TerminalService_List_Handler(srv interface{}, ctx context.Context, dec fun
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/List",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).List(ctx, req.(*ListTerminalsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TerminalService_Listen_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _TerminalService_Listen_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(ListenTerminalRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -322,7 +322,7 @@ func (x *terminalServiceListenServer) Send(m *ListenTerminalResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _TerminalService_Write_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_Write_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WriteTerminalRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -334,13 +334,13 @@ func _TerminalService_Write_Handler(srv interface{}, ctx context.Context, dec fu
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/Write",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).Write(ctx, req.(*WriteTerminalRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TerminalService_SetSize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_SetSize_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SetTerminalSizeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -352,13 +352,13 @@ func _TerminalService_SetSize_Handler(srv interface{}, ctx context.Context, dec 
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/SetSize",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).SetSize(ctx, req.(*SetTerminalSizeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TerminalService_SetTitle_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_SetTitle_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SetTerminalTitleRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -370,13 +370,13 @@ func _TerminalService_SetTitle_Handler(srv interface{}, ctx context.Context, dec
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/SetTitle",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).SetTitle(ctx, req.(*SetTerminalTitleRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TerminalService_UpdateAnnotations_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TerminalService_UpdateAnnotations_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UpdateTerminalAnnotationsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -388,7 +388,7 @@ func _TerminalService_UpdateAnnotations_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/supervisor.TerminalService/UpdateAnnotations",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TerminalServiceServer).UpdateAnnotations(ctx, req.(*UpdateTerminalAnnotationsRequest))
 	}
 	return interceptor(ctx, in, info, handler)

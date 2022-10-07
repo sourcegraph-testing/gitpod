@@ -940,6 +940,6 @@ func (c *cannotCancelContext) Err() error {
 	return err
 }
 
-func (c *cannotCancelContext) Value(key interface{}) interface{} {
+func (c *cannotCancelContext) Value(key any) any {
 	return c.Delegate.Value(key)
 }

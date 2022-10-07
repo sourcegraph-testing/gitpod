@@ -338,7 +338,7 @@ func (s *Server) TrackSSHConnection(wsInfo *p.WorkspaceInfo, phase string, err e
 	if wsInfo == nil {
 		return
 	}
-	propertics := make(map[string]interface{})
+	propertics := make(map[string]any)
 	propertics["workspaceId"] = wsInfo.WorkspaceID
 	propertics["instanceId"] = wsInfo.InstanceID
 	propertics["state"] = "success"

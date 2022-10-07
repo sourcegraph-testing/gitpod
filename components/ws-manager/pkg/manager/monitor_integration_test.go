@@ -56,9 +56,9 @@ func TestIntegrationWorkspaceDisposal(t *testing.T) {
 					r.Spec.WorkspaceImage = "does-not-exist"
 				},
 				MockWsdaemon: func(t *testing.T, s *wsdaemon_mock.MockWorkspaceContentServiceServer) {
-					s.EXPECT().InitWorkspace(gomock.Any(), gomock.Any()).DoAndReturn(func(a, b interface{}) { time.Sleep(1 * time.Second) }).Return(&wsdaemon.InitWorkspaceResponse{}, nil)
+					s.EXPECT().InitWorkspace(gomock.Any(), gomock.Any()).DoAndReturn(func(a, b any) { time.Sleep(1 * time.Second) }).Return(&wsdaemon.InitWorkspaceResponse{}, nil)
 					s.EXPECT().WaitForInit(gomock.Any(), gomock.Any()).Return(&wsdaemon.WaitForInitResponse{}, nil).AnyTimes()
-					s.EXPECT().DisposeWorkspace(gomock.Any(), matches(func(a interface{}) bool {
+					s.EXPECT().DisposeWorkspace(gomock.Any(), matches(func(a any) bool {
 						req, ok := a.(*wsdaemon.DisposeWorkspaceRequest)
 						if !ok {
 							return false
@@ -89,9 +89,9 @@ func TestIntegrationWorkspaceDisposal(t *testing.T) {
 					r.Spec.WorkspaceImage = "gitpod/workspace-full"
 				},
 				MockWsdaemon: func(t *testing.T, s *wsdaemon_mock.MockWorkspaceContentServiceServer) {
-					s.EXPECT().InitWorkspace(gomock.Any(), gomock.Any()).DoAndReturn(func(a, b interface{}) { time.Sleep(1 * time.Second) }).Return(nil, status.Error(codes.Internal, "fail intentionally"))
+					s.EXPECT().InitWorkspace(gomock.Any(), gomock.Any()).DoAndReturn(func(a, b any) { time.Sleep(1 * time.Second) }).Return(nil, status.Error(codes.Internal, "fail intentionally"))
 					s.EXPECT().WaitForInit(gomock.Any(), gomock.Any()).Return(&wsdaemon.WaitForInitResponse{}, nil).AnyTimes()
-					s.EXPECT().DisposeWorkspace(gomock.Any(), matches(func(a interface{}) bool {
+					s.EXPECT().DisposeWorkspace(gomock.Any(), matches(func(a any) bool {
 						_, ok := a.(*wsdaemon.DisposeWorkspaceRequest)
 						return ok //req.Backup == false
 					})).Return(&wsdaemon.DisposeWorkspaceResponse{}, nil).MinTimes(1)
@@ -117,7 +117,7 @@ func TestIntegrationWorkspaceDisposal(t *testing.T) {
 				MockWsdaemon: func(t *testing.T, s *wsdaemon_mock.MockWorkspaceContentServiceServer) {
 					initCall := s.EXPECT().InitWorkspace(gomock.Any(), gomock.Any()).Return(&wsdaemon.InitWorkspaceResponse{}, nil)
 					s.EXPECT().WaitForInit(gomock.Any(), gomock.Any()).Return(&wsdaemon.WaitForInitResponse{}, nil).MinTimes(1).After(initCall)
-					s.EXPECT().DisposeWorkspace(gomock.Any(), matches(func(a interface{}) bool {
+					s.EXPECT().DisposeWorkspace(gomock.Any(), matches(func(a any) bool {
 						req, ok := a.(*wsdaemon.DisposeWorkspaceRequest)
 						if !ok {
 							return false
@@ -163,7 +163,7 @@ func TestIntegrationWorkspaceDisposal(t *testing.T) {
 				MockWsdaemon: func(t *testing.T, s *wsdaemon_mock.MockWorkspaceContentServiceServer) {
 					initCall := s.EXPECT().InitWorkspace(gomock.Any(), gomock.Any()).Return(&wsdaemon.InitWorkspaceResponse{}, nil)
 					s.EXPECT().WaitForInit(gomock.Any(), gomock.Any()).Return(&wsdaemon.WaitForInitResponse{}, nil).MinTimes(1).After(initCall)
-					s.EXPECT().DisposeWorkspace(gomock.Any(), gomock.Any()).DoAndReturn(func(ctx context.Context, req interface{}) (resp *wsdaemon.DisposeWorkspaceRequest, err error) {
+					s.EXPECT().DisposeWorkspace(gomock.Any(), gomock.Any()).DoAndReturn(func(ctx context.Context, req any) (resp *wsdaemon.DisposeWorkspaceRequest, err error) {
 						return nil, context.DeadlineExceeded
 					}).MinTimes(wsdaemonMaxAttempts)
 				},
@@ -224,15 +224,15 @@ func TestIntegrationWorkspaceDisposal(t *testing.T) {
 	}
 }
 
-func matches(p func(interface{}) bool) gomock.Matcher {
+func matches(p func(any) bool) gomock.Matcher {
 	return &funcMatcher{p}
 }
 
 type funcMatcher struct {
-	P func(a interface{}) bool
+	P func(a any) bool
 }
 
-func (f *funcMatcher) Matches(a interface{}) bool {
+func (f *funcMatcher) Matches(a any) bool {
 	return f.P(a)
 }
 

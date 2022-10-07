@@ -26,8 +26,8 @@ var (
 	failCommand = "exit 1"
 )
 
-var exampleEnvVarInputs = &map[string]interface{}{
-	"JSON_ENV_VAR":     map[string]interface{}{"property": "some string"},
+var exampleEnvVarInputs = &map[string]any{
+	"JSON_ENV_VAR":     map[string]any{"property": "some string"},
 	"JSON_ESCAPED_VAR": "{\"property\":\"some escaped string\"}",
 	"JSON_ARRAY_VAR":   []string{"Hello", "World"},
 	"STRING_ENV_VAR":   "stringEnvironmentVariable",

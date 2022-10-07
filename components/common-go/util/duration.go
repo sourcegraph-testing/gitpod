@@ -16,7 +16,7 @@ type Duration time.Duration
 
 // UnmarshalJSON parses the duration to a time.Duration
 func (d *Duration) UnmarshalJSON(b []byte) error {
-	var v interface{}
+	var v any
 	if err := json.Unmarshal(b, &v); err != nil {
 		return err
 	}

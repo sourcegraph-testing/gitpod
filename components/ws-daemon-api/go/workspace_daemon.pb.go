@@ -1186,7 +1186,7 @@ func file_workspace_daemon_proto_rawDescGZIP() []byte {
 
 var file_workspace_daemon_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_workspace_daemon_proto_msgTypes = make([]protoimpl.MessageInfo, 20)
-var file_workspace_daemon_proto_goTypes = []interface{}{
+var file_workspace_daemon_proto_goTypes = []any{
 	(FSShiftMethod)(0),                    // 0: iws.FSShiftMethod
 	(*PrepareForUserNSRequest)(nil),       // 1: iws.PrepareForUserNSRequest
 	(*PrepareForUserNSResponse)(nil),      // 2: iws.PrepareForUserNSResponse
@@ -1250,7 +1250,7 @@ func file_workspace_daemon_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_workspace_daemon_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*PrepareForUserNSRequest); i {
 			case 0:
 				return &v.state
@@ -1262,7 +1262,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*PrepareForUserNSResponse); i {
 			case 0:
 				return &v.state
@@ -1274,7 +1274,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*WriteIDMappingResponse); i {
 			case 0:
 				return &v.state
@@ -1286,7 +1286,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*WriteIDMappingRequest); i {
 			case 0:
 				return &v.state
@@ -1298,7 +1298,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*EvacuateCGroupRequest); i {
 			case 0:
 				return &v.state
@@ -1310,7 +1310,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*EvacuateCGroupResponse); i {
 			case 0:
 				return &v.state
@@ -1322,7 +1322,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*MountProcRequest); i {
 			case 0:
 				return &v.state
@@ -1334,7 +1334,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*MountProcResponse); i {
 			case 0:
 				return &v.state
@@ -1346,7 +1346,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*UmountProcRequest); i {
 			case 0:
 				return &v.state
@@ -1358,7 +1358,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*UmountProcResponse); i {
 			case 0:
 				return &v.state
@@ -1370,7 +1370,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*TeardownRequest); i {
 			case 0:
 				return &v.state
@@ -1382,7 +1382,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*TeardownResponse); i {
 			case 0:
 				return &v.state
@@ -1394,7 +1394,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*SetupPairVethsRequest); i {
 			case 0:
 				return &v.state
@@ -1406,7 +1406,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*SetupPairVethsResponse); i {
 			case 0:
 				return &v.state
@@ -1418,7 +1418,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[14].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInfoRequest); i {
 			case 0:
 				return &v.state
@@ -1430,7 +1430,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[15].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceInfoResponse); i {
 			case 0:
 				return &v.state
@@ -1442,7 +1442,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[16].Exporter = func(v any, i int) any {
 			switch v := v.(*Resources); i {
 			case 0:
 				return &v.state
@@ -1454,7 +1454,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[17].Exporter = func(v any, i int) any {
 			switch v := v.(*Cpu); i {
 			case 0:
 				return &v.state
@@ -1466,7 +1466,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[18].Exporter = func(v any, i int) any {
 			switch v := v.(*Memory); i {
 			case 0:
 				return &v.state
@@ -1478,7 +1478,7 @@ func file_workspace_daemon_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_daemon_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_daemon_proto_msgTypes[19].Exporter = func(v any, i int) any {
 			switch v := v.(*WriteIDMappingRequest_Mapping); i {
 			case 0:
 				return &v.state

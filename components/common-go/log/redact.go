@@ -21,7 +21,7 @@ var (
 
 // RedactJSON removes sensitive data from JSON structures
 func RedactJSON(data []byte) (res []byte, err error) {
-	var jsonBlob interface{}
+	var jsonBlob any
 	err = json.Unmarshal(data, &jsonBlob)
 	if err != nil {
 		return data, err
@@ -32,14 +32,14 @@ func RedactJSON(data []byte) (res []byte, err error) {
 }
 
 // blatently copied from https://github.com/cloudfoundry/lager/blob/master/json_redacter.go#L45
-func redactValue(data *interface{}) interface{} {
+func redactValue(data *any) any {
 	if data == nil {
 		return data
 	}
 
-	if a, ok := (*data).([]interface{}); ok {
+	if a, ok := (*data).([]any); ok {
 		redactArray(&a)
-	} else if m, ok := (*data).(map[string]interface{}); ok {
+	} else if m, ok := (*data).(map[string]any); ok {
 		redactObject(&m)
 	} else if s, ok := (*data).(string); ok {
 		for _, prohibited := range redactedFields {
@@ -52,13 +52,13 @@ func redactValue(data *interface{}) interface{} {
 	return (*data)
 }
 
-func redactArray(data *[]interface{}) {
+func redactArray(data *[]any) {
 	for i := range *data {
 		redactValue(&((*data)[i]))
 	}
 }
 
-func redactObject(data *map[string]interface{}) {
+func redactObject(data *map[string]any) {
 	for k, v := range *data {
 		for _, prohibited := range redactedFields {
 			if strings.Contains(strings.ToLower(fmt.Sprintf("%v", k)), prohibited) {

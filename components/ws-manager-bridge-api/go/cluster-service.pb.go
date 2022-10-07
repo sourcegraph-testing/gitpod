@@ -1226,7 +1226,7 @@ func file_cluster_service_proto_rawDescGZIP() []byte {
 
 var file_cluster_service_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_cluster_service_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
-var file_cluster_service_proto_goTypes = []interface{}{
+var file_cluster_service_proto_goTypes = []any{
 	(Preferability)(0),                         // 0: workspacemanagerbridge.Preferability
 	(ClusterState)(0),                          // 1: workspacemanagerbridge.ClusterState
 	(*RegisterRequest)(nil),                    // 2: workspacemanagerbridge.RegisterRequest
@@ -1278,7 +1278,7 @@ func file_cluster_service_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_cluster_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*RegisterRequest); i {
 			case 0:
 				return &v.state
@@ -1290,7 +1290,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*RegisterResponse); i {
 			case 0:
 				return &v.state
@@ -1302,7 +1302,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*TlsConfig); i {
 			case 0:
 				return &v.state
@@ -1314,7 +1314,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*RegistrationHints); i {
 			case 0:
 				return &v.state
@@ -1326,7 +1326,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*AdmissionConstraint); i {
 			case 0:
 				return &v.state
@@ -1338,7 +1338,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*ClusterStatus); i {
 			case 0:
 				return &v.state
@@ -1350,7 +1350,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateRequest); i {
 			case 0:
 				return &v.state
@@ -1362,7 +1362,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*ModifyAdmissionConstraint); i {
 			case 0:
 				return &v.state
@@ -1374,7 +1374,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateResponse); i {
 			case 0:
 				return &v.state
@@ -1386,7 +1386,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*DeregisterRequest); i {
 			case 0:
 				return &v.state
@@ -1398,7 +1398,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*DeregisterResponse); i {
 			case 0:
 				return &v.state
@@ -1410,7 +1410,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*ListRequest); i {
 			case 0:
 				return &v.state
@@ -1422,7 +1422,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*ListResponse); i {
 			case 0:
 				return &v.state
@@ -1434,7 +1434,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*AdmissionConstraint_FeaturePreview); i {
 			case 0:
 				return &v.state
@@ -1446,7 +1446,7 @@ func file_cluster_service_proto_init() {
 				return nil
 			}
 		}
-		file_cluster_service_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_cluster_service_proto_msgTypes[14].Exporter = func(v any, i int) any {
 			switch v := v.(*AdmissionConstraint_HasPermission); i {
 			case 0:
 				return &v.state
@@ -1459,13 +1459,13 @@ func file_cluster_service_proto_init() {
 			}
 		}
 	}
-	file_cluster_service_proto_msgTypes[4].OneofWrappers = []interface{}{
+	file_cluster_service_proto_msgTypes[4].OneofWrappers = []any{
 		(*AdmissionConstraint_HasFeaturePreview)(nil),
 		(*AdmissionConstraint_HasPermission_)(nil),
 		(*AdmissionConstraint_HasUserLevel)(nil),
 		(*AdmissionConstraint_HasMoreResources)(nil),
 	}
-	file_cluster_service_proto_msgTypes[6].OneofWrappers = []interface{}{
+	file_cluster_service_proto_msgTypes[6].OneofWrappers = []any{
 		(*UpdateRequest_Score)(nil),
 		(*UpdateRequest_MaxScore)(nil),
 		(*UpdateRequest_Cordoned)(nil),

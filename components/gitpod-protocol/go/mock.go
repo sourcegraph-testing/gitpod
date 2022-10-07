@@ -48,7 +48,7 @@ func (m *MockAPIInterface) AddSSHPublicKey(ctx context.Context, value *SSHPublic
 }
 
 // AddSSHPublicKey indicates an expected call of AddSSHPublicKey.
-func (mr *MockAPIInterfaceMockRecorder) AddSSHPublicKey(ctx, value interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) AddSSHPublicKey(ctx, value any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddSSHPublicKey", reflect.TypeOf((*MockAPIInterface)(nil).AddSSHPublicKey), ctx, value)
 }
@@ -62,7 +62,7 @@ func (m *MockAPIInterface) AdminBlockUser(ctx context.Context, req *AdminBlockUs
 }
 
 // AdminBlockUser indicates an expected call of AdminBlockUser.
-func (mr *MockAPIInterfaceMockRecorder) AdminBlockUser(ctx, req interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) AdminBlockUser(ctx, req any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AdminBlockUser", reflect.TypeOf((*MockAPIInterface)(nil).AdminBlockUser), ctx, req)
 }
@@ -76,7 +76,7 @@ func (m *MockAPIInterface) ClosePort(ctx context.Context, workspaceID string, po
 }
 
 // ClosePort indicates an expected call of ClosePort.
-func (mr *MockAPIInterfaceMockRecorder) ClosePort(ctx, workspaceID, port interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) ClosePort(ctx, workspaceID, port any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ClosePort", reflect.TypeOf((*MockAPIInterface)(nil).ClosePort), ctx, workspaceID, port)
 }
@@ -90,7 +90,7 @@ func (m *MockAPIInterface) ControlAdmission(ctx context.Context, id string, leve
 }
 
 // ControlAdmission indicates an expected call of ControlAdmission.
-func (mr *MockAPIInterfaceMockRecorder) ControlAdmission(ctx, id, level interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) ControlAdmission(ctx, id, level any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ControlAdmission", reflect.TypeOf((*MockAPIInterface)(nil).ControlAdmission), ctx, id, level)
 }
@@ -105,7 +105,7 @@ func (m *MockAPIInterface) CreateWorkspace(ctx context.Context, options *CreateW
 }
 
 // CreateWorkspace indicates an expected call of CreateWorkspace.
-func (mr *MockAPIInterfaceMockRecorder) CreateWorkspace(ctx, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) CreateWorkspace(ctx, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateWorkspace", reflect.TypeOf((*MockAPIInterface)(nil).CreateWorkspace), ctx, options)
 }
@@ -119,7 +119,7 @@ func (m *MockAPIInterface) DeleteAccount(ctx context.Context) error {
 }
 
 // DeleteAccount indicates an expected call of DeleteAccount.
-func (mr *MockAPIInterfaceMockRecorder) DeleteAccount(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) DeleteAccount(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteAccount", reflect.TypeOf((*MockAPIInterface)(nil).DeleteAccount), ctx)
 }
@@ -133,7 +133,7 @@ func (m *MockAPIInterface) DeleteEnvVar(ctx context.Context, variable *UserEnvVa
 }
 
 // DeleteEnvVar indicates an expected call of DeleteEnvVar.
-func (mr *MockAPIInterfaceMockRecorder) DeleteEnvVar(ctx, variable interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) DeleteEnvVar(ctx, variable any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteEnvVar", reflect.TypeOf((*MockAPIInterface)(nil).DeleteEnvVar), ctx, variable)
 }
@@ -147,7 +147,7 @@ func (m *MockAPIInterface) DeleteGitpodToken(ctx context.Context, tokenHash stri
 }
 
 // DeleteGitpodToken indicates an expected call of DeleteGitpodToken.
-func (mr *MockAPIInterfaceMockRecorder) DeleteGitpodToken(ctx, tokenHash interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) DeleteGitpodToken(ctx, tokenHash any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteGitpodToken", reflect.TypeOf((*MockAPIInterface)(nil).DeleteGitpodToken), ctx, tokenHash)
 }
@@ -161,7 +161,7 @@ func (m *MockAPIInterface) DeleteOwnAuthProvider(ctx context.Context, params *De
 }
 
 // DeleteOwnAuthProvider indicates an expected call of DeleteOwnAuthProvider.
-func (mr *MockAPIInterfaceMockRecorder) DeleteOwnAuthProvider(ctx, params interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) DeleteOwnAuthProvider(ctx, params any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteOwnAuthProvider", reflect.TypeOf((*MockAPIInterface)(nil).DeleteOwnAuthProvider), ctx, params)
 }
@@ -175,7 +175,7 @@ func (m *MockAPIInterface) DeleteSSHPublicKey(ctx context.Context, id string) er
 }
 
 // DeleteSSHPublicKey indicates an expected call of DeleteSSHPublicKey.
-func (mr *MockAPIInterfaceMockRecorder) DeleteSSHPublicKey(ctx, id interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) DeleteSSHPublicKey(ctx, id any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteSSHPublicKey", reflect.TypeOf((*MockAPIInterface)(nil).DeleteSSHPublicKey), ctx, id)
 }
@@ -189,7 +189,7 @@ func (m *MockAPIInterface) DeleteWorkspace(ctx context.Context, id string) error
 }
 
 // DeleteWorkspace indicates an expected call of DeleteWorkspace.
-func (mr *MockAPIInterfaceMockRecorder) DeleteWorkspace(ctx, id interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) DeleteWorkspace(ctx, id any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteWorkspace", reflect.TypeOf((*MockAPIInterface)(nil).DeleteWorkspace), ctx, id)
 }
@@ -204,7 +204,7 @@ func (m *MockAPIInterface) GenerateNewGitpodToken(ctx context.Context, options *
 }
 
 // GenerateNewGitpodToken indicates an expected call of GenerateNewGitpodToken.
-func (mr *MockAPIInterfaceMockRecorder) GenerateNewGitpodToken(ctx, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GenerateNewGitpodToken(ctx, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GenerateNewGitpodToken", reflect.TypeOf((*MockAPIInterface)(nil).GenerateNewGitpodToken), ctx, options)
 }
@@ -219,7 +219,7 @@ func (m *MockAPIInterface) GetAuthProviders(ctx context.Context) ([]*AuthProvide
 }
 
 // GetAuthProviders indicates an expected call of GetAuthProviders.
-func (mr *MockAPIInterfaceMockRecorder) GetAuthProviders(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetAuthProviders(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetAuthProviders", reflect.TypeOf((*MockAPIInterface)(nil).GetAuthProviders), ctx)
 }
@@ -234,7 +234,7 @@ func (m *MockAPIInterface) GetClientRegion(ctx context.Context) (string, error) 
 }
 
 // GetClientRegion indicates an expected call of GetClientRegion.
-func (mr *MockAPIInterfaceMockRecorder) GetClientRegion(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetClientRegion(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetClientRegion", reflect.TypeOf((*MockAPIInterface)(nil).GetClientRegion), ctx)
 }
@@ -249,7 +249,7 @@ func (m *MockAPIInterface) GetConfiguration(ctx context.Context) (*Configuration
 }
 
 // GetConfiguration indicates an expected call of GetConfiguration.
-func (mr *MockAPIInterfaceMockRecorder) GetConfiguration(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetConfiguration(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetConfiguration", reflect.TypeOf((*MockAPIInterface)(nil).GetConfiguration), ctx)
 }
@@ -264,7 +264,7 @@ func (m *MockAPIInterface) GetContentBlobDownloadURL(ctx context.Context, name s
 }
 
 // GetContentBlobDownloadURL indicates an expected call of GetContentBlobDownloadURL.
-func (mr *MockAPIInterfaceMockRecorder) GetContentBlobDownloadURL(ctx, name interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetContentBlobDownloadURL(ctx, name any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContentBlobDownloadURL", reflect.TypeOf((*MockAPIInterface)(nil).GetContentBlobDownloadURL), ctx, name)
 }
@@ -279,7 +279,7 @@ func (m *MockAPIInterface) GetContentBlobUploadURL(ctx context.Context, name str
 }
 
 // GetContentBlobUploadURL indicates an expected call of GetContentBlobUploadURL.
-func (mr *MockAPIInterfaceMockRecorder) GetContentBlobUploadURL(ctx, name interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetContentBlobUploadURL(ctx, name any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetContentBlobUploadURL", reflect.TypeOf((*MockAPIInterface)(nil).GetContentBlobUploadURL), ctx, name)
 }
@@ -294,7 +294,7 @@ func (m *MockAPIInterface) GetEnvVars(ctx context.Context) ([]*UserEnvVarValue, 
 }
 
 // GetEnvVars indicates an expected call of GetEnvVars.
-func (mr *MockAPIInterfaceMockRecorder) GetEnvVars(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetEnvVars(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetEnvVars", reflect.TypeOf((*MockAPIInterface)(nil).GetEnvVars), ctx)
 }
@@ -309,7 +309,7 @@ func (m *MockAPIInterface) GetFeaturedRepositories(ctx context.Context) ([]*Whit
 }
 
 // GetFeaturedRepositories indicates an expected call of GetFeaturedRepositories.
-func (mr *MockAPIInterfaceMockRecorder) GetFeaturedRepositories(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetFeaturedRepositories(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetFeaturedRepositories", reflect.TypeOf((*MockAPIInterface)(nil).GetFeaturedRepositories), ctx)
 }
@@ -324,7 +324,7 @@ func (m *MockAPIInterface) GetGitpodTokenScopes(ctx context.Context, tokenHash s
 }
 
 // GetGitpodTokenScopes indicates an expected call of GetGitpodTokenScopes.
-func (mr *MockAPIInterfaceMockRecorder) GetGitpodTokenScopes(ctx, tokenHash interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetGitpodTokenScopes(ctx, tokenHash any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGitpodTokenScopes", reflect.TypeOf((*MockAPIInterface)(nil).GetGitpodTokenScopes), ctx, tokenHash)
 }
@@ -339,7 +339,7 @@ func (m *MockAPIInterface) GetGitpodTokens(ctx context.Context) ([]*APIToken, er
 }
 
 // GetGitpodTokens indicates an expected call of GetGitpodTokens.
-func (mr *MockAPIInterfaceMockRecorder) GetGitpodTokens(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetGitpodTokens(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetGitpodTokens", reflect.TypeOf((*MockAPIInterface)(nil).GetGitpodTokens), ctx)
 }
@@ -354,7 +354,7 @@ func (m *MockAPIInterface) GetLayout(ctx context.Context, workspaceID string) (s
 }
 
 // GetLayout indicates an expected call of GetLayout.
-func (mr *MockAPIInterfaceMockRecorder) GetLayout(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetLayout(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLayout", reflect.TypeOf((*MockAPIInterface)(nil).GetLayout), ctx, workspaceID)
 }
@@ -369,7 +369,7 @@ func (m *MockAPIInterface) GetLoggedInUser(ctx context.Context) (*User, error) {
 }
 
 // GetLoggedInUser indicates an expected call of GetLoggedInUser.
-func (mr *MockAPIInterfaceMockRecorder) GetLoggedInUser(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetLoggedInUser(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetLoggedInUser", reflect.TypeOf((*MockAPIInterface)(nil).GetLoggedInUser), ctx)
 }
@@ -384,7 +384,7 @@ func (m *MockAPIInterface) GetOpenPorts(ctx context.Context, workspaceID string)
 }
 
 // GetOpenPorts indicates an expected call of GetOpenPorts.
-func (mr *MockAPIInterfaceMockRecorder) GetOpenPorts(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetOpenPorts(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOpenPorts", reflect.TypeOf((*MockAPIInterface)(nil).GetOpenPorts), ctx, workspaceID)
 }
@@ -399,7 +399,7 @@ func (m *MockAPIInterface) GetOwnAuthProviders(ctx context.Context) ([]*AuthProv
 }
 
 // GetOwnAuthProviders indicates an expected call of GetOwnAuthProviders.
-func (mr *MockAPIInterfaceMockRecorder) GetOwnAuthProviders(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetOwnAuthProviders(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOwnAuthProviders", reflect.TypeOf((*MockAPIInterface)(nil).GetOwnAuthProviders), ctx)
 }
@@ -414,7 +414,7 @@ func (m *MockAPIInterface) GetOwnerToken(ctx context.Context, workspaceID string
 }
 
 // GetOwnerToken indicates an expected call of GetOwnerToken.
-func (mr *MockAPIInterfaceMockRecorder) GetOwnerToken(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetOwnerToken(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetOwnerToken", reflect.TypeOf((*MockAPIInterface)(nil).GetOwnerToken), ctx, workspaceID)
 }
@@ -429,7 +429,7 @@ func (m *MockAPIInterface) GetPortAuthenticationToken(ctx context.Context, works
 }
 
 // GetPortAuthenticationToken indicates an expected call of GetPortAuthenticationToken.
-func (mr *MockAPIInterfaceMockRecorder) GetPortAuthenticationToken(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetPortAuthenticationToken(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPortAuthenticationToken", reflect.TypeOf((*MockAPIInterface)(nil).GetPortAuthenticationToken), ctx, workspaceID)
 }
@@ -444,7 +444,7 @@ func (m *MockAPIInterface) GetSSHPublicKeys(ctx context.Context) ([]*UserSSHPubl
 }
 
 // GetSSHPublicKeys indicates an expected call of GetSSHPublicKeys.
-func (mr *MockAPIInterfaceMockRecorder) GetSSHPublicKeys(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetSSHPublicKeys(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSSHPublicKeys", reflect.TypeOf((*MockAPIInterface)(nil).GetSSHPublicKeys), ctx)
 }
@@ -459,7 +459,7 @@ func (m *MockAPIInterface) GetSnapshots(ctx context.Context, workspaceID string)
 }
 
 // GetSnapshots indicates an expected call of GetSnapshots.
-func (mr *MockAPIInterfaceMockRecorder) GetSnapshots(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetSnapshots(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSnapshots", reflect.TypeOf((*MockAPIInterface)(nil).GetSnapshots), ctx, workspaceID)
 }
@@ -474,7 +474,7 @@ func (m *MockAPIInterface) GetSupportedWorkspaceClasses(ctx context.Context) ([]
 }
 
 // GetSupportedWorkspaceClasses indicates an expected call of GetSupportedWorkspaceClasses.
-func (mr *MockAPIInterfaceMockRecorder) GetSupportedWorkspaceClasses(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetSupportedWorkspaceClasses(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSupportedWorkspaceClasses", reflect.TypeOf((*MockAPIInterface)(nil).GetSupportedWorkspaceClasses), ctx)
 }
@@ -489,7 +489,7 @@ func (m *MockAPIInterface) GetToken(ctx context.Context, query *GetTokenSearchOp
 }
 
 // GetToken indicates an expected call of GetToken.
-func (mr *MockAPIInterfaceMockRecorder) GetToken(ctx, query interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetToken(ctx, query any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetToken", reflect.TypeOf((*MockAPIInterface)(nil).GetToken), ctx, query)
 }
@@ -504,7 +504,7 @@ func (m *MockAPIInterface) GetUserStorageResource(ctx context.Context, options *
 }
 
 // GetUserStorageResource indicates an expected call of GetUserStorageResource.
-func (mr *MockAPIInterfaceMockRecorder) GetUserStorageResource(ctx, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetUserStorageResource(ctx, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUserStorageResource", reflect.TypeOf((*MockAPIInterface)(nil).GetUserStorageResource), ctx, options)
 }
@@ -519,7 +519,7 @@ func (m *MockAPIInterface) GetWorkspace(ctx context.Context, id string) (*Worksp
 }
 
 // GetWorkspace indicates an expected call of GetWorkspace.
-func (mr *MockAPIInterfaceMockRecorder) GetWorkspace(ctx, id interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetWorkspace(ctx, id any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkspace", reflect.TypeOf((*MockAPIInterface)(nil).GetWorkspace), ctx, id)
 }
@@ -534,7 +534,7 @@ func (m *MockAPIInterface) GetWorkspaceOwner(ctx context.Context, workspaceID st
 }
 
 // GetWorkspaceOwner indicates an expected call of GetWorkspaceOwner.
-func (mr *MockAPIInterfaceMockRecorder) GetWorkspaceOwner(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetWorkspaceOwner(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkspaceOwner", reflect.TypeOf((*MockAPIInterface)(nil).GetWorkspaceOwner), ctx, workspaceID)
 }
@@ -549,7 +549,7 @@ func (m *MockAPIInterface) GetWorkspaceTimeout(ctx context.Context, workspaceID 
 }
 
 // GetWorkspaceTimeout indicates an expected call of GetWorkspaceTimeout.
-func (mr *MockAPIInterfaceMockRecorder) GetWorkspaceTimeout(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetWorkspaceTimeout(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkspaceTimeout", reflect.TypeOf((*MockAPIInterface)(nil).GetWorkspaceTimeout), ctx, workspaceID)
 }
@@ -564,7 +564,7 @@ func (m *MockAPIInterface) GetWorkspaceUsers(ctx context.Context, workspaceID st
 }
 
 // GetWorkspaceUsers indicates an expected call of GetWorkspaceUsers.
-func (mr *MockAPIInterfaceMockRecorder) GetWorkspaceUsers(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetWorkspaceUsers(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkspaceUsers", reflect.TypeOf((*MockAPIInterface)(nil).GetWorkspaceUsers), ctx, workspaceID)
 }
@@ -579,7 +579,7 @@ func (m *MockAPIInterface) GetWorkspaces(ctx context.Context, options *GetWorksp
 }
 
 // GetWorkspaces indicates an expected call of GetWorkspaces.
-func (mr *MockAPIInterfaceMockRecorder) GetWorkspaces(ctx, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GetWorkspaces(ctx, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetWorkspaces", reflect.TypeOf((*MockAPIInterface)(nil).GetWorkspaces), ctx, options)
 }
@@ -594,7 +594,7 @@ func (m *MockAPIInterface) GuessGitTokenScopes(ctx context.Context, params *Gues
 }
 
 // GuessGitTokenScopes indicates an expected call of GuessGitTokenScopes.
-func (mr *MockAPIInterfaceMockRecorder) GuessGitTokenScopes(ctx, params interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) GuessGitTokenScopes(ctx, params any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GuessGitTokenScopes", reflect.TypeOf((*MockAPIInterface)(nil).GuessGitTokenScopes), ctx, params)
 }
@@ -609,7 +609,7 @@ func (m *MockAPIInterface) HasPermission(ctx context.Context, permission *Permis
 }
 
 // HasPermission indicates an expected call of HasPermission.
-func (mr *MockAPIInterfaceMockRecorder) HasPermission(ctx, permission interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) HasPermission(ctx, permission any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HasPermission", reflect.TypeOf((*MockAPIInterface)(nil).HasPermission), ctx, permission)
 }
@@ -624,7 +624,7 @@ func (m *MockAPIInterface) HasSSHPublicKey(ctx context.Context) (bool, error) {
 }
 
 // HasSSHPublicKey indicates an expected call of HasSSHPublicKey.
-func (mr *MockAPIInterfaceMockRecorder) HasSSHPublicKey(ctx interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) HasSSHPublicKey(ctx any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HasSSHPublicKey", reflect.TypeOf((*MockAPIInterface)(nil).HasSSHPublicKey), ctx)
 }
@@ -639,7 +639,7 @@ func (m *MockAPIInterface) InstanceUpdates(ctx context.Context, instanceID strin
 }
 
 // InstanceUpdates indicates an expected call of InstanceUpdates.
-func (mr *MockAPIInterfaceMockRecorder) InstanceUpdates(ctx, instanceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) InstanceUpdates(ctx, instanceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InstanceUpdates", reflect.TypeOf((*MockAPIInterface)(nil).InstanceUpdates), ctx, instanceID)
 }
@@ -654,7 +654,7 @@ func (m *MockAPIInterface) IsPrebuildDone(ctx context.Context, pwsid string) (bo
 }
 
 // IsPrebuildDone indicates an expected call of IsPrebuildDone.
-func (mr *MockAPIInterfaceMockRecorder) IsPrebuildDone(ctx, pwsid interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) IsPrebuildDone(ctx, pwsid any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsPrebuildDone", reflect.TypeOf((*MockAPIInterface)(nil).IsPrebuildDone), ctx, pwsid)
 }
@@ -669,7 +669,7 @@ func (m *MockAPIInterface) IsWorkspaceOwner(ctx context.Context, workspaceID str
 }
 
 // IsWorkspaceOwner indicates an expected call of IsWorkspaceOwner.
-func (mr *MockAPIInterfaceMockRecorder) IsWorkspaceOwner(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) IsWorkspaceOwner(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IsWorkspaceOwner", reflect.TypeOf((*MockAPIInterface)(nil).IsWorkspaceOwner), ctx, workspaceID)
 }
@@ -684,7 +684,7 @@ func (m *MockAPIInterface) OpenPort(ctx context.Context, workspaceID string, por
 }
 
 // OpenPort indicates an expected call of OpenPort.
-func (mr *MockAPIInterfaceMockRecorder) OpenPort(ctx, workspaceID, port interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) OpenPort(ctx, workspaceID, port any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OpenPort", reflect.TypeOf((*MockAPIInterface)(nil).OpenPort), ctx, workspaceID, port)
 }
@@ -698,7 +698,7 @@ func (m *MockAPIInterface) RegisterGithubApp(ctx context.Context, installationID
 }
 
 // RegisterGithubApp indicates an expected call of RegisterGithubApp.
-func (mr *MockAPIInterfaceMockRecorder) RegisterGithubApp(ctx, installationID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) RegisterGithubApp(ctx, installationID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RegisterGithubApp", reflect.TypeOf((*MockAPIInterface)(nil).RegisterGithubApp), ctx, installationID)
 }
@@ -713,7 +713,7 @@ func (m *MockAPIInterface) SendFeedback(ctx context.Context, feedback string) (s
 }
 
 // SendFeedback indicates an expected call of SendFeedback.
-func (mr *MockAPIInterfaceMockRecorder) SendFeedback(ctx, feedback interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) SendFeedback(ctx, feedback any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendFeedback", reflect.TypeOf((*MockAPIInterface)(nil).SendFeedback), ctx, feedback)
 }
@@ -727,7 +727,7 @@ func (m *MockAPIInterface) SendHeartBeat(ctx context.Context, options *SendHeart
 }
 
 // SendHeartBeat indicates an expected call of SendHeartBeat.
-func (mr *MockAPIInterfaceMockRecorder) SendHeartBeat(ctx, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) SendHeartBeat(ctx, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendHeartBeat", reflect.TypeOf((*MockAPIInterface)(nil).SendHeartBeat), ctx, options)
 }
@@ -741,7 +741,7 @@ func (m *MockAPIInterface) SetEnvVar(ctx context.Context, variable *UserEnvVarVa
 }
 
 // SetEnvVar indicates an expected call of SetEnvVar.
-func (mr *MockAPIInterfaceMockRecorder) SetEnvVar(ctx, variable interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) SetEnvVar(ctx, variable any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetEnvVar", reflect.TypeOf((*MockAPIInterface)(nil).SetEnvVar), ctx, variable)
 }
@@ -755,7 +755,7 @@ func (m *MockAPIInterface) SetWorkspaceDescription(ctx context.Context, id, desc
 }
 
 // SetWorkspaceDescription indicates an expected call of SetWorkspaceDescription.
-func (mr *MockAPIInterfaceMockRecorder) SetWorkspaceDescription(ctx, id, desc interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) SetWorkspaceDescription(ctx, id, desc any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetWorkspaceDescription", reflect.TypeOf((*MockAPIInterface)(nil).SetWorkspaceDescription), ctx, id, desc)
 }
@@ -770,7 +770,7 @@ func (m *MockAPIInterface) SetWorkspaceTimeout(ctx context.Context, workspaceID 
 }
 
 // SetWorkspaceTimeout indicates an expected call of SetWorkspaceTimeout.
-func (mr *MockAPIInterfaceMockRecorder) SetWorkspaceTimeout(ctx, workspaceID, duration interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) SetWorkspaceTimeout(ctx, workspaceID, duration any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetWorkspaceTimeout", reflect.TypeOf((*MockAPIInterface)(nil).SetWorkspaceTimeout), ctx, workspaceID, duration)
 }
@@ -785,7 +785,7 @@ func (m *MockAPIInterface) StartWorkspace(ctx context.Context, id string, option
 }
 
 // StartWorkspace indicates an expected call of StartWorkspace.
-func (mr *MockAPIInterfaceMockRecorder) StartWorkspace(ctx, id, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) StartWorkspace(ctx, id, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StartWorkspace", reflect.TypeOf((*MockAPIInterface)(nil).StartWorkspace), ctx, id, options)
 }
@@ -799,7 +799,7 @@ func (m *MockAPIInterface) StopWorkspace(ctx context.Context, id string) error {
 }
 
 // StopWorkspace indicates an expected call of StopWorkspace.
-func (mr *MockAPIInterfaceMockRecorder) StopWorkspace(ctx, id interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) StopWorkspace(ctx, id any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StopWorkspace", reflect.TypeOf((*MockAPIInterface)(nil).StopWorkspace), ctx, id)
 }
@@ -813,7 +813,7 @@ func (m *MockAPIInterface) StoreLayout(ctx context.Context, workspaceID, layoutD
 }
 
 // StoreLayout indicates an expected call of StoreLayout.
-func (mr *MockAPIInterfaceMockRecorder) StoreLayout(ctx, workspaceID, layoutData interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) StoreLayout(ctx, workspaceID, layoutData any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "StoreLayout", reflect.TypeOf((*MockAPIInterface)(nil).StoreLayout), ctx, workspaceID, layoutData)
 }
@@ -828,7 +828,7 @@ func (m *MockAPIInterface) TakeSnapshot(ctx context.Context, options *TakeSnapsh
 }
 
 // TakeSnapshot indicates an expected call of TakeSnapshot.
-func (mr *MockAPIInterfaceMockRecorder) TakeSnapshot(ctx, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) TakeSnapshot(ctx, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TakeSnapshot", reflect.TypeOf((*MockAPIInterface)(nil).TakeSnapshot), ctx, options)
 }
@@ -842,7 +842,7 @@ func (m *MockAPIInterface) TrackEvent(ctx context.Context, event *RemoteTrackMes
 }
 
 // TrackEvent indicates an expected call of TrackEvent.
-func (mr *MockAPIInterfaceMockRecorder) TrackEvent(ctx, event interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) TrackEvent(ctx, event any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TrackEvent", reflect.TypeOf((*MockAPIInterface)(nil).TrackEvent), ctx, event)
 }
@@ -857,7 +857,7 @@ func (m *MockAPIInterface) UpdateLoggedInUser(ctx context.Context, user *User) (
 }
 
 // UpdateLoggedInUser indicates an expected call of UpdateLoggedInUser.
-func (mr *MockAPIInterfaceMockRecorder) UpdateLoggedInUser(ctx, user interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) UpdateLoggedInUser(ctx, user any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateLoggedInUser", reflect.TypeOf((*MockAPIInterface)(nil).UpdateLoggedInUser), ctx, user)
 }
@@ -871,7 +871,7 @@ func (m *MockAPIInterface) UpdateOwnAuthProvider(ctx context.Context, params *Up
 }
 
 // UpdateOwnAuthProvider indicates an expected call of UpdateOwnAuthProvider.
-func (mr *MockAPIInterfaceMockRecorder) UpdateOwnAuthProvider(ctx, params interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) UpdateOwnAuthProvider(ctx, params any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateOwnAuthProvider", reflect.TypeOf((*MockAPIInterface)(nil).UpdateOwnAuthProvider), ctx, params)
 }
@@ -885,7 +885,7 @@ func (m *MockAPIInterface) UpdateUserStorageResource(ctx context.Context, option
 }
 
 // UpdateUserStorageResource indicates an expected call of UpdateUserStorageResource.
-func (mr *MockAPIInterfaceMockRecorder) UpdateUserStorageResource(ctx, options interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) UpdateUserStorageResource(ctx, options any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateUserStorageResource", reflect.TypeOf((*MockAPIInterface)(nil).UpdateUserStorageResource), ctx, options)
 }
@@ -899,7 +899,7 @@ func (m *MockAPIInterface) UpdateWorkspaceUserPin(ctx context.Context, id string
 }
 
 // UpdateWorkspaceUserPin indicates an expected call of UpdateWorkspaceUserPin.
-func (mr *MockAPIInterfaceMockRecorder) UpdateWorkspaceUserPin(ctx, id, action interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) UpdateWorkspaceUserPin(ctx, id, action any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateWorkspaceUserPin", reflect.TypeOf((*MockAPIInterface)(nil).UpdateWorkspaceUserPin), ctx, id, action)
 }
@@ -913,7 +913,7 @@ func (m *MockAPIInterface) WaitForSnapshot(ctx context.Context, snapshotId strin
 }
 
 // WaitForSnapshot indicates an expected call of WaitForSnapshot.
-func (mr *MockAPIInterfaceMockRecorder) WaitForSnapshot(ctx, snapshotId interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) WaitForSnapshot(ctx, snapshotId any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WaitForSnapshot", reflect.TypeOf((*MockAPIInterface)(nil).WaitForSnapshot), ctx, snapshotId)
 }
@@ -927,7 +927,7 @@ func (m *MockAPIInterface) WatchWorkspaceImageBuildLogs(ctx context.Context, wor
 }
 
 // WatchWorkspaceImageBuildLogs indicates an expected call of WatchWorkspaceImageBuildLogs.
-func (mr *MockAPIInterfaceMockRecorder) WatchWorkspaceImageBuildLogs(ctx, workspaceID interface{}) *gomock.Call {
+func (mr *MockAPIInterfaceMockRecorder) WatchWorkspaceImageBuildLogs(ctx, workspaceID any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "WatchWorkspaceImageBuildLogs", reflect.TypeOf((*MockAPIInterface)(nil).WatchWorkspaceImageBuildLogs), ctx, workspaceID)
 }

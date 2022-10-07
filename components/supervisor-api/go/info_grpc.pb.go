@@ -74,7 +74,7 @@ func RegisterInfoServiceServer(s grpc.ServiceRegistrar, srv InfoServiceServer) {
 	s.RegisterService(&InfoService_ServiceDesc, srv)
 }
 
-func _InfoService_WorkspaceInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InfoService_WorkspaceInfo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WorkspaceInfoRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -86,7 +86,7 @@ func _InfoService_WorkspaceInfo_Handler(srv interface{}, ctx context.Context, de
 		Server:     srv,
 		FullMethod: "/supervisor.InfoService/WorkspaceInfo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InfoServiceServer).WorkspaceInfo(ctx, req.(*WorkspaceInfoRequest))
 	}
 	return interceptor(ctx, in, info, handler)

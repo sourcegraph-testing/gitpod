@@ -254,7 +254,7 @@ func RegisterInWorkspaceServiceServer(s grpc.ServiceRegistrar, srv InWorkspaceSe
 	s.RegisterService(&InWorkspaceService_ServiceDesc, srv)
 }
 
-func _InWorkspaceService_PrepareForUserNS_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_PrepareForUserNS_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(PrepareForUserNSRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -266,13 +266,13 @@ func _InWorkspaceService_PrepareForUserNS_Handler(srv interface{}, ctx context.C
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/PrepareForUserNS",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).PrepareForUserNS(ctx, req.(*PrepareForUserNSRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_WriteIDMapping_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_WriteIDMapping_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WriteIDMappingRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -284,13 +284,13 @@ func _InWorkspaceService_WriteIDMapping_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/WriteIDMapping",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).WriteIDMapping(ctx, req.(*WriteIDMappingRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_EvacuateCGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_EvacuateCGroup_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(EvacuateCGroupRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -302,13 +302,13 @@ func _InWorkspaceService_EvacuateCGroup_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/EvacuateCGroup",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).EvacuateCGroup(ctx, req.(*EvacuateCGroupRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_MountProc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_MountProc_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(MountProcRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -320,13 +320,13 @@ func _InWorkspaceService_MountProc_Handler(srv interface{}, ctx context.Context,
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/MountProc",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).MountProc(ctx, req.(*MountProcRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_UmountProc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_UmountProc_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UmountProcRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -338,13 +338,13 @@ func _InWorkspaceService_UmountProc_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/UmountProc",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).UmountProc(ctx, req.(*UmountProcRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_MountSysfs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_MountSysfs_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(MountProcRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -356,13 +356,13 @@ func _InWorkspaceService_MountSysfs_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/MountSysfs",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).MountSysfs(ctx, req.(*MountProcRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_UmountSysfs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_UmountSysfs_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UmountProcRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -374,13 +374,13 @@ func _InWorkspaceService_UmountSysfs_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/UmountSysfs",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).UmountSysfs(ctx, req.(*UmountProcRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_Teardown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_Teardown_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(TeardownRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -392,13 +392,13 @@ func _InWorkspaceService_Teardown_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/Teardown",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).Teardown(ctx, req.(*TeardownRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_SetupPairVeths_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_SetupPairVeths_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SetupPairVethsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -410,13 +410,13 @@ func _InWorkspaceService_SetupPairVeths_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/SetupPairVeths",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).SetupPairVeths(ctx, req.(*SetupPairVethsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _InWorkspaceService_WorkspaceInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _InWorkspaceService_WorkspaceInfo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WorkspaceInfoRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -428,7 +428,7 @@ func _InWorkspaceService_WorkspaceInfo_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/iws.InWorkspaceService/WorkspaceInfo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(InWorkspaceServiceServer).WorkspaceInfo(ctx, req.(*WorkspaceInfoRequest))
 	}
 	return interceptor(ctx, in, info, handler)
@@ -540,7 +540,7 @@ func RegisterWorkspaceInfoServiceServer(s grpc.ServiceRegistrar, srv WorkspaceIn
 	s.RegisterService(&WorkspaceInfoService_ServiceDesc, srv)
 }
 
-func _WorkspaceInfoService_WorkspaceInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _WorkspaceInfoService_WorkspaceInfo_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(WorkspaceInfoRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -552,7 +552,7 @@ func _WorkspaceInfoService_WorkspaceInfo_Handler(srv interface{}, ctx context.Co
 		Server:     srv,
 		FullMethod: "/iws.WorkspaceInfoService/WorkspaceInfo",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(WorkspaceInfoServiceServer).WorkspaceInfo(ctx, req.(*WorkspaceInfoRequest))
 	}
 	return interceptor(ctx, in, info, handler)

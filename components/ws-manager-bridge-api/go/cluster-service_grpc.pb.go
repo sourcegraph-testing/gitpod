@@ -124,7 +124,7 @@ func RegisterClusterServiceServer(s grpc.ServiceRegistrar, srv ClusterServiceSer
 	s.RegisterService(&ClusterService_ServiceDesc, srv)
 }
 
-func _ClusterService_Register_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ClusterService_Register_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(RegisterRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -136,13 +136,13 @@ func _ClusterService_Register_Handler(srv interface{}, ctx context.Context, dec 
 		Server:     srv,
 		FullMethod: "/workspacemanagerbridge.ClusterService/Register",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ClusterServiceServer).Register(ctx, req.(*RegisterRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ClusterService_Update_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ClusterService_Update_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UpdateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -154,13 +154,13 @@ func _ClusterService_Update_Handler(srv interface{}, ctx context.Context, dec fu
 		Server:     srv,
 		FullMethod: "/workspacemanagerbridge.ClusterService/Update",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ClusterServiceServer).Update(ctx, req.(*UpdateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ClusterService_Deregister_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ClusterService_Deregister_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DeregisterRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -172,13 +172,13 @@ func _ClusterService_Deregister_Handler(srv interface{}, ctx context.Context, de
 		Server:     srv,
 		FullMethod: "/workspacemanagerbridge.ClusterService/Deregister",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ClusterServiceServer).Deregister(ctx, req.(*DeregisterRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ClusterService_List_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ClusterService_List_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ListRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -190,7 +190,7 @@ func _ClusterService_List_Handler(srv interface{}, ctx context.Context, dec func
 		Server:     srv,
 		FullMethod: "/workspacemanagerbridge.ClusterService/List",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ClusterServiceServer).List(ctx, req.(*ListRequest))
 	}
 	return interceptor(ctx, in, info, handler)

@@ -133,7 +133,7 @@ func startTestTarget(t *testing.T, host, name string, checkedHost bool) *testTar
 			w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 			w.WriteHeader(http.StatusOK)
 			format := "%s hit: %s\n"
-			args := []interface{}{name, r.URL.String()}
+			args := []any{name, r.URL.String()}
 			if checkedHost {
 				format += "host: %s\n"
 				args = append(args, r.Host)
@@ -782,7 +782,7 @@ func TestSSHGatewayRouter(t *testing.T) {
 			if resp.StatusCode != 200 {
 				t.Fatalf("status code should be 200, but got %d", resp.StatusCode)
 			}
-			var hostkeys []map[string]interface{}
+			var hostkeys []map[string]any
 			fmt.Println(string(body))
 			err = json.Unmarshal(body, &hostkeys)
 			if err != nil {

@@ -222,7 +222,7 @@ func RegisterNotificationServiceServer(s grpc.ServiceRegistrar, srv Notification
 	s.RegisterService(&NotificationService_ServiceDesc, srv)
 }
 
-func _NotificationService_Notify_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _NotificationService_Notify_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(NotifyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -234,13 +234,13 @@ func _NotificationService_Notify_Handler(srv interface{}, ctx context.Context, d
 		Server:     srv,
 		FullMethod: "/supervisor.NotificationService/Notify",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(NotificationServiceServer).Notify(ctx, req.(*NotifyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _NotificationService_Subscribe_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _NotificationService_Subscribe_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(SubscribeRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -261,7 +261,7 @@ func (x *notificationServiceSubscribeServer) Send(m *SubscribeResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _NotificationService_Respond_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _NotificationService_Respond_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(RespondRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -273,13 +273,13 @@ func _NotificationService_Respond_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/supervisor.NotificationService/Respond",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(NotificationServiceServer).Respond(ctx, req.(*RespondRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _NotificationService_SubscribeActive_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _NotificationService_SubscribeActive_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(SubscribeActiveRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -300,7 +300,7 @@ func (x *notificationServiceSubscribeActiveServer) Send(m *SubscribeActiveRespon
 	return x.ServerStream.SendMsg(m)
 }
 
-func _NotificationService_NotifyActive_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _NotificationService_NotifyActive_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(NotifyActiveRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -312,13 +312,13 @@ func _NotificationService_NotifyActive_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/supervisor.NotificationService/NotifyActive",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(NotificationServiceServer).NotifyActive(ctx, req.(*NotifyActiveRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _NotificationService_NotifyActiveRespond_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _NotificationService_NotifyActiveRespond_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(NotifyActiveRespondRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -330,7 +330,7 @@ func _NotificationService_NotifyActiveRespond_Handler(srv interface{}, ctx conte
 		Server:     srv,
 		FullMethod: "/supervisor.NotificationService/NotifyActiveRespond",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(NotificationServiceServer).NotifyActiveRespond(ctx, req.(*NotifyActiveRespondRequest))
 	}
 	return interceptor(ctx, in, info, handler)

@@ -474,7 +474,7 @@ func file_localapp_proto_rawDescGZIP() []byte {
 }
 
 var file_localapp_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
-var file_localapp_proto_goTypes = []interface{}{
+var file_localapp_proto_goTypes = []any{
 	(*TunnelStatusRequest)(nil),          // 0: localapp.TunnelStatusRequest
 	(*TunnelStatusResponse)(nil),         // 1: localapp.TunnelStatusResponse
 	(*TunnelStatus)(nil),                 // 2: localapp.TunnelStatus
@@ -506,7 +506,7 @@ func file_localapp_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_localapp_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_localapp_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*TunnelStatusRequest); i {
 			case 0:
 				return &v.state
@@ -518,7 +518,7 @@ func file_localapp_proto_init() {
 				return nil
 			}
 		}
-		file_localapp_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_localapp_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*TunnelStatusResponse); i {
 			case 0:
 				return &v.state
@@ -530,7 +530,7 @@ func file_localapp_proto_init() {
 				return nil
 			}
 		}
-		file_localapp_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_localapp_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*TunnelStatus); i {
 			case 0:
 				return &v.state
@@ -542,7 +542,7 @@ func file_localapp_proto_init() {
 				return nil
 			}
 		}
-		file_localapp_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_localapp_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*AutoTunnelRequest); i {
 			case 0:
 				return &v.state
@@ -554,7 +554,7 @@ func file_localapp_proto_init() {
 				return nil
 			}
 		}
-		file_localapp_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_localapp_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*AutoTunnelResponse); i {
 			case 0:
 				return &v.state
@@ -566,7 +566,7 @@ func file_localapp_proto_init() {
 				return nil
 			}
 		}
-		file_localapp_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_localapp_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*ResolveSSHConnectionRequest); i {
 			case 0:
 				return &v.state
@@ -578,7 +578,7 @@ func file_localapp_proto_init() {
 				return nil
 			}
 		}
-		file_localapp_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_localapp_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*ResolveSSHConnectionResponse); i {
 			case 0:
 				return &v.state

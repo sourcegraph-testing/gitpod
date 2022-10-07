@@ -24,7 +24,7 @@ func init() {
 
 type version struct{}
 
-func (v version) Factory() interface{} {
+func (v version) Factory() any {
 	return &Config{
 		AuthProviders: []ObjectRef{},
 		BlockNewUsers: BlockNewUsers{
@@ -33,7 +33,7 @@ func (v version) Factory() interface{} {
 		},
 	}
 }
-func (v version) Defaults(in interface{}) error {
+func (v version) Defaults(in any) error {
 	cfg, ok := in.(*Config)
 	if !ok {
 		return config.ErrInvalidType
@@ -74,8 +74,8 @@ func (v version) Defaults(in interface{}) error {
 	return nil
 }
 
-func (v version) CheckDeprecated(rawCfg interface{}) (map[string]interface{}, []string) {
-	warnings := make(map[string]interface{}, 0)
+func (v version) CheckDeprecated(rawCfg any) (map[string]any, []string) {
+	warnings := make(map[string]any, 0)
 	conflicts := make([]string, 0)
 	cfg := rawCfg.(*Config)
 

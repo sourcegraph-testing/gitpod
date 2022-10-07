@@ -26,7 +26,7 @@ var generateWsspecCmd = &cobra.Command{
 		schema.Title = "ws-manager wsspec schema - generated using wsman generate wsspec"
 		schema.Ref = "#/definitions/StartWorkspaceSpec"
 
-		initializers := map[string]interface{}{
+		initializers := map[string]any{
 			"WorkspaceInitializer_Empty":    &csapi.WorkspaceInitializer_Empty{},
 			"WorkspaceInitializer_Git":      &csapi.WorkspaceInitializer_Git{},
 			"WorkspaceInitializer_Snapshot": &csapi.WorkspaceInitializer_Snapshot{},

@@ -322,7 +322,7 @@ func (test *SingleWorkspaceIntegrationTest) Run(t *testing.T) {
 	}
 	files := []struct {
 		tplfn  string
-		ctnt   interface{}
+		ctnt   any
 		setter func(fn string)
 	}{
 		{"default-template.yaml", test.PodTemplates.Default, func(fn string) {

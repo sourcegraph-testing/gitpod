@@ -13,7 +13,7 @@ import (
 func TestTick(t *testing.T) {
 	type Expectation struct {
 		Samples                []uint64
-		Panic                  interface{}
+		Panic                  any
 		MonotonicityViolations int
 	}
 

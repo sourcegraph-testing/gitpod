@@ -84,7 +84,7 @@ const (
 func NewRemoteWorkspaceInfoProvider(client client.Client, scheme *runtime.Scheme) *RemoteWorkspaceInfoProvider {
 	// create custom indexer for searches
 	indexers := cache.Indexers{
-		workspaceIndex: func(obj interface{}) ([]string, error) {
+		workspaceIndex: func(obj any) ([]string, error) {
 			if workspaceInfo, ok := obj.(*WorkspaceInfo); ok {
 				return []string{workspaceInfo.WorkspaceID}, nil
 			}

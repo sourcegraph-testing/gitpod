@@ -933,7 +933,7 @@ func file_notification_proto_rawDescGZIP() []byte {
 
 var file_notification_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
-var file_notification_proto_goTypes = []interface{}{
+var file_notification_proto_goTypes = []any{
 	(NotifyRequest_Level)(0),                // 0: supervisor.NotifyRequest.Level
 	(*NotifyRequest)(nil),                   // 1: supervisor.NotifyRequest
 	(*NotifyResponse)(nil),                  // 2: supervisor.NotifyResponse
@@ -983,7 +983,7 @@ func file_notification_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_notification_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyRequest); i {
 			case 0:
 				return &v.state
@@ -995,7 +995,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyResponse); i {
 			case 0:
 				return &v.state
@@ -1007,7 +1007,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*SubscribeRequest); i {
 			case 0:
 				return &v.state
@@ -1019,7 +1019,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*SubscribeResponse); i {
 			case 0:
 				return &v.state
@@ -1031,7 +1031,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*RespondRequest); i {
 			case 0:
 				return &v.state
@@ -1043,7 +1043,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*RespondResponse); i {
 			case 0:
 				return &v.state
@@ -1055,7 +1055,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyActiveRequest); i {
 			case 0:
 				return &v.state
@@ -1067,7 +1067,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyActiveResponse); i {
 			case 0:
 				return &v.state
@@ -1079,7 +1079,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*SubscribeActiveRequest); i {
 			case 0:
 				return &v.state
@@ -1091,7 +1091,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*SubscribeActiveResponse); i {
 			case 0:
 				return &v.state
@@ -1103,7 +1103,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyActiveRespondRequest); i {
 			case 0:
 				return &v.state
@@ -1115,7 +1115,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyActiveRespondResponse); i {
 			case 0:
 				return &v.state
@@ -1127,7 +1127,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyActiveRequest_OpenData); i {
 			case 0:
 				return &v.state
@@ -1139,7 +1139,7 @@ func file_notification_proto_init() {
 				return nil
 			}
 		}
-		file_notification_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_notification_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*NotifyActiveRequest_PreviewData); i {
 			case 0:
 				return &v.state
@@ -1152,7 +1152,7 @@ func file_notification_proto_init() {
 			}
 		}
 	}
-	file_notification_proto_msgTypes[6].OneofWrappers = []interface{}{
+	file_notification_proto_msgTypes[6].OneofWrappers = []any{
 		(*NotifyActiveRequest_Open)(nil),
 		(*NotifyActiveRequest_Preview)(nil),
 	}

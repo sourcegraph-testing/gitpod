@@ -80,7 +80,7 @@ func RegisterSpecProviderServer(s grpc.ServiceRegistrar, srv SpecProviderServer)
 	s.RegisterService(&SpecProvider_ServiceDesc, srv)
 }
 
-func _SpecProvider_GetImageSpec_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _SpecProvider_GetImageSpec_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetImageSpecRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -92,7 +92,7 @@ func _SpecProvider_GetImageSpec_Handler(srv interface{}, ctx context.Context, de
 		Server:     srv,
 		FullMethod: "/registryfacade.SpecProvider/GetImageSpec",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(SpecProviderServer).GetImageSpec(ctx, req.(*GetImageSpecRequest))
 	}
 	return interceptor(ctx, in, info, handler)

@@ -224,7 +224,7 @@ func RegisterStatusServiceServer(s grpc.ServiceRegistrar, srv StatusServiceServe
 	s.RegisterService(&StatusService_ServiceDesc, srv)
 }
 
-func _StatusService_SupervisorStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _StatusService_SupervisorStatus_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SupervisorStatusRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -236,13 +236,13 @@ func _StatusService_SupervisorStatus_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/supervisor.StatusService/SupervisorStatus",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(StatusServiceServer).SupervisorStatus(ctx, req.(*SupervisorStatusRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _StatusService_IDEStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _StatusService_IDEStatus_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(IDEStatusRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -254,13 +254,13 @@ func _StatusService_IDEStatus_Handler(srv interface{}, ctx context.Context, dec 
 		Server:     srv,
 		FullMethod: "/supervisor.StatusService/IDEStatus",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(StatusServiceServer).IDEStatus(ctx, req.(*IDEStatusRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _StatusService_ContentStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _StatusService_ContentStatus_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ContentStatusRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -272,13 +272,13 @@ func _StatusService_ContentStatus_Handler(srv interface{}, ctx context.Context, 
 		Server:     srv,
 		FullMethod: "/supervisor.StatusService/ContentStatus",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(StatusServiceServer).ContentStatus(ctx, req.(*ContentStatusRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _StatusService_BackupStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _StatusService_BackupStatus_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(BackupStatusRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -290,13 +290,13 @@ func _StatusService_BackupStatus_Handler(srv interface{}, ctx context.Context, d
 		Server:     srv,
 		FullMethod: "/supervisor.StatusService/BackupStatus",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(StatusServiceServer).BackupStatus(ctx, req.(*BackupStatusRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _StatusService_PortsStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _StatusService_PortsStatus_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(PortsStatusRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -317,7 +317,7 @@ func (x *statusServicePortsStatusServer) Send(m *PortsStatusResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _StatusService_TasksStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _StatusService_TasksStatus_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(TasksStatusRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -338,7 +338,7 @@ func (x *statusServiceTasksStatusServer) Send(m *TasksStatusResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _StatusService_ResourcesStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _StatusService_ResourcesStatus_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ResourcesStatuRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -350,7 +350,7 @@ func _StatusService_ResourcesStatus_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/supervisor.StatusService/ResourcesStatus",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(StatusServiceServer).ResourcesStatus(ctx, req.(*ResourcesStatuRequest))
 	}
 	return interceptor(ctx, in, info, handler)

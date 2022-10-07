@@ -745,7 +745,7 @@ func moveMount(instanceID string, targetPid int, source, target string) error {
 // Errors are logged instead of returned.
 // This is useful for when we've moved the mount (which we've done with OPEN_TREE_CLONE), we'll
 // need to unmount the mask mounts again to not leave them dangling.
-func cleanupMaskedMount(owi map[string]interface{}, base string, paths []string) {
+func cleanupMaskedMount(owi map[string]any, base string, paths []string) {
 	for _, mask := range paths {
 		// Note: if errors happen while unmounting or removing the masks this does not mean
 		//       that the final unmount won't happen. I.e. we can ignore those errors here
@@ -1223,7 +1223,7 @@ func (rli ratelimitingInterceptor) UnaryInterceptor() grpc.UnaryServerIntercepto
 		mu   sync.Mutex
 		used = make(map[string]struct{})
 	)
-	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
+	return func(ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp any, err error) {
 		limit, ok := rli[info.FullMethod]
 		if ok {
 			if limit.UseOnce {

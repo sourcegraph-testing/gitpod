@@ -75,7 +75,7 @@ type Workspace struct {
 
 	XFSProjectID int `json:"xfsProjectID"`
 
-	NonPersistentAttrs map[string]interface{} `json:"-"`
+	NonPersistentAttrs map[string]any `json:"-"`
 
 	store              *Store
 	state              WorkspaceState
@@ -379,7 +379,7 @@ func loadWorkspace(ctx context.Context, path string) (sess *Workspace, err error
 	}
 
 	res := p.Workspace
-	res.NonPersistentAttrs = make(map[string]interface{})
+	res.NonPersistentAttrs = make(map[string]any)
 	res.state = p.State
 	res.operatingCondition = sync.NewCond(&sync.Mutex{})
 

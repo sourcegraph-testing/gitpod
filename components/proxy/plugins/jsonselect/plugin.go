@@ -54,7 +54,7 @@ func (e *JSONSelectEncoder) Provision(ctx caddy.Context) error {
 	e.setters = [][]string{}
 	e.getters = [][]string{}
 	r := caddy.NewReplacer()
-	r.Map(func(sel string) (interface{}, bool) {
+	r.Map(func(sel string) (any, bool) {
 		var set, get string
 
 		parts := strings.Split(sel, ":")

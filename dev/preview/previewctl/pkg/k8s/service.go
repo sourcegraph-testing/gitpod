@@ -46,7 +46,7 @@ func (c *Config) WaitProxySvcReady(ctx context.Context, namespace string, doneCh
 	defer close(stopCh)
 
 	svcInformer.AddEventHandler(cache.ResourceEventHandlerFuncs{
-		AddFunc: func(obj interface{}) {
+		AddFunc: func(obj any) {
 			svc := obj.(*v1.Service)
 			if svc.Namespace == namespace && svc.Name == proxySvcName {
 				doneCh <- struct{}{}

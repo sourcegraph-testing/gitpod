@@ -66,8 +66,8 @@ func NewServiceFromEnv() (*HTTPTheiaService, error) {
 }
 
 type request struct {
-	Method string      `json:"method"`
-	Params interface{} `json:"params"`
+	Method string `json:"method"`
+	Params any    `json:"params"`
 }
 
 var (

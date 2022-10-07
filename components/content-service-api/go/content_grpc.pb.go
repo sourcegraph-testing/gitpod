@@ -76,7 +76,7 @@ func RegisterContentServiceServer(s grpc.ServiceRegistrar, srv ContentServiceSer
 	s.RegisterService(&ContentService_ServiceDesc, srv)
 }
 
-func _ContentService_DeleteUserContent_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ContentService_DeleteUserContent_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(DeleteUserContentRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -88,7 +88,7 @@ func _ContentService_DeleteUserContent_Handler(srv interface{}, ctx context.Cont
 		Server:     srv,
 		FullMethod: "/contentservice.ContentService/DeleteUserContent",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ContentServiceServer).DeleteUserContent(ctx, req.(*DeleteUserContentRequest))
 	}
 	return interceptor(ctx, in, info, handler)

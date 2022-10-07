@@ -65,7 +65,7 @@ func (m *Uidmapper) HandleUIDMappingRequest(ctx context.Context, req *api.WriteI
 		return err
 	}
 
-	log := log.WithFields(map[string]interface{}{
+	log := log.WithFields(map[string]any{
 		"req":         string(reqjson),
 		"containerID": containerID,
 		"instanceId":  instanceID,

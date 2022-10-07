@@ -96,7 +96,7 @@ func (c *Config) WaitVMReady(ctx context.Context, name, namespace string, doneCh
 	vmInformer := kubeInformerFactory.ForResource(vmInstanceResource).Informer()
 
 	vmInformer.AddEventHandler(cache.ResourceEventHandlerFuncs{
-		AddFunc: func(obj interface{}) {
+		AddFunc: func(obj any) {
 			res := obj.(*unstructured.Unstructured)
 			ip, err := parseVMInstanceIPAddress(res)
 			if err != nil && errors.Is(err, ErrGettingVMIpAddress) {
@@ -111,7 +111,7 @@ func (c *Config) WaitVMReady(ctx context.Context, name, namespace string, doneCh
 			doneCh <- struct{}{}
 		},
 		// We also watch for updates
-		UpdateFunc: func(oldObj interface{}, newObj interface{}) {
+		UpdateFunc: func(oldObj any, newObj any) {
 			res := newObj.(*unstructured.Unstructured)
 			ip, err := parseVMInstanceIPAddress(res)
 			if err != nil && errors.Is(err, ErrGettingVMIpAddress) {

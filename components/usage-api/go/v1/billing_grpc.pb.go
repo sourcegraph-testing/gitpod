@@ -130,7 +130,7 @@ func RegisterBillingServiceServer(s grpc.ServiceRegistrar, srv BillingServiceSer
 	s.RegisterService(&BillingService_ServiceDesc, srv)
 }
 
-func _BillingService_UpdateInvoices_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BillingService_UpdateInvoices_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(UpdateInvoicesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -142,13 +142,13 @@ func _BillingService_UpdateInvoices_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/usage.v1.BillingService/UpdateInvoices",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(BillingServiceServer).UpdateInvoices(ctx, req.(*UpdateInvoicesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BillingService_GetUpcomingInvoice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BillingService_GetUpcomingInvoice_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetUpcomingInvoiceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -160,13 +160,13 @@ func _BillingService_GetUpcomingInvoice_Handler(srv interface{}, ctx context.Con
 		Server:     srv,
 		FullMethod: "/usage.v1.BillingService/GetUpcomingInvoice",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(BillingServiceServer).GetUpcomingInvoice(ctx, req.(*GetUpcomingInvoiceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BillingService_FinalizeInvoice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BillingService_FinalizeInvoice_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(FinalizeInvoiceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -178,13 +178,13 @@ func _BillingService_FinalizeInvoice_Handler(srv interface{}, ctx context.Contex
 		Server:     srv,
 		FullMethod: "/usage.v1.BillingService/FinalizeInvoice",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(BillingServiceServer).FinalizeInvoice(ctx, req.(*FinalizeInvoiceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BillingService_SetBilledSession_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _BillingService_SetBilledSession_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SetBilledSessionRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -196,7 +196,7 @@ func _BillingService_SetBilledSession_Handler(srv interface{}, ctx context.Conte
 		Server:     srv,
 		FullMethod: "/usage.v1.BillingService/SetBilledSession",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(BillingServiceServer).SetBilledSession(ctx, req.(*SetBilledSessionRequest))
 	}
 	return interceptor(ctx, in, info, handler)

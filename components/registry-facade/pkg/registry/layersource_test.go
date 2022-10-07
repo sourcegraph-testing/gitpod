@@ -62,7 +62,7 @@ func TestStaticLayerSource(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:    t,
 		Path: "fixtures/layersrc_*.json",
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*testStaticLayerSourceFixture)
 
 			src, err := NewStaticSourceFromImage(context.Background(), &fakeFetcher{Content: fixture.Content}, fixture.SourceRef)
@@ -80,8 +80,8 @@ func TestStaticLayerSource(t *testing.T) {
 			}
 			return &gold{Layer: res, Envs: envs.serialize()}
 		},
-		Fixture: func() interface{} { return &testStaticLayerSourceFixture{} },
-		Gold:    func() interface{} { return &gold{} },
+		Fixture: func() any { return &testStaticLayerSourceFixture{} },
+		Gold:    func() any { return &gold{} },
 	}
 	test.Run()
 }

@@ -31,7 +31,7 @@ type VarcharTime struct {
 }
 
 // Scan implements the Scanner interface.
-func (n *VarcharTime) Scan(value interface{}) error {
+func (n *VarcharTime) Scan(value any) error {
 	if value == nil {
 		n.valid = false
 		return nil

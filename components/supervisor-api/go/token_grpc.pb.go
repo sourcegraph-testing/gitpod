@@ -138,7 +138,7 @@ func RegisterTokenServiceServer(s grpc.ServiceRegistrar, srv TokenServiceServer)
 	s.RegisterService(&TokenService_ServiceDesc, srv)
 }
 
-func _TokenService_GetToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TokenService_GetToken_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(GetTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -150,13 +150,13 @@ func _TokenService_GetToken_Handler(srv interface{}, ctx context.Context, dec fu
 		Server:     srv,
 		FullMethod: "/supervisor.TokenService/GetToken",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TokenServiceServer).GetToken(ctx, req.(*GetTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TokenService_SetToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TokenService_SetToken_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(SetTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -168,13 +168,13 @@ func _TokenService_SetToken_Handler(srv interface{}, ctx context.Context, dec fu
 		Server:     srv,
 		FullMethod: "/supervisor.TokenService/SetToken",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TokenServiceServer).SetToken(ctx, req.(*SetTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TokenService_ClearToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _TokenService_ClearToken_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ClearTokenRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -186,13 +186,13 @@ func _TokenService_ClearToken_Handler(srv interface{}, ctx context.Context, dec 
 		Server:     srv,
 		FullMethod: "/supervisor.TokenService/ClearToken",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(TokenServiceServer).ClearToken(ctx, req.(*ClearTokenRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _TokenService_ProvideToken_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _TokenService_ProvideToken_Handler(srv any, stream grpc.ServerStream) error {
 	return srv.(TokenServiceServer).ProvideToken(&tokenServiceProvideTokenServer{stream})
 }
 

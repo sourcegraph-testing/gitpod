@@ -48,7 +48,7 @@ func TestBuild(t *testing.T) {
 			}
 			builder.RefResolver = resolver
 			wsman.EXPECT().StartWorkspace(gomock.Any(), gomock.Any(), gomock.Any()).
-				DoAndReturn(func(ctx context.Context, req *wsmanapi.StartWorkspaceRequest, _ ...interface{}) (*wsmanapi.StartWorkspaceResponse, error) {
+				DoAndReturn(func(ctx context.Context, req *wsmanapi.StartWorkspaceRequest, _ ...any) (*wsmanapi.StartWorkspaceResponse, error) {
 					close(pushUpdate)
 					t.Log("StartWorkspace called")
 

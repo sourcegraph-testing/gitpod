@@ -38,7 +38,7 @@ func TestIsWorkspaceTimedout(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:    t,
 		Path: "testdata/timeout*.json",
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*fixture)
 			manager := Manager{
 				clock: clock.LogicalOnly(),
@@ -90,8 +90,8 @@ func TestIsWorkspaceTimedout(t *testing.T) {
 			}
 			return &result
 		},
-		Fixture: func() interface{} { return &fixture{} },
-		Gold:    func() interface{} { return &gold{} },
+		Fixture: func() any { return &fixture{} },
+		Gold:    func() any { return &gold{} },
 	}
 	test.Run()
 }
@@ -105,7 +105,7 @@ func TestGetWorkspaceStatusWithFixtures(t *testing.T) {
 	test := ctesting.FixtureTest{
 		T:    t,
 		Path: "testdata/status_*.json",
-		Test: func(t *testing.T, input interface{}) interface{} {
+		Test: func(t *testing.T, input any) any {
 			fixture := input.(*workspaceObjects)
 			manager := Manager{
 				clock: clock.LogicalOnly(),
@@ -118,8 +118,8 @@ func TestGetWorkspaceStatusWithFixtures(t *testing.T) {
 			}
 			return &result
 		},
-		Fixture: func() interface{} { return &workspaceObjects{} },
-		Gold:    func() interface{} { return &statusTestResult{} },
+		Fixture: func() any { return &workspaceObjects{} },
+		Gold:    func() any { return &statusTestResult{} },
 	}
 	test.Run()
 }

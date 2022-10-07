@@ -49,7 +49,7 @@ func (m *MockPresignedAccess) BackupObject(arg0, arg1, arg2 string) string {
 }
 
 // BackupObject indicates an expected call of BackupObject.
-func (mr *MockPresignedAccessMockRecorder) BackupObject(arg0, arg1, arg2 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) BackupObject(arg0, arg1, arg2 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BackupObject", reflect.TypeOf((*MockPresignedAccess)(nil).BackupObject), arg0, arg1, arg2)
 }
@@ -64,7 +64,7 @@ func (m *MockPresignedAccess) BlobObject(arg0 string) (string, error) {
 }
 
 // BlobObject indicates an expected call of BlobObject.
-func (mr *MockPresignedAccessMockRecorder) BlobObject(arg0 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) BlobObject(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BlobObject", reflect.TypeOf((*MockPresignedAccess)(nil).BlobObject), arg0)
 }
@@ -78,7 +78,7 @@ func (m *MockPresignedAccess) Bucket(arg0 string) string {
 }
 
 // Bucket indicates an expected call of Bucket.
-func (mr *MockPresignedAccessMockRecorder) Bucket(arg0 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) Bucket(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Bucket", reflect.TypeOf((*MockPresignedAccess)(nil).Bucket), arg0)
 }
@@ -92,7 +92,7 @@ func (m *MockPresignedAccess) DeleteBucket(arg0 context.Context, arg1 string) er
 }
 
 // DeleteBucket indicates an expected call of DeleteBucket.
-func (mr *MockPresignedAccessMockRecorder) DeleteBucket(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) DeleteBucket(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteBucket", reflect.TypeOf((*MockPresignedAccess)(nil).DeleteBucket), arg0, arg1)
 }
@@ -106,7 +106,7 @@ func (m *MockPresignedAccess) DeleteObject(arg0 context.Context, arg1 string, ar
 }
 
 // DeleteObject indicates an expected call of DeleteObject.
-func (mr *MockPresignedAccessMockRecorder) DeleteObject(arg0, arg1, arg2 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) DeleteObject(arg0, arg1, arg2 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteObject", reflect.TypeOf((*MockPresignedAccess)(nil).DeleteObject), arg0, arg1, arg2)
 }
@@ -121,7 +121,7 @@ func (m *MockPresignedAccess) DiskUsage(arg0 context.Context, arg1, arg2 string)
 }
 
 // DiskUsage indicates an expected call of DiskUsage.
-func (mr *MockPresignedAccessMockRecorder) DiskUsage(arg0, arg1, arg2 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) DiskUsage(arg0, arg1, arg2 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DiskUsage", reflect.TypeOf((*MockPresignedAccess)(nil).DiskUsage), arg0, arg1, arg2)
 }
@@ -135,7 +135,7 @@ func (m *MockPresignedAccess) EnsureExists(arg0 context.Context, arg1 string) er
 }
 
 // EnsureExists indicates an expected call of EnsureExists.
-func (mr *MockPresignedAccessMockRecorder) EnsureExists(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) EnsureExists(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnsureExists", reflect.TypeOf((*MockPresignedAccess)(nil).EnsureExists), arg0, arg1)
 }
@@ -149,7 +149,7 @@ func (m *MockPresignedAccess) InstanceObject(arg0, arg1, arg2, arg3 string) stri
 }
 
 // InstanceObject indicates an expected call of InstanceObject.
-func (mr *MockPresignedAccessMockRecorder) InstanceObject(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) InstanceObject(arg0, arg1, arg2, arg3 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InstanceObject", reflect.TypeOf((*MockPresignedAccess)(nil).InstanceObject), arg0, arg1, arg2, arg3)
 }
@@ -164,7 +164,7 @@ func (m *MockPresignedAccess) ObjectExists(arg0 context.Context, arg1, arg2 stri
 }
 
 // ObjectExists indicates an expected call of ObjectExists.
-func (mr *MockPresignedAccessMockRecorder) ObjectExists(arg0, arg1, arg2 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) ObjectExists(arg0, arg1, arg2 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ObjectExists", reflect.TypeOf((*MockPresignedAccess)(nil).ObjectExists), arg0, arg1, arg2)
 }
@@ -179,7 +179,7 @@ func (m *MockPresignedAccess) ObjectHash(arg0 context.Context, arg1, arg2 string
 }
 
 // ObjectHash indicates an expected call of ObjectHash.
-func (mr *MockPresignedAccessMockRecorder) ObjectHash(arg0, arg1, arg2 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) ObjectHash(arg0, arg1, arg2 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ObjectHash", reflect.TypeOf((*MockPresignedAccess)(nil).ObjectHash), arg0, arg1, arg2)
 }
@@ -194,7 +194,7 @@ func (m *MockPresignedAccess) SignDownload(arg0 context.Context, arg1, arg2 stri
 }
 
 // SignDownload indicates an expected call of SignDownload.
-func (mr *MockPresignedAccessMockRecorder) SignDownload(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) SignDownload(arg0, arg1, arg2, arg3 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SignDownload", reflect.TypeOf((*MockPresignedAccess)(nil).SignDownload), arg0, arg1, arg2, arg3)
 }
@@ -209,7 +209,7 @@ func (m *MockPresignedAccess) SignUpload(arg0 context.Context, arg1, arg2 string
 }
 
 // SignUpload indicates an expected call of SignUpload.
-func (mr *MockPresignedAccessMockRecorder) SignUpload(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
+func (mr *MockPresignedAccessMockRecorder) SignUpload(arg0, arg1, arg2, arg3 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SignUpload", reflect.TypeOf((*MockPresignedAccess)(nil).SignUpload), arg0, arg1, arg2, arg3)
 }
@@ -246,7 +246,7 @@ func (m *MockDirectAccess) BackupObject(arg0 string) string {
 }
 
 // BackupObject indicates an expected call of BackupObject.
-func (mr *MockDirectAccessMockRecorder) BackupObject(arg0 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) BackupObject(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BackupObject", reflect.TypeOf((*MockDirectAccess)(nil).BackupObject), arg0)
 }
@@ -260,7 +260,7 @@ func (m *MockDirectAccess) Bucket(arg0 string) string {
 }
 
 // Bucket indicates an expected call of Bucket.
-func (mr *MockDirectAccessMockRecorder) Bucket(arg0 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) Bucket(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Bucket", reflect.TypeOf((*MockDirectAccess)(nil).Bucket), arg0)
 }
@@ -275,7 +275,7 @@ func (m *MockDirectAccess) Download(arg0 context.Context, arg1, arg2 string, arg
 }
 
 // Download indicates an expected call of Download.
-func (mr *MockDirectAccessMockRecorder) Download(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) Download(arg0, arg1, arg2, arg3 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Download", reflect.TypeOf((*MockDirectAccess)(nil).Download), arg0, arg1, arg2, arg3)
 }
@@ -290,7 +290,7 @@ func (m *MockDirectAccess) DownloadSnapshot(arg0 context.Context, arg1, arg2 str
 }
 
 // DownloadSnapshot indicates an expected call of DownloadSnapshot.
-func (mr *MockDirectAccessMockRecorder) DownloadSnapshot(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) DownloadSnapshot(arg0, arg1, arg2, arg3 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DownloadSnapshot", reflect.TypeOf((*MockDirectAccess)(nil).DownloadSnapshot), arg0, arg1, arg2, arg3)
 }
@@ -304,7 +304,7 @@ func (m *MockDirectAccess) EnsureExists(arg0 context.Context) error {
 }
 
 // EnsureExists indicates an expected call of EnsureExists.
-func (mr *MockDirectAccessMockRecorder) EnsureExists(arg0 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) EnsureExists(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "EnsureExists", reflect.TypeOf((*MockDirectAccess)(nil).EnsureExists), arg0)
 }
@@ -318,7 +318,7 @@ func (m *MockDirectAccess) Init(arg0 context.Context, arg1, arg2, arg3 string) e
 }
 
 // Init indicates an expected call of Init.
-func (mr *MockDirectAccessMockRecorder) Init(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) Init(arg0, arg1, arg2, arg3 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Init", reflect.TypeOf((*MockDirectAccess)(nil).Init), arg0, arg1, arg2, arg3)
 }
@@ -333,7 +333,7 @@ func (m *MockDirectAccess) ListObjects(arg0 context.Context, arg1 string) ([]str
 }
 
 // ListObjects indicates an expected call of ListObjects.
-func (mr *MockDirectAccessMockRecorder) ListObjects(arg0, arg1 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) ListObjects(arg0, arg1 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListObjects", reflect.TypeOf((*MockDirectAccess)(nil).ListObjects), arg0, arg1)
 }
@@ -347,7 +347,7 @@ func (m *MockDirectAccess) Qualify(arg0 string) string {
 }
 
 // Qualify indicates an expected call of Qualify.
-func (mr *MockDirectAccessMockRecorder) Qualify(arg0 interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) Qualify(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Qualify", reflect.TypeOf((*MockDirectAccess)(nil).Qualify), arg0)
 }
@@ -355,7 +355,7 @@ func (mr *MockDirectAccessMockRecorder) Qualify(arg0 interface{}) *gomock.Call {
 // Upload mocks base method.
 func (m *MockDirectAccess) Upload(arg0 context.Context, arg1, arg2 string, arg3 ...storage.UploadOption) (string, string, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1, arg2}
+	varargs := []any{arg0, arg1, arg2}
 	for _, a := range arg3 {
 		varargs = append(varargs, a)
 	}
@@ -367,16 +367,16 @@ func (m *MockDirectAccess) Upload(arg0 context.Context, arg1, arg2 string, arg3 
 }
 
 // Upload indicates an expected call of Upload.
-func (mr *MockDirectAccessMockRecorder) Upload(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) Upload(arg0, arg1, arg2 any, arg3 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	varargs := append([]any{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Upload", reflect.TypeOf((*MockDirectAccess)(nil).Upload), varargs...)
 }
 
 // UploadInstance mocks base method.
 func (m *MockDirectAccess) UploadInstance(arg0 context.Context, arg1, arg2 string, arg3 ...storage.UploadOption) (string, string, error) {
 	m.ctrl.T.Helper()
-	varargs := []interface{}{arg0, arg1, arg2}
+	varargs := []any{arg0, arg1, arg2}
 	for _, a := range arg3 {
 		varargs = append(varargs, a)
 	}
@@ -388,8 +388,8 @@ func (m *MockDirectAccess) UploadInstance(arg0 context.Context, arg1, arg2 strin
 }
 
 // UploadInstance indicates an expected call of UploadInstance.
-func (mr *MockDirectAccessMockRecorder) UploadInstance(arg0, arg1, arg2 interface{}, arg3 ...interface{}) *gomock.Call {
+func (mr *MockDirectAccessMockRecorder) UploadInstance(arg0, arg1, arg2 any, arg3 ...any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{arg0, arg1, arg2}, arg3...)
+	varargs := append([]any{arg0, arg1, arg2}, arg3...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UploadInstance", reflect.TypeOf((*MockDirectAccess)(nil).UploadInstance), varargs...)
 }

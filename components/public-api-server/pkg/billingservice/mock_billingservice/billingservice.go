@@ -47,7 +47,7 @@ func (m *MockInterface) FinalizeInvoice(ctx context.Context, invoiceId string) e
 }
 
 // FinalizeInvoice indicates an expected call of FinalizeInvoice.
-func (mr *MockInterfaceMockRecorder) FinalizeInvoice(ctx, invoiceId interface{}) *gomock.Call {
+func (mr *MockInterfaceMockRecorder) FinalizeInvoice(ctx, invoiceId any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FinalizeInvoice", reflect.TypeOf((*MockInterface)(nil).FinalizeInvoice), ctx, invoiceId)
 }

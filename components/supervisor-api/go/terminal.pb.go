@@ -1423,7 +1423,7 @@ func file_terminal_proto_rawDescGZIP() []byte {
 
 var file_terminal_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_terminal_proto_msgTypes = make([]protoimpl.MessageInfo, 23)
-var file_terminal_proto_goTypes = []interface{}{
+var file_terminal_proto_goTypes = []any{
 	(TerminalTitleSource)(0),                  // 0: supervisor.TerminalTitleSource
 	(*TerminalSize)(nil),                      // 1: supervisor.TerminalSize
 	(*OpenTerminalRequest)(nil),               // 2: supervisor.OpenTerminalRequest
@@ -1491,7 +1491,7 @@ func file_terminal_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_terminal_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*TerminalSize); i {
 			case 0:
 				return &v.state
@@ -1503,7 +1503,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*OpenTerminalRequest); i {
 			case 0:
 				return &v.state
@@ -1515,7 +1515,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*OpenTerminalResponse); i {
 			case 0:
 				return &v.state
@@ -1527,7 +1527,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*ShutdownTerminalRequest); i {
 			case 0:
 				return &v.state
@@ -1539,7 +1539,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*ShutdownTerminalResponse); i {
 			case 0:
 				return &v.state
@@ -1551,7 +1551,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*Terminal); i {
 			case 0:
 				return &v.state
@@ -1563,7 +1563,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*GetTerminalRequest); i {
 			case 0:
 				return &v.state
@@ -1575,7 +1575,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*ListTerminalsRequest); i {
 			case 0:
 				return &v.state
@@ -1587,7 +1587,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*ListTerminalsResponse); i {
 			case 0:
 				return &v.state
@@ -1599,7 +1599,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[9].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenTerminalRequest); i {
 			case 0:
 				return &v.state
@@ -1611,7 +1611,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[10].Exporter = func(v any, i int) any {
 			switch v := v.(*ListenTerminalResponse); i {
 			case 0:
 				return &v.state
@@ -1623,7 +1623,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[11].Exporter = func(v any, i int) any {
 			switch v := v.(*WriteTerminalRequest); i {
 			case 0:
 				return &v.state
@@ -1635,7 +1635,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[12].Exporter = func(v any, i int) any {
 			switch v := v.(*WriteTerminalResponse); i {
 			case 0:
 				return &v.state
@@ -1647,7 +1647,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[13].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTerminalSizeRequest); i {
 			case 0:
 				return &v.state
@@ -1659,7 +1659,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[14].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTerminalSizeResponse); i {
 			case 0:
 				return &v.state
@@ -1671,7 +1671,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[15].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTerminalTitleRequest); i {
 			case 0:
 				return &v.state
@@ -1683,7 +1683,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[16].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTerminalTitleResponse); i {
 			case 0:
 				return &v.state
@@ -1695,7 +1695,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[17].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateTerminalAnnotationsRequest); i {
 			case 0:
 				return &v.state
@@ -1707,7 +1707,7 @@ func file_terminal_proto_init() {
 				return nil
 			}
 		}
-		file_terminal_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_terminal_proto_msgTypes[18].Exporter = func(v any, i int) any {
 			switch v := v.(*UpdateTerminalAnnotationsResponse); i {
 			case 0:
 				return &v.state
@@ -1720,12 +1720,12 @@ func file_terminal_proto_init() {
 			}
 		}
 	}
-	file_terminal_proto_msgTypes[10].OneofWrappers = []interface{}{
+	file_terminal_proto_msgTypes[10].OneofWrappers = []any{
 		(*ListenTerminalResponse_Data)(nil),
 		(*ListenTerminalResponse_ExitCode)(nil),
 		(*ListenTerminalResponse_Title)(nil),
 	}
-	file_terminal_proto_msgTypes[13].OneofWrappers = []interface{}{
+	file_terminal_proto_msgTypes[13].OneofWrappers = []any{
 		(*SetTerminalSizeRequest_Token)(nil),
 		(*SetTerminalSizeRequest_Force)(nil),
 	}

@@ -415,7 +415,7 @@ func file_workspace_proto_rawDescGZIP() []byte {
 }
 
 var file_workspace_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_workspace_proto_goTypes = []interface{}{
+var file_workspace_proto_goTypes = []any{
 	(*WorkspaceDownloadURLRequest)(nil),     // 0: contentservice.WorkspaceDownloadURLRequest
 	(*WorkspaceDownloadURLResponse)(nil),    // 1: contentservice.WorkspaceDownloadURLResponse
 	(*DeleteWorkspaceRequest)(nil),          // 2: contentservice.DeleteWorkspaceRequest
@@ -443,7 +443,7 @@ func file_workspace_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_workspace_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceDownloadURLRequest); i {
 			case 0:
 				return &v.state
@@ -455,7 +455,7 @@ func file_workspace_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceDownloadURLResponse); i {
 			case 0:
 				return &v.state
@@ -467,7 +467,7 @@ func file_workspace_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteWorkspaceRequest); i {
 			case 0:
 				return &v.state
@@ -479,7 +479,7 @@ func file_workspace_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*DeleteWorkspaceResponse); i {
 			case 0:
 				return &v.state
@@ -491,7 +491,7 @@ func file_workspace_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceSnapshotExistsRequest); i {
 			case 0:
 				return &v.state
@@ -503,7 +503,7 @@ func file_workspace_proto_init() {
 				return nil
 			}
 		}
-		file_workspace_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_workspace_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*WorkspaceSnapshotExistsResponse); i {
 			case 0:
 				return &v.state

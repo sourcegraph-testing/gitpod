@@ -188,7 +188,7 @@ func RegisterImageBuilderServer(s grpc.ServiceRegistrar, srv ImageBuilderServer)
 	s.RegisterService(&ImageBuilder_ServiceDesc, srv)
 }
 
-func _ImageBuilder_ResolveBaseImage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ImageBuilder_ResolveBaseImage_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ResolveBaseImageRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -200,13 +200,13 @@ func _ImageBuilder_ResolveBaseImage_Handler(srv interface{}, ctx context.Context
 		Server:     srv,
 		FullMethod: "/builder.ImageBuilder/ResolveBaseImage",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ImageBuilderServer).ResolveBaseImage(ctx, req.(*ResolveBaseImageRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ImageBuilder_ResolveWorkspaceImage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ImageBuilder_ResolveWorkspaceImage_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ResolveWorkspaceImageRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -218,13 +218,13 @@ func _ImageBuilder_ResolveWorkspaceImage_Handler(srv interface{}, ctx context.Co
 		Server:     srv,
 		FullMethod: "/builder.ImageBuilder/ResolveWorkspaceImage",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ImageBuilderServer).ResolveWorkspaceImage(ctx, req.(*ResolveWorkspaceImageRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ImageBuilder_Build_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _ImageBuilder_Build_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(BuildRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -245,7 +245,7 @@ func (x *imageBuilderBuildServer) Send(m *BuildResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _ImageBuilder_Logs_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _ImageBuilder_Logs_Handler(srv any, stream grpc.ServerStream) error {
 	m := new(LogsRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
@@ -266,7 +266,7 @@ func (x *imageBuilderLogsServer) Send(m *LogsResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func _ImageBuilder_ListBuilds_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _ImageBuilder_ListBuilds_Handler(srv any, ctx context.Context, dec func(any) error, interceptor grpc.UnaryServerInterceptor) (any, error) {
 	in := new(ListBuildsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
@@ -278,7 +278,7 @@ func _ImageBuilder_ListBuilds_Handler(srv interface{}, ctx context.Context, dec 
 		Server:     srv,
 		FullMethod: "/builder.ImageBuilder/ListBuilds",
 	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+	handler := func(ctx context.Context, req any) (any, error) {
 		return srv.(ImageBuilderServer).ListBuilds(ctx, req.(*ListBuildsRequest))
 	}
 	return interceptor(ctx, in, info, handler)

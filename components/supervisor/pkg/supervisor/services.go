@@ -29,7 +29,7 @@ import (
 )
 
 // RegisterableService can register a service.
-type RegisterableService interface{}
+type RegisterableService any
 
 // RegisterableGRPCService can register gRPC services.
 type RegisterableGRPCService interface {

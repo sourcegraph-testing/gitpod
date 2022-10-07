@@ -24,19 +24,19 @@ func init() {
 	caddyconfig.RegisterAdapter("inject-ssh-tunnel", InjectSSHTunnelAdaper{})
 }
 
-func (a InjectSSHTunnelAdaper) Adapt(body []byte, options map[string]interface{}) (result []byte, warnings []caddyconfig.Warning, err error) {
+func (a InjectSSHTunnelAdaper) Adapt(body []byte, options map[string]any) (result []byte, warnings []caddyconfig.Warning, err error) {
 	c := caddyfile.Adapter{ServerType: httpcaddyfile.ServerType{}}
 	result, warnings, err = c.Adapt(body, options)
 	if err != nil {
 		return
 	}
-	var r map[string]interface{}
+	var r map[string]any
 	err = json.Unmarshal(result, &r)
 	if err != nil {
 		return
 	}
-	if apps, ok := r["apps"].(map[string]interface{}); ok {
-		apps["ssh-tunnel"] = make(map[string]interface{})
+	if apps, ok := r["apps"].(map[string]any); ok {
+		apps["ssh-tunnel"] = make(map[string]any)
 		result, err = json.Marshal(r)
 	}
 	return

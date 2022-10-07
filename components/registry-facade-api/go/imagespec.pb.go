@@ -404,7 +404,7 @@ func file_imagespec_proto_rawDescGZIP() []byte {
 }
 
 var file_imagespec_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_imagespec_proto_goTypes = []interface{}{
+var file_imagespec_proto_goTypes = []any{
 	(*ImageSpec)(nil),          // 0: registryfacade.ImageSpec
 	(*ContentLayer)(nil),       // 1: registryfacade.ContentLayer
 	(*RemoteContentLayer)(nil), // 2: registryfacade.RemoteContentLayer
@@ -427,7 +427,7 @@ func file_imagespec_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_imagespec_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_imagespec_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*ImageSpec); i {
 			case 0:
 				return &v.state
@@ -439,7 +439,7 @@ func file_imagespec_proto_init() {
 				return nil
 			}
 		}
-		file_imagespec_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_imagespec_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*ContentLayer); i {
 			case 0:
 				return &v.state
@@ -451,7 +451,7 @@ func file_imagespec_proto_init() {
 				return nil
 			}
 		}
-		file_imagespec_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_imagespec_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*RemoteContentLayer); i {
 			case 0:
 				return &v.state
@@ -463,7 +463,7 @@ func file_imagespec_proto_init() {
 				return nil
 			}
 		}
-		file_imagespec_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_imagespec_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*DirectContentLayer); i {
 			case 0:
 				return &v.state
@@ -476,7 +476,7 @@ func file_imagespec_proto_init() {
 			}
 		}
 	}
-	file_imagespec_proto_msgTypes[1].OneofWrappers = []interface{}{
+	file_imagespec_proto_msgTypes[1].OneofWrappers = []any{
 		(*ContentLayer_Remote)(nil),
 		(*ContentLayer_Direct)(nil),
 	}

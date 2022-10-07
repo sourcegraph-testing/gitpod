@@ -760,7 +760,7 @@ func file_token_proto_rawDescGZIP() []byte {
 
 var file_token_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_token_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
-var file_token_proto_goTypes = []interface{}{
+var file_token_proto_goTypes = []any{
 	(TokenReuse)(0),                              // 0: supervisor.TokenReuse
 	(*GetTokenRequest)(nil),                      // 1: supervisor.GetTokenRequest
 	(*GetTokenResponse)(nil),                     // 2: supervisor.GetTokenResponse
@@ -800,7 +800,7 @@ func file_token_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_token_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*GetTokenRequest); i {
 			case 0:
 				return &v.state
@@ -812,7 +812,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[1].Exporter = func(v any, i int) any {
 			switch v := v.(*GetTokenResponse); i {
 			case 0:
 				return &v.state
@@ -824,7 +824,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[2].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTokenRequest); i {
 			case 0:
 				return &v.state
@@ -836,7 +836,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[3].Exporter = func(v any, i int) any {
 			switch v := v.(*SetTokenResponse); i {
 			case 0:
 				return &v.state
@@ -848,7 +848,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[4].Exporter = func(v any, i int) any {
 			switch v := v.(*ClearTokenRequest); i {
 			case 0:
 				return &v.state
@@ -860,7 +860,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[5].Exporter = func(v any, i int) any {
 			switch v := v.(*ClearTokenResponse); i {
 			case 0:
 				return &v.state
@@ -872,7 +872,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[6].Exporter = func(v any, i int) any {
 			switch v := v.(*ProvideTokenRequest); i {
 			case 0:
 				return &v.state
@@ -884,7 +884,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[7].Exporter = func(v any, i int) any {
 			switch v := v.(*ProvideTokenResponse); i {
 			case 0:
 				return &v.state
@@ -896,7 +896,7 @@ func file_token_proto_init() {
 				return nil
 			}
 		}
-		file_token_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_token_proto_msgTypes[8].Exporter = func(v any, i int) any {
 			switch v := v.(*ProvideTokenRequest_RegisterProvider); i {
 			case 0:
 				return &v.state
@@ -909,11 +909,11 @@ func file_token_proto_init() {
 			}
 		}
 	}
-	file_token_proto_msgTypes[4].OneofWrappers = []interface{}{
+	file_token_proto_msgTypes[4].OneofWrappers = []any{
 		(*ClearTokenRequest_Value)(nil),
 		(*ClearTokenRequest_All)(nil),
 	}
-	file_token_proto_msgTypes[6].OneofWrappers = []interface{}{
+	file_token_proto_msgTypes[6].OneofWrappers = []any{
 		(*ProvideTokenRequest_Registration)(nil),
 		(*ProvideTokenRequest_Answer)(nil),
 	}

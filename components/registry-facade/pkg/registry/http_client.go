@@ -88,8 +88,8 @@ type leveledLogrus struct {
 	*logrus.Entry
 }
 
-func (l *leveledLogrus) fields(keysAndValues ...interface{}) map[string]interface{} {
-	fields := make(map[string]interface{})
+func (l *leveledLogrus) fields(keysAndValues ...any) map[string]any {
+	fields := make(map[string]any)
 
 	for i := 0; i < len(keysAndValues)-1; i += 2 {
 		fields[keysAndValues[i].(string)] = keysAndValues[i+1]
@@ -98,18 +98,18 @@ func (l *leveledLogrus) fields(keysAndValues ...interface{}) map[string]interfac
 	return fields
 }
 
-func (l *leveledLogrus) Error(msg string, keysAndValues ...interface{}) {
+func (l *leveledLogrus) Error(msg string, keysAndValues ...any) {
 	l.WithFields(l.fields(keysAndValues...)).Error(msg)
 }
 
-func (l *leveledLogrus) Info(msg string, keysAndValues ...interface{}) {
+func (l *leveledLogrus) Info(msg string, keysAndValues ...any) {
 	l.WithFields(l.fields(keysAndValues...)).Info(msg)
 }
 
-func (l *leveledLogrus) Debug(msg string, keysAndValues ...interface{}) {
+func (l *leveledLogrus) Debug(msg string, keysAndValues ...any) {
 	l.WithFields(l.fields(keysAndValues...)).Debug(msg)
 }
 
-func (l *leveledLogrus) Warn(msg string, keysAndValues ...interface{}) {
+func (l *leveledLogrus) Warn(msg string, keysAndValues ...any) {
 	l.WithFields(l.fields(keysAndValues...)).Warn(msg)
 }

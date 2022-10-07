@@ -82,7 +82,7 @@ func (v version) LoadValidationFuncs(validate *validator.Validate) error {
 }
 
 // ClusterValidation introduces configuration specific cluster validation checks
-func (v version) ClusterValidation(rcfg interface{}) cluster.ValidationChecks {
+func (v version) ClusterValidation(rcfg any) cluster.ValidationChecks {
 	cfg := rcfg.(*Config)
 
 	var res cluster.ValidationChecks
