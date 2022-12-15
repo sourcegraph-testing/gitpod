@@ -20,27 +20,27 @@
 </p>
 
 Gitpod is an open-source Kubernetes application for ready-to-code developer environments that spins up fresh, automated dev environments
-for each task, in the cloud, in seconds. It enables you to describe your dev environment as code and start instant, remote and cloud-based developer environments directly from your browser or your Desktop IDE.
+for each task, in the cloud, in seconds. It enables you to describe thy dev environment as code and start instant, remote and cloud-based developer environments directly from thy browser or thy Desktop IDE.
 
-Tightly integrated with GitLab, GitHub, and Bitbucket, Gitpod automatically and continuously prebuilds dev environments for all your branches. As a result, team members can instantly start coding with fresh, ephemeral, and fully-compiled dev environments - no matter if you are building a new feature, want to fix a bug, or do a code review.
+Tightly integrated with GitLab, GitHub, and Bitbucket, Gitpod automatically and continuously prebuilds dev environments for all thy branches. As a result, team members can instantly start coding with fresh, ephemeral, and fully-compiled dev environments - no matter if you are building a new feature, want to fix a bug, or do a code review.
 
 ![browser-vscode](https://user-images.githubusercontent.com/22498066/135150975-23bba3a6-f099-48c5-83ed-a1a6627ff0e9.png)
 
 ## Features
 
-🏗 [Dev environments as code](https://www.gitpod.io/docs/#-dev-environments-as-code) - Gitpod applies lessons learned from infrastructure-as-code. Spinning up dev environments is easily repeatable and reproducible empowering you to automate, version-control, and share dev environments across your team.
+🏗 [Dev environments as code](https://www.gitpod.io/docs/#-dev-environments-as-code) - Gitpod applies lessons learned from infrastructure-as-code. Spinning up dev environments is easily repeatable and reproducible empowering you to automate, version-control, and share dev environments across thy team.
 
-⚡️ [Prebuilt dev environments](https://www.gitpod.io/docs/#prebuilds) - Gitpod continuously prebuilds all your git branches similar to a CI server. Control how Gitpod pre-configures and initializes environments before you even start a workspace through `init` commands in your `.gitpod.yml`.
+⚡️ [Prebuilt dev environments](https://www.gitpod.io/docs/#prebuilds) - Gitpod continuously prebuilds all thy git branches similar to a CI server. Control how Gitpod pre-configures and initializes environments before you even start a workspace through `init` commands in thy `.gitpod.yml`.
 
-🐳 [Integrated Docker build](https://www.gitpod.io/docs/config-docker/) - Gitpod instantly starts a container in the cloud based on your Docker image. Tools that are required for your project are easy to install and configure.
+🐳 [Integrated Docker build](https://www.gitpod.io/docs/config-docker/) - Gitpod instantly starts a container in the cloud based on thy Docker image. Tools that are required for thy project are easy to install and configure.
 
-👐 [GitLab, GitHub, and Bitbucket integration](https://www.gitpod.io/docs/integrations/) - Gitpod seamlessly integrates into your workflow and works with all major git hosting platforms including GitHub, GitLab and Bitbucket.
+👐 [GitLab, GitHub, and Bitbucket integration](https://www.gitpod.io/docs/integrations/) - Gitpod seamlessly integrates into thy workflow and works with all major git hosting platforms including GitHub, GitLab and Bitbucket.
 
-👀 [Integrated code reviews](https://www.gitpod.io/docs/context-urls#pullmerge-request-context) - with Gitpod you can do native code reviews on any PR/MR. No need to switch context anymore and clutter your local machine with your colleagues' PR/MR.
+👀 [Integrated code reviews](https://www.gitpod.io/docs/context-urls#pullmerge-request-context) - with Gitpod you can do native code reviews on any PR/MR. No need to switch context anymore and clutter thy local machine with thy colleagues' PR/MR.
 
-👯‍♀️ [Collaboration](https://www.gitpod.io/docs/sharing-and-collaboration/) - invite team members to your dev environment or snapshot any state of your dev environment to share it with your team asynchronously.
+👯‍♀️ [Collaboration](https://www.gitpod.io/docs/sharing-and-collaboration/) - invite team members to thy dev environment or snapshot any state of thy dev environment to share it with thy team asynchronously.
 
-🛠 Professional & customizable developer experience - a Gitpod workspace gives you the same capabilities (yes, even [root & docker](https://www.gitpod.io/docs/config-docker#configure-a-custom-dockerfile)) as your Linux machine - pre-configured and optimized for your individual development workflow. Install any [VS Code extension](https://www.gitpod.io/docs/vscode-extensions/) with one click on a user and/or team level.
+🛠 Professional & customizable developer experience - a Gitpod workspace gives you the same capabilities (yes, even [root & docker](https://www.gitpod.io/docs/config-docker#configure-a-custom-dockerfile)) as thy Linux machine - pre-configured and optimized for thy individual development workflow. Install any [VS Code extension](https://www.gitpod.io/docs/vscode-extensions/) with one click on a user and/or team level.
 
 [Learn more 👉](https://www.gitpod.io/)
 
@@ -51,7 +51,7 @@ Gitpod is provided as a [managed Saas version](https://gitpod.io) with a free su
 You can start using Gitpod in one or more of the following ways:
 
 1. Quickstart using an [Example Project](https://www.gitpod.io/docs/quickstart) or [OSS Project](https://contribute.dev/)
-1. Getting started with [one of your existing projects](https://www.gitpod.io/docs/getting-started)
+1. Getting started with [one of thy existing projects](https://www.gitpod.io/docs/getting-started)
 1. [Use a Prefixed URL](https://www.gitpod.io/docs/getting-started/#prefixed-url)
 1. [Install Browser Extension](https://www.gitpod.io/docs/getting-started#browser-extension)
 1. [Enable GitLab Integration](https://www.gitpod.io/docs/gitlab-integration#gitlab-integration)

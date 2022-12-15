@@ -7,7 +7,7 @@ blowtorch is a tool to selectively burn down bridges, i.e. Kubernetes service co
 ## Usage
 
 ```
-blowtorch helps using toxiproxy to create network chaos in your k8s application
+blowtorch helps using toxiproxy to create network chaos in thy k8s application
 
 Usage:
   blowtorch [command]

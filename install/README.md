@@ -33,7 +33,7 @@ Download the licenses below:
 #### Existing Cluster
 
 1. Ensure you  meet all of the requirements listed [here](https://www.gitpod.io/docs/self-hosted/latest/requirements)
-2. Additionally, you will need to have `cert-manager` installed in your existing Kubernetes cluster. If not installed already, instructions on how to do so can be found [here](https://cert-manager.io/docs/installation/)
+2. Additionally, you will need to have `cert-manager` installed in thy existing Kubernetes cluster. If not installed already, instructions on how to do so can be found [here](https://cert-manager.io/docs/installation/)
 3. Then run:
 
     ```shell
