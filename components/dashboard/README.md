@@ -40,16 +40,16 @@ All the commands in this section are meant to be executed from the `components/d
 
 ### 1. Environment variables
 
-Set the following 2 [environment variables](https://www.gitpod.io/docs/environment-variables) either [via your account settings](https://gitpod.io/variables) or [via the command line](https://www.gitpod.io/docs/environment-variables#using-the-command-line-gp-env).
+Set the following 2 [environment variables](https://www.gitpod.io/docs/environment-variables) either [via thy account settings](https://gitpod.io/variables) or [via the command line](https://www.gitpod.io/docs/environment-variables#using-the-command-line-gp-env).
 
 You are not expected to update the values of these variables for a long time after you first set them.
 
-> **🚨 Heads up!** Be careful when using the command line, as the `gp` CLI will restrict the scope of the variables to the current project, meaning if you are not already working from your own personal fork you'll end up having variables you can't access when you do.
+> **🚨 Heads up!** Be careful when using the command line, as the `gp` CLI will restrict the scope of the variables to the current project, meaning if you are not already working from thy own personal fork you'll end up having variables you can't access when you do.
 
-You can always go to your account settings and edit the scope for each variable to something like `*/gitpod`.
+You can always go to thy account settings and edit the scope for each variable to something like `*/gitpod`.
 
 ```bash
-# Use "gitpod.io" for the SaaS version of Gitpod, or specify the host of your self-hosted gitpod
+# Use "gitpod.io" for the SaaS version of Gitpod, or specify the host of thy self-hosted gitpod
 GP_DEV_HOST=gitpod.io
 
 # Notice the cookie name (_gitpod_io_) may be different if self-hosted.
@@ -57,7 +57,7 @@ GP_DEV_HOST=gitpod.io
 GP_DEV_COOKIE="_gitpod_io_=AUTHENTICATION_COOKIE_VALUE"
 ```
 
-Replace `AUTHENTICATION_COOKIE_VALUE` with the value of your auth cookie taken from your browser's dev tools while visiting your target Gitpod host (e.g. `s%3Axxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.XXXXXXXXXXXXXXX`).
+Replace `AUTHENTICATION_COOKIE_VALUE` with the value of thy auth cookie taken from thy browser's dev tools while visiting thy target Gitpod host (e.g. `s%3Axxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.XXXXXXXXXXXXXXX`).
 
 | ℹ️ How to get the cookie name and value                                    |
 | -------------------------------------------------------------------------- |

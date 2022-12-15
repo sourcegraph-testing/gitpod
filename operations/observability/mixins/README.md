@@ -109,7 +109,7 @@ local runningWorkspacesGraph =
 }
 ```
 
-To make sure your jsonnet code compiles and is well-formated, you can always run `make lint`.
+To make sure thy jsonnet code compiles and is well-formated, you can always run `make lint`.
 
 You can also use our [preview environments to make sure the dashboard really looks like what you imagined](#How-do-I-review-dashboards-before-merging-PRs).
 
@@ -271,7 +271,7 @@ We also have this same validation running in our CI, to make sure we don't merge
 
 ## Deploying merged changes to production
 
-Alright, you got your changes merged, now what? The changes need to land on our [gitpod-io/observability](https://github.com/gitpod-io/observability) repository by updating the `vendor/` folder.
+Alright, you got thy changes merged, now what? The changes need to land on our [gitpod-io/observability](https://github.com/gitpod-io/observability) repository by updating the `vendor/` folder.
 
 The `vendor/` folder can be updated by triggering this [workflow](https://github.com/gitpod-io/observability/actions/workflows/dep-update.yaml). Yes, you just need to click the button and the workflow will open a new Pull Request with the updates.
 
@@ -295,7 +295,7 @@ This `jsonnetfile.json` lists all dependencies that we use, which includes this 
 
 ### How do I review dashboards before merging PRs?
 
-There are a couple of options to trigger a werft job that will deploy a preview environment with Prometheus+Grafana with your changes:
+There are a couple of options to trigger a werft job that will deploy a preview environment with Prometheus+Grafana with thy changes:
 
 #### Pull request description
 
@@ -305,7 +305,7 @@ The following combination of annotations can be used to deploy monitoring satell
 * Use harvester previews. Monitoring-satellite is deployed on those previews by default
 ```
 /werft with-vm=true
-# Just in case your PR requires extra configuration on Prometheus side (and you have a new branch on https://github.com/gitpod-io/observability with such changes)
+# Just in case thy PR requires extra configuration on Prometheus side (and you have a new branch on https://github.com/gitpod-io/observability with such changes)
 # You can add the line below
 /werft withObservabilityBranch=<my-branch>
 ```
@@ -313,7 +313,7 @@ The following combination of annotations can be used to deploy monitoring satell
 * Use Gitpod helm charts to deploy a preview, and add the observability annotation
 ```
 /werft with-helm=true with-observability=true
-# Just in case your PR requires extra configuration on Prometheus side (and you have a new branch on https://github.com/gitpod-io/observability with such changes)
+# Just in case thy PR requires extra configuration on Prometheus side (and you have a new branch on https://github.com/gitpod-io/observability with such changes)
 # You can add the line below
 /werft withObservabilityBranch=<my-branch>
 ```

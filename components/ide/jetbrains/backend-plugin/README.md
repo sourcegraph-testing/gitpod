@@ -13,7 +13,7 @@ you experience any issues with JetBrains remote dev make sure to report
 issues [here](https://youtrack.jetbrains.com/issues?q=project:%20CWM)
 under remote development subsystem.
 
-Usually you will need to create a preview environments to try your changes, but if your changes don't touch any other
+Usually you will need to create a preview environments to try thy changes, but if thy changes don't touch any other
 components beside the backend plugin then you can test against the running workspace:
 
 - Launch `./launch-dev-server.sh` from `components/ide/jetbrains/backend-plugin`. It builds the backend plugin, and

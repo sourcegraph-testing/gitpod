@@ -12,7 +12,7 @@ This module will do the following steps:
   - Set up external-dns using our [`external-dns` module](../../modules/tools/external-dns/)
   - Creates a cluster-issuer using our [`issuer` module](../../modules/tools/issuer/)
 
-> 💡 If you would like to create the infrastructure orchestrating the terraform modules by yourself, you can find all the modules we support [here](../../modules/).
+> 💡 If you would like to create the infrastructure orchestrating the terraform modules by thyself, you can find all the modules we support [here](../../modules/).
 
 Since the entire setup requires more than one terraform target to be run due to
 dependencies (eg: helm provider depends on kubernetes cluster config, which is
@@ -37,7 +37,7 @@ Before starting the installation process, you need:
 * Setup credentials to be usable in one of the following ways:
   * [As environmental variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
     * Copy the file `.env_sample` to `.env` and update the values corresponding
-      to your AWS user. Run:
+      to thy AWS user. Run:
       ```sh
       source .env
       ```
@@ -146,12 +146,12 @@ make output
 Once the apply process has exited successfully, we can go ahead and prepare to
 setup Gitpod. If you specified the `domain_name` in the `terraform.tfvars` file,
 the terraform module registers the module with `route53` to point to the
-cluster. Now you have to configure whichever provider you use to host your
+cluster. Now you have to configure whichever provider you use to host thy
 domain name to route traffic to the AWS name servers. You can find these name
 servers in the `make output` command from above. It would be of the format:
 
 ```json
-Nameservers for the domain(to be added as NS records in your domain provider):
+Nameservers for the domain(to be added as NS records in thy domain provider):
 =================
 [
   "ns-1444.awsdns-52.org.",
@@ -161,8 +161,8 @@ Nameservers for the domain(to be added as NS records in your domain provider):
 ]
 ```
 
-Add the `ns` records similar to the above 4 URIs as NS records under your domain
-DNS management setup. Check with your domain hosting service for specific information.
+Add the `ns` records similar to the above 4 URIs as NS records under thy domain
+DNS management setup. Check with thy domain hosting service for specific information.
 
 ## Note the dependency credentials from terraform output
 
@@ -212,7 +212,7 @@ NAME                     READY   STATUS    RESTARTS   AGE
 proxy-5998488f4c-t8vkh   0/1     Init 0/1  0          5m
 ```
 
-The most likely reason is that the DNS01 challenge has yet to resolve. To fix this, make sure you have added the NS records corresponding to the `route53` zone of the `domain_name` added to your domain provider.
+The most likely reason is that the DNS01 challenge has yet to resolve. To fix this, make sure you have added the NS records corresponding to the `route53` zone of the `domain_name` added to thy domain provider.
 
 Once the DNS record has been updated, you will need to delete all Cert Manager pods to retrigger the certificate request
 
@@ -230,7 +230,7 @@ https-certificates          True    https-certificates          5m
 
 ### Cannot connect to the created cluster after a while
 
-There is a chance that your kubeconfig has gotten expired after a specific amount of time. You can reconnect to the cluster by using:
+There is a chance that thy kubeconfig has gotten expired after a specific amount of time. You can reconnect to the cluster by using:
 
 ``` sh
 aws eks --region <regon> update-kubeconfig --name <cluster_name>

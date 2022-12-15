@@ -20,7 +20,7 @@ commercially supported project.
 
 # Development
 
-> tl;dr the `make` command will build and push a release to your development channel
+> tl;dr the `make` command will build and push a release to thy development channel
 
 ## Authentication
 
@@ -39,14 +39,14 @@ The following environment variables are required to be able to publish to our Re
 # Create a development release
 
 A development release can be created by running `make create_dev_release`. This builds and publishes
-a new development release to the account. This can then be applied to your development cluster.
+a new development release to the account. This can then be applied to thy development cluster.
 
 Development releases should be used by individual developers when testing and developing a KOTS release.
 
 ## Create an unstable release
 
 An unstable release can be created by running `make create_unstable_release`. This builds and publishes
-a new unstable release to the account. This can then be applied to your development cluster.
+a new unstable release to the account. This can then be applied to thy development cluster.
 
 Unstable releases should be used as the first part of creating a stable release.
 

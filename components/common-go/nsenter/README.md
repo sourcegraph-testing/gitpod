@@ -13,7 +13,7 @@ The `nsenter` package registers a special init constructor that is called before
 the Go runtime has a chance to boot.  This provides us the ability to `setns` on
 existing namespaces and avoid the issues that the Go runtime has with multiple
 threads.  This constructor will be called if this package is registered,
-imported, in your go application.
+imported, in thy go application.
 
 The `nsenter` package will `import "C"` and it uses [cgo](https://golang.org/cmd/cgo/)
 package. In cgo, if the import of "C" is immediately preceded by a comment, that comment,

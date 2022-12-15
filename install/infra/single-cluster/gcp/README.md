@@ -12,7 +12,7 @@ This module will do the following steps:
   - Set up external-dns using our [`external-dns` module](../../modules/tools/external-dns/)
   - Creates a cluster-issuer using our [`issuer` module](../../modules/tools/issuer/)
 
-> 💡 If you would like to create the infrastructure orchestrating the terraform modules by yourself, you can find all the modules we support [here](../../modules/).
+> 💡 If you would like to create the infrastructure orchestrating the terraform modules by thyself, you can find all the modules we support [here](../../modules/).
 
 
 Since the entire setup requires more than one terraform target to be run due to
@@ -57,7 +57,7 @@ to the service account stored as a JSON file. The path to the JSON file is
 expected to be provided as a value to the `credentials` field. Alongside, one is
 expected to provide the name of the project(`project` field) corresponding to
 this service account and region in with the cluster to be created(`region`
-field). If you want your cluster to be zonal(only existing in one zone), you can
+field). If you want thy cluster to be zonal(only existing in one zone), you can
 provide a zone corresponding to the project(`zone` field), else the cluster will
 be regional.
 
@@ -141,12 +141,12 @@ make output
 Once the apply process has exited successfully, we can go ahead and prepare to
 setup Gitpod. If you specified the `domain_name` in the `terraform.tfvars` file,
 the terraform module registers the module with `cloudDNS` to point to the
-cluster. Now you have to configure whichever provider you use to host your
+cluster. Now you have to configure whichever provider you use to host thy
 domain name to route traffic to the GCP name servers. You can find these name
 servers in the `make output` command from above. It would be of the format:
 
 ```json
-Nameservers for the domain(to be added as NS records in your domain provider):
+Nameservers for the domain(to be added as NS records in thy domain provider):
 =================
 [
   "ns-cloud-c1.googledomains.com.",
@@ -158,8 +158,8 @@ Nameservers for the domain(to be added as NS records in your domain provider):
 
 ```
 
-Add the `ns` records similar to the above 4 URIs as NS records under your domain
-DNS management setup. Check with your domain hosting service for specific information.
+Add the `ns` records similar to the above 4 URIs as NS records under thy domain
+DNS management setup. Check with thy domain hosting service for specific information.
 
 ## Note the dependency credentials from terraform output
 
@@ -215,7 +215,7 @@ https-certificates          True    https-certificates          5m
 
 ### Cannot connect to the created cluster after a while
 
-There is a chance that your kubeconfig has gotten expired after a specific amount of time. You can reconnect to the cluster by using:
+There is a chance that thy kubeconfig has gotten expired after a specific amount of time. You can reconnect to the cluster by using:
 
 ``` sh
 # make sure you are authenticated using the service account you used to create the cluster

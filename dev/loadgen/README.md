@@ -7,7 +7,7 @@ A load generator (framework) for Gitpod.
 You can find a short explanation of this tool in this [loom video](https://www.loom.com/share/6487e3403c0746cc97bb3f766e15fab6).
 
 ## How to run a benchmark
-- Ensure your kubeconfig has the configuration for the cluster you want to benchmark. You can use kubecdl to update your kubeconfig with the cluster information
+- Ensure thy kubeconfig has the configuration for the cluster you want to benchmark. You can use kubecdl to update thy kubeconfig with the cluster information
   ```console
   $ kubecdl -p workspace-clusters [cluster-name]
   $ kubectx [cluster-name]
@@ -50,7 +50,7 @@ In order to configure the benchmark, you can use the configuration file
 | repo.environment | Environment variables that will only be set for this repository |
 | repo.workspaceClass | The workspace class to use for the workspace that will be created for this repository |
 
-After the benchmark has completed, you will find a benchmark-result.json file in your working directory, that contains information about every started workspace.
+After the benchmark has completed, you will find a benchmark-result.json file in thy working directory, that contains information about every started workspace.
 
 ```
 [

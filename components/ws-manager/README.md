@@ -14,7 +14,7 @@ You can start `ws-manager` in any Kubernetes cluster, it will only look at pods 
 To run `ws-manager` you need:
 1. _messagebus you can connect to:_ e.g. `kubectl port-forward deployment/messagebus 5672`
 2. _valid configuration file:_ e.g. `example-config.json`. You can use `wsman validate-config --config example-config.json` to make sure you have a valid configuration file.
-3. _Kubernetes cluster to work with:_ you can use your `kubectl` config file using the `--kubeconfig` flag or otherwise have it connect to the cluster it's running in
+3. _Kubernetes cluster to work with:_ you can use thy `kubectl` config file using the `--kubeconfig` flag or otherwise have it connect to the cluster it's running in
 
 Then run `wsman run --config example-config.json --kubeconfig ~/.kube/config -v`
 

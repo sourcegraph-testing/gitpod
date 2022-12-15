@@ -33,19 +33,19 @@ VERSION=main.4110 make getRenderVersionManifest
 
 To generate a new test, the following process must be followed - in this example, the name of the test will be `testname`, but this should be substituted for whatever you want to call it. This becomes the test name and is how the files are stored in the codebase, so it should be descriptive.
 
-First, create your folder:
+First, create thy folder:
 
 ```shell
 mkdir -p ./cmd/testdata/render/testname
 ```
 
-Second, create your config file and amend it as required:
+Second, create thy config file and amend it as required:
 
 ```shell
 go run . init > ./cmd/testdata/render/testname/config.yaml
 ```
 
-Finally, generate your output:
+Finally, generate thy output:
 
 ```shell
 make generateRenderTests
