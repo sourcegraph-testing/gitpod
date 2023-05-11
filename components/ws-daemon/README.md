@@ -20,4 +20,4 @@ JAEGER_ENDPOINT=http://localhost:14268/api/traces
 JAEGER_SAMPLER_TYPE=const
 # enable the constant sampler
 JAEGER_SAMPLER_PARAM=1
-```
+```Hello World

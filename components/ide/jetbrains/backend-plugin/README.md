@@ -43,3 +43,4 @@ Listening for transport dt_socket at address: 54963
   for now each thin client is accompanied by another window (main) which directly renders UI from backend. Sometimes
   there are bugs when a file will be opened in this window instead of the thin client. It also can be that
   the main window is not visible then try to find it in the left top corner and resize. It looks almost like a line.
+Hello World

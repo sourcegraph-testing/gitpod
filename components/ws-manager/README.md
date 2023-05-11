@@ -39,3 +39,4 @@ This EVT can be converted to testcases using `cd pkg/manager && go run testdata/
 ### Adding tests for Create Definite Workspace Pod
 To create new testcases for the workspace pod creation part, one can convert a workspace request to a "start workspace context" required as input for such a test.
 To do this, save a valid _workspace spec_ (e.g. `example-wsspec.json`) file as `pkg/manager/testdata/cdwp_MyCustomTestName.spec.json` and run the tests. The `TestCreateDefiniteWorkspacePod` test will convert those `cdwp_*.spec.json` files to the required test fixtures as `cdwp_*.json`.
+Hello World

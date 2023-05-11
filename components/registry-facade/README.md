@@ -12,3 +12,4 @@ Registry-facade modifies images as they are downloaded. It consults with `ws-man
 6. Desktop IDE
 
 It also adds the `gp` cli to the workspace. Think of `registry-facade` as an image layer smuggler.
+Hello World

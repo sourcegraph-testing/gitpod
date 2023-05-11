@@ -50,3 +50,4 @@ For detailed instructions on the KOTS CLI, please see the [Replicated docs](http
 ## Installer
 
 For advanced users, the [Installer](./installer) is available.
+Hello World

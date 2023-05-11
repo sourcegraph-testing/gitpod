@@ -81,3 +81,4 @@ terraform apply # provide the values that are prompted for
 ``` sh
 terraform destroy
 ```
+Hello World

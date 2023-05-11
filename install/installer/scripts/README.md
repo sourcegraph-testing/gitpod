@@ -28,3 +28,4 @@ go run ./scripts/structdoc.go
 INFO[0000] Generating doc for config version v1         
 INFO[0000] The doc is written to the file pkg/config/v1/config.md 
 ```
+Hello World
