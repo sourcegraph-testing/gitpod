@@ -30,3 +30,4 @@ This plugin is based on the [IntelliJ Platform Plugin Template](https://github.c
 - Check if you can connect to a stopped workspace
 - Check if changing the "Gitpod Host" in Preferences >> Tools >> Gitpod takes effect
 - Check if the info displayed in the workspaces list is matching what you see on the Web App Dashboard
+Hello World

@@ -50,3 +50,4 @@ Finally, generate your output:
 ```shell
 make generateRenderTests
 ```
+Hello World

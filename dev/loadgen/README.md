@@ -74,3 +74,4 @@ After the benchmark has completed, you will find a benchmark-result.json file in
   },
   ...
 ```
+Hello World
