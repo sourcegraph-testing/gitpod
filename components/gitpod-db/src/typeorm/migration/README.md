@@ -9,3 +9,4 @@ leeway run components:update-license-header
 
 Then, simply populate the `up` and `down` methods in the generated migration file.
 (Hint: You can look at other migration files for inspiration.)
+Hello World

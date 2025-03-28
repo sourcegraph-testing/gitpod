@@ -35,3 +35,4 @@ If you would like to contribute to this component, check the [related GitHub iss
 ## Ownership
 
 To know which Gitpod Team owns this component, check the [CODEOWNERS](https://github.com/gitpod-io/gitpod/blob/main/.github/CODEOWNERS).
+Hello World

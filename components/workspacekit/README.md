@@ -2,4 +2,4 @@
 ![Architecture](../../docs/workspace/architecture.drawio.svg)
 
 ## Namespace layering
-![Namespaces](../../docs/workspace/namespaces.drawio.svg)
+![Namespaces](../../docs/workspace/namespaces.drawio.svg)Hello World

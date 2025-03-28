@@ -17,3 +17,4 @@ docker run --rm -it -v /tmp/dest:/out eu.gcr.io/gitpod-core-dev/build/local-app:
 cd components/local-app
 BROWSER= GITPOD_HOST=<URL-of-your-preview-env> go run main.go --mock-keyring run
 ```
+Hello World

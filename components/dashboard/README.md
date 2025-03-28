@@ -105,3 +105,4 @@ yarn test:integration:run
 ```
 
 You should see Cypress running in the terminal.
+Hello World

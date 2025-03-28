@@ -19,3 +19,4 @@ Hint: do not use the `base64` to encode a signature
 ```
 agent-smith signature new <signature-args> | agent-smith signature match <test-binary>
 ```
+Hello World

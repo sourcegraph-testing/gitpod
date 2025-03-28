@@ -18,3 +18,4 @@ When you are making changes to gitpod-protocol component, make sure to run `yarn
 ```
     @inject(UserDB) protected readonly userDb: UserDB;
 ```
+Hello World
