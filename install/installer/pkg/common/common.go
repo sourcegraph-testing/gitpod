@@ -5,11 +5,11 @@
 package common
 
 import (
+	"crypto/rand"
 	"crypto/sha256"
 	"encoding/json"
 	"fmt"
 	"io"
-	"math/rand"
 	"strconv"
 	"strings"
 
@@ -570,20 +570,31 @@ var validCookieChars = []byte("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklm
 // RandomString produces a cryptographically secure random string of length N.
 // The string contains alphanumeric characters and _ (underscore), - (dash) and . (dot)
 func RandomString(length int) (string, error) {
-	b := make([]byte, length)
-	n, err := rand.Read(b)
-	if err != nil {
-		return "", err
-	}
-	if n != length {
-		return "", io.ErrShortWrite
-	}
-
 	lrsc := len(validCookieChars)
-	for i, c := range b {
-		b[i] = validCookieChars[int(c)%lrsc]
+	// Bytes at or above maxByte are discarded to avoid modulo bias.
+	maxByte := 256 - (256 % lrsc)
+
+	res := make([]byte, 0, length)
+	buf := make([]byte, length)
+	for len(res) < length {
+		n, err := rand.Read(buf)
+		if err != nil {
+			return "", err
+		}
+		if n != len(buf) {
+			return "", io.ErrShortWrite
+		}
+		for _, c := range buf {
+			if int(c) >= maxByte {
+				continue
+			}
+			res = append(res, validCookieChars[int(c)%lrsc])
+			if len(res) == length {
+				break
+			}
+		}
 	}
-	return string(b), nil
+	return string(res), nil
 }
 
 // ThirdPartyContainerRepo returns the container registry to use for third-party containers.
