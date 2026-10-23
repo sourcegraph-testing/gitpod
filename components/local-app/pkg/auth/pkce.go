@@ -5,35 +5,19 @@
 package auth
 
 import (
-	crypto_rand "crypto/rand"
+	"crypto/rand"
 	"crypto/sha256"
 	"encoding/base64"
-	"encoding/binary"
-	"math/rand"
-	math_rand "math/rand"
-	"time"
+	"math/big"
 )
 
-func init() {
-	PKCEInit()
-}
+// PKCEInit used to seed math/rand for PKCE verifier generation.
+//
+// Deprecated: PKCEVerifier draws its randomness from crypto/rand and needs no
+// initialisation. PKCEInit is kept as a no-op for API compatibility.
+func PKCEInit() {}
 
-// PKCEInit ensures we use random values to generate the PKCE verifier
-func PKCEInit() {
-	var seed int64
-	var b [8]byte
-	// We'd like more entropy than UnixNano() for PKCE
-	_, err := crypto_rand.Read(b[:])
-	if err == nil {
-		seed = int64(binary.LittleEndian.Uint64(b[:]))
-	} else {
-		// ... but will accept it if we have to
-		seed = time.Now().UnixNano()
-	}
-	math_rand.Seed(seed)
-}
-
-// PKCEVerifier generates a string of pkce allowed chars
+// PKCEVerifier generates a cryptographically random string of pkce allowed chars
 func PKCEVerifier(length int) string {
 	if length > 128 {
 		length = 128
@@ -43,9 +27,14 @@ func PKCEVerifier(length int) string {
 	}
 	const charset = "abcdefghijklmnopqrstuvwxyz" +
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~"
+	max := big.NewInt(int64(len(charset)))
 	b := make([]byte, length)
 	for i := range b {
-		b[i] = charset[rand.Intn(len(charset))]
+		n, err := rand.Int(rand.Reader, max)
+		if err != nil {
+			panic("cannot generate PKCE verifier: " + err.Error())
+		}
+		b[i] = charset[n.Int64()]
 	}
 	return string(b)
 }

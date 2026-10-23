@@ -10,9 +10,7 @@ import (
 	"os"
 	"os/user"
 	"path/filepath"
-	"strings"
 
-	"github.com/gitpod-io/gitpod/installer/pkg/common"
 	"github.com/spf13/cobra"
 )
 
@@ -43,12 +41,11 @@ func setSeed() {
 	if rootOpts.SeedValue != 0 {
 		rand.Seed(rootOpts.SeedValue)
 
-		// crypto/rand is used by the bcrypt package to generate its random values
-		str, err := common.RandomString(64)
-		if err != nil {
-			panic(err)
-		}
-		cryptoRand.Reader = strings.NewReader(str)
+		// crypto/rand is used by the bcrypt package and common.RandomString to generate their random values.
+		// When a seed is explicitly requested (debugging and golden-file tests only), replace crypto/rand's
+		// reader with an unbounded deterministic source so that the rendered output is reproducible.
+		// Without --seed, crypto/rand keeps using the operating system's secure random source.
+		cryptoRand.Reader = rand.New(rand.NewSource(rootOpts.SeedValue))
 	}
 }
 
