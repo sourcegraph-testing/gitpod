@@ -1,13 +1,15 @@
 module github.com/gitpod-io/gitpod/previewctl
 
-go 1.18
+go 1.27.3
 
 require (
 	github.com/pkg/errors v0.9.1
+	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v1.5.0
 	github.com/stretchr/testify v1.7.0
 	k8s.io/api v0.24.4
 	k8s.io/apimachinery v0.24.4
+	k8s.io/client-go v0.24.4
 	kubevirt.io/api v0.54.0
 )
 
@@ -26,6 +28,7 @@ require (
 	github.com/google/gofuzz v1.2.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
+	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
@@ -35,6 +38,7 @@ require (
 	github.com/openshift/custom-resource-status v1.1.2 // indirect
 	github.com/pborman/uuid v1.2.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/spf13/pflag v1.0.5 // indirect
 	golang.org/x/net v0.0.0-20220624214902-1bab6f366d9e // indirect
 	golang.org/x/oauth2 v0.0.0-20220622183110-fd043fe589d2 // indirect
 	golang.org/x/sys v0.0.0-20220627191245-f75cf1eec38b // indirect
@@ -55,11 +59,4 @@ require (
 	sigs.k8s.io/json v0.0.0-20220525155127-227cbc7cc124 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.1 // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
-)
-
-require (
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
-	github.com/sirupsen/logrus v1.8.1
-	github.com/spf13/pflag v1.0.5 // indirect
-	k8s.io/client-go v0.24.4
 )
