@@ -1,22 +1,26 @@
 module github.com/gitpod-io/gitpod/common-go
 
-go 1.18
+go 1.27.3
 
 require (
-	github.com/HdrHistogram/hdrhistogram-go v1.1.0 // indirect
-	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
+	github.com/configcat/go-sdk/v7 v7.6.0
+	github.com/containerd/cgroups v1.0.4
+	github.com/fsnotify/fsnotify v1.4.9
 	github.com/go-test/deep v1.0.5
 	github.com/google/go-cmp v0.5.7
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
+	github.com/hashicorp/golang-lru v0.5.1
+	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/prometheus/client_golang v1.12.1
-	github.com/segmentio/backo-go v0.0.0-20200129164019-23eae7c10bd3 // indirect
 	github.com/sirupsen/logrus v1.8.1
 	github.com/stretchr/testify v1.7.0
 	github.com/uber/jaeger-client-go v2.29.1+incompatible
-	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
-	github.com/xtgo/uuid v0.0.0-20140804021211-a0b114877d4c // indirect
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+	golang.org/x/sys v0.0.0-20220209214540-3681064d5158
+	golang.org/x/time v0.0.0-20191024005414-555d28b269f0
+	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	google.golang.org/grpc v1.45.0
 	google.golang.org/protobuf v1.28.0
 	gopkg.in/segmentio/analytics-go.v3 v3.1.0
@@ -25,20 +29,10 @@ require (
 )
 
 require (
-	github.com/configcat/go-sdk/v7 v7.6.0
-	github.com/containerd/cgroups v1.0.4
-	github.com/fsnotify/fsnotify v1.4.9
-	github.com/hashicorp/golang-lru v0.5.1
-	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20220209214540-3681064d5158
-	golang.org/x/time v0.0.0-20191024005414-555d28b269f0
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
-)
-
-require (
+	github.com/HdrHistogram/hdrhistogram-go v1.1.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
+	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/cilium/ebpf v0.4.0 // indirect
 	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
@@ -59,6 +53,9 @@ require (
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.32.1 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
+	github.com/segmentio/backo-go v0.0.0-20200129164019-23eae7c10bd3 // indirect
+	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
+	github.com/xtgo/uuid v0.0.0-20140804021211-a0b114877d4c // indirect
 	go.uber.org/atomic v1.4.0 // indirect
 	golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd // indirect
 	golang.org/x/text v0.3.7 // indirect

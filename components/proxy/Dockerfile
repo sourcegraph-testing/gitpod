@@ -2,7 +2,7 @@
 # Licensed under the GNU Affero General Public License (AGPL).
 # See License-AGPL.txt in the project root for license information.
 
-FROM golang:1.18 as builder
+FROM golang:1.27 as builder
 
 RUN curl -fsSL https://github.com/caddyserver/xcaddy/releases/download/v0.3.0/xcaddy_0.3.0_linux_amd64.tar.gz \
   | tar -xzv -C /usr/local/bin/ xcaddy

@@ -1,34 +1,29 @@
 module github.com/gitpod-io/gitpod/content-service
 
-go 1.18
+go 1.27.3
 
 require (
 	cloud.google.com/go/storage v1.22.0
 	github.com/cenkalti/backoff v2.2.1+incompatible
+	github.com/fsouza/fake-gcs-server v1.37.11
 	github.com/gitpod-io/gitpod/common-go v0.0.0-00010101000000-000000000000
 	github.com/gitpod-io/gitpod/content-service/api v0.0.0-00010101000000-000000000000
 	github.com/go-ozzo/ozzo-validation v3.5.0+incompatible
 	github.com/golang/mock v1.6.0
 	github.com/google/go-cmp v0.5.8
-	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/minio/minio-go/v7 v7.0.26
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.0.2
 	github.com/opentracing/opentracing-go v1.2.0
-	github.com/prometheus/client_golang v1.12.1 // indirect
 	github.com/spf13/cobra v1.4.0
+	github.com/stretchr/testify v1.7.1
 	golang.org/x/oauth2 v0.0.0-20220411215720-9780585627b5
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+	golang.org/x/sys v0.0.0-20220412211240-33da011f77ad
 	golang.org/x/xerrors v0.0.0-20220411194840-2f41105eb62f
 	google.golang.org/api v0.77.0
 	google.golang.org/grpc v1.45.0
 	google.golang.org/protobuf v1.28.0
-)
-
-require (
-	github.com/fsouza/fake-gcs-server v1.37.11
-	github.com/stretchr/testify v1.7.1
-	golang.org/x/sys v0.0.0-20220412211240-33da011f77ad
 )
 
 require (
@@ -51,6 +46,7 @@ require (
 	github.com/gorilla/handlers v1.5.1 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
+	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/hashicorp/golang-lru v0.5.1 // indirect
 	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
@@ -69,6 +65,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/xattr v0.4.7 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/prometheus/client_golang v1.12.1 // indirect
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.32.1 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect

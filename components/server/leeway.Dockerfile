@@ -11,7 +11,7 @@ COPY components-server--app /installer/
 WORKDIR /app
 RUN /installer/install.sh
 
-FROM golang:1.17.2 as oci-tool-builder
+FROM golang:1.27.3 as oci-tool-builder
 RUN go install github.com/csweichel/oci-tool@v0.1.1
 
 FROM node:16.13.0-slim

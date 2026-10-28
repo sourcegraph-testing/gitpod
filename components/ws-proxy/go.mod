@@ -1,6 +1,6 @@
 module github.com/gitpod-io/gitpod/ws-proxy
 
-go 1.18
+go 1.27.3
 
 require (
 	github.com/bombsimon/logrusr/v2 v2.0.1

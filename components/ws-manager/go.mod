@@ -1,6 +1,6 @@
 module github.com/gitpod-io/gitpod/ws-manager
 
-go 1.18
+go 1.27.3
 
 require (
 	github.com/alecthomas/jsonschema v0.0.0-20210214200137-e6fc2822d59d

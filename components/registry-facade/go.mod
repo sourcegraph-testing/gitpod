@@ -1,12 +1,11 @@
 module github.com/gitpod-io/gitpod/registry-facade
 
-go 1.18
+go 1.27.3
 
 require (
 	github.com/containerd/containerd v1.6.6
 	github.com/docker/cli v20.10.17+incompatible
 	github.com/docker/distribution v2.8.1+incompatible
-	github.com/docker/docker-credential-helpers v0.6.4 // indirect
 	github.com/gitpod-io/gitpod/common-go v0.0.0-00010101000000-000000000000
 	github.com/gitpod-io/gitpod/registry-facade/api v0.0.0-00010101000000-000000000000
 	github.com/go-redis/redis/v8 v8.11.5
@@ -16,6 +15,7 @@ require (
 	github.com/google/go-cmp v0.5.7
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
+	github.com/hashicorp/go-retryablehttp v0.7.1
 	github.com/hashicorp/golang-lru v0.5.4
 	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
 	github.com/ipfs/go-ipfs-files v0.1.1
@@ -27,15 +27,11 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.12.1
+	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v1.4.0
 	golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	google.golang.org/grpc v1.45.0
-)
-
-require (
-	github.com/hashicorp/go-retryablehttp v0.7.1
-	github.com/sirupsen/logrus v1.8.1
 )
 
 require (
@@ -44,6 +40,7 @@ require (
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/crackcomm/go-gitignore v0.0.0-20170627025303-887ab5e44cc3 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
+	github.com/docker/docker-credential-helpers v0.6.4 // indirect
 	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/go-logr/logr v1.2.2 // indirect

@@ -1,6 +1,6 @@
 module github.com/gitpod-io/gitpod/image-builder/bob
 
-go 1.18
+go 1.27.3
 
 require (
 	github.com/containerd/console v1.0.3
@@ -8,7 +8,6 @@ require (
 	github.com/docker/cli v20.10.17+incompatible
 	github.com/docker/distribution v2.8.1+incompatible
 	github.com/gitpod-io/gitpod/common-go v0.0.0-00010101000000-000000000000
-	github.com/gofrs/flock v0.8.0 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.0
 	github.com/moby/buildkit v0.10.4
 	github.com/opencontainers/runtime-spec v1.0.3-0.20210326190908-1c3f411f0417
@@ -27,6 +26,7 @@ require (
 	github.com/docker/docker-credential-helpers v0.6.4 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
+	github.com/gofrs/flock v0.8.0 // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect

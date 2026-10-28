@@ -2,7 +2,7 @@
 # Licensed under the GNU Affero General Public License (AGPL).
 # See License-AGPL.txt in the project root for license information.
 
-FROM golang:1.18-alpine AS debugger
+FROM golang:1.27-alpine AS debugger
 RUN apk add --no-cache git
 RUN go get -u github.com/go-delve/delve/cmd/dlv
 

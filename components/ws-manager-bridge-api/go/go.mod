@@ -1,6 +1,6 @@
 module github.com/gitpod-io/gitpod/ws-manager-bridge/api
 
-go 1.18
+go 1.27.3
 
 require (
 	google.golang.org/grpc v1.45.0

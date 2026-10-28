@@ -1,6 +1,6 @@
 module github.com/gitpod-io/gitpod/proxy/plugins/sshtunnel
 
-go 1.18
+go 1.27.3
 
 require (
 	github.com/caddyserver/caddy/v2 v2.5.2
